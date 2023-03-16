@@ -1,0 +1,65 @@
+﻿<h2>Novo Processo Nº XXXXXXXXXX</h2>
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <h6>Escolha a primeira letra do sintoma e clique em <b>Aplicar</b> para filtrar sintomas:</h6>
+    @Html.DropDownList("catSint", (SelectList)ViewBag.CATSINT,"Escolha a primeira letra:")
+    <br />
+    <input type="submit" value="Aplicar">
+}
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <h4>Sintomas:</h4>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.SINTOMAS)
+            {
+                <tr>
+                    <th>
+                        @Html.RadioButton("sintoma",$"{item.Id}")
+                        @item.Nome
+                    </th>
+                </tr>
+            }
+            <tr>
+                <th>
+                    <input type="submit" value="Adicionar">
+                </th>
+            </tr>
+        </tbody>
+    </table>
+}
+<br />
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Lista de Sintomas do Utente
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.LISTASINT)
+            {
+                <tr>
+                    <th>
+                        @item
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
