@@ -10517,11 +10517,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rpcun\\Desktop\\apoio_decisao_medica\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
+      "projectUniqueName": "D:\\code\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
       "projectName": "apoio_decisao_medica",
-      "projectPath": "C:\\Users\\rpcun\\Desktop\\apoio_decisao_medica\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
+      "projectPath": "D:\\code\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
       "packagesPath": "C:\\Users\\rpcun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rpcun\\Desktop\\apoio_decisao_medica\\apoio_decisao_medica\\obj\\",
+      "outputPath": "D:\\code\\apoio_decisao_medica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
