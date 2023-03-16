@@ -1,0 +1,56 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+a {
+    color: #228B22;
+    text-decoration: none;
+}
+a:hover {
+        color: black;
+        text-decoration: none;
+    }
+.btnCriar a {
+    color:white;
+    text-decoration: none;
+}
+.btnCriar a:hover {
+    color: black;
+}
+
+
+.btnCriar {
+    background-color: #228B22;
+    width: fit-content;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.navbar-brand {
+    color: #228B22;
+    font-weight: bold;
+}
+
+.btn2{
+    margin-right: 1em;
+}
