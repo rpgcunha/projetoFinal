@@ -44,17 +44,44 @@ namespace apoio_decisao_medica.Controllers
             }
 
             //adiciona o sintoma à tabela processo/sintoma
-            List<CatSintoma> listaSintomas = new List<CatSintoma>();
             foreach (var item in dbpointer.Tsintomas)
             {
                 if (sintoma == item.Id.ToString())
                 {
-                    CatSintoma s = new CatSintoma();
-                    s.Id = item.Id;
-                    s.Nome = item.Nome;
-                    listaSintomas.Add(s);
+                    //ViewBag.ID = item.Id;
+                    //ViewBag.PROCESSO = "2013000001";
+                    ProcessoSintoma s = new ProcessoSintoma();
+                    s.ProcessoId = 2013000001;
+                    s.SintomaId = item.Id;
+                    dbpointer.TprocessoSintomas.Add(s);
                 }
+                //else
+                //{
+                //    ViewBag.ID = "";
+                //    ViewBag.PROCESSO = "";
+                //}
             }
+            dbpointer.SaveChanges();
+            //List<ProcessoSintoma> listaSintomas = new List<ProcessoSintoma>();
+            //foreach (var item in dbpointer.TprocessoSintomas)
+            //{
+            //    if (2013000001 == item.ProcessoId)
+            //    {
+            //        ProcessoSintoma s = new ProcessoSintoma();
+            //        s.ProcessoId = 2013000001;
+            //        s.SintomaId = item.SintomaId;
+            //        listaSintomas.Add(s);
+            //    }
+            //}
+            //if (!listaSintomas.IsNullOrEmpty())
+            //{
+            //    ViewBag.LISTASINT = listaSintomas.ToList();
+            //}
+            //else
+            //{
+            //    ViewBag.LISTASINT = "";
+            //}
+
             return View();
         }
     }

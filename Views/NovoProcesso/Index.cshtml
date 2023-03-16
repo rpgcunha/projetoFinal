@@ -23,7 +23,10 @@
 }
 <br />
 <br />
-@using (Html.BeginForm())
+@ViewBag.ID
+<br />
+@ViewBag.PROCESSO
+@*@using (Html.BeginForm())
 {
     <h4>Lista de Sintomas do utente:</h4>
     @foreach (var item in ViewBag.LISTASINT)
@@ -31,4 +34,4 @@
         @item.Nome
         <br />
     }
-}
+}*@
