@@ -1,0 +1,56 @@
+﻿@model IEnumerable<apoio_decisao_medica.Models.Utente>
+<h2>Utente</h2>
+<br />
+<div class="btnCriar">
+    <a asp-controller="Utentes" asp-action="Create">Novo Utente</a>
+</div>
+<br />
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Numero de Utente</th>
+                <th>Data de Nascimento</th>
+            </tr>
+        </thead>
+        <tbody>
+                        <tr>
+                <th>@Html.TextBox("nome")</th>
+                <th>@Html.TextBox("numUtente")</th>
+                <th>@Html.TextBox("dataNasc")</th>
+            </tr>
+        </tbody>
+    </table>
+    <input  class="btnCriar" type="submit" value="Aplicar">
+}
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <h4>Utentes Filtrados</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Numero de Utente</th>
+                <th>Data de Nascimento</th>
+                <th>Genero</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th><a asp-action="Detalhes" asp-route-id="@item.Id">@item.Nome</a></th>
+                    <th>@item.NumeroUtente</th>
+                    <th>@item.DataNascimento</th>
+                    <th>@item.Genero</th>
+                    <th>@item.Cidade</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

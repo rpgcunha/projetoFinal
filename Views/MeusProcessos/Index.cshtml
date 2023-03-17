@@ -1,0 +1,82 @@
+﻿<h2>Meus processos</h2>
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h5>Processos Abertos</h5>
+        </div>
+        <div class="col-3">
+            @Html.TextBox("pesquisaAbertos")
+            <input class="btnCriar" type="submit" value="Procurar">
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+                <th>Numero do Processo</th>
+                <th>Nome do Utente</th>
+                <th>Numero do Utente</th>
+                <th>Data de abertura</th>
+                <th>Data de Fecho</th>
+                <th>Doença</th>
+                <th>Hospital</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.ABERTOS)
+            {
+                <tr>
+                    <th>@item.NumeroProcesso</th>
+                    <th>@item.UtenteId</th>
+                    <th>@item.UtenteId</th>
+                    <th>@item.DataHoraAbertura</th>
+                    <th>@item.DataHoraFecho</th>
+                    <th>@item.DoencaId</th>
+                    <th>@item.HospitalId</th>
+                </tr>
+            }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h5>Processos Fechados</h5>
+        </div>
+        <div class="col-3">
+            @Html.TextBox("pesquisaFechados")
+            <input class="btnCriar" type="submit" value="Procurar">
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Numero do Processo</th>
+            <th>Nome do Utente</th>
+            <th>Numero do Utente</th>
+            <th>Data de abertura</th>
+            <th>Data de Fecho</th>
+            <th>Doença</th>
+            <th>Hospital</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.FECHADOS)
+        {
+            <tr>
+                <th>@item.NumeroProcesso</th>
+                <th>@item.UtenteId</th>
+                <th>@item.UtenteId</th>
+                <th>@item.DataHoraAbertura</th>
+                <th>@item.DataHoraFecho</th>
+                <th>@item.DoencaId</th>
+                <th>@item.HospitalId</th>
+            </tr>
+        }
+    </tbody>
+</table>

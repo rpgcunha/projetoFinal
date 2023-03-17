@@ -184,6 +184,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/code/apoio_decisao_medica/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/code/apoio_decisao_medica/Views/Medicos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -202,6 +206,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/code/apoio_decisao_medica/Views/Medicos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/apoio_decisao_medica/Views/MeusProcessos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV1c1Byb2Nlc3Nvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/code/apoio_decisao_medica/Views/NovoProcesso/Index.cshtml]
@@ -318,6 +326,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/code/apoio_decisao_medica/Views/Utentes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/apoio_decisao_medica/Views/Utente/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXERldGFsaGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/code/apoio_decisao_medica/Views/Utente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/code/apoio_decisao_medica/Views/_ViewImports.cshtml]
