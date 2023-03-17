@@ -1,6 +1,7 @@
 ﻿using apoio_decisao_medica.Data;
 using apoio_decisao_medica.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -75,6 +76,7 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult Detalhes(int? Id)
         {
+            //detalhes do utente
             Utente u = new Utente();
             foreach (var item in dbpointer.Tutentes)
             {
@@ -88,6 +90,26 @@ namespace apoio_decisao_medica.Controllers
                     u.Cidade = item.Cidade;
                 }
             }
+
+            //historico de processos do utente
+            List<Processo> listaProcessos = new List<Processo>();
+
+            foreach (var item in dbpointer.Tprocessos)
+            {
+                if (item.UtenteId == Id)
+                {
+                    Processo p = new Processo();
+                    p.Id = item.Id;
+                    p.UtenteId = item.UtenteId;
+                    p.MedicoId= item.MedicoId;
+                    p.HospitalId= item.HospitalId;
+                    p.DataHoraAbertura= item.DataHoraAbertura;
+                    p.DataHoraFecho = item.DataHoraFecho;
+                    p.DoencaId= item.DoencaId;
+                    listaProcessos.Add(p);
+                }
+            }
+            ViewBag.LISTAPRO = listaProcessos.ToList();
             return View(u);
         }
     }

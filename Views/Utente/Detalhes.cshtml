@@ -27,3 +27,32 @@
 <br />
 <a asp-controller="" asp-action="">Novo Processo</a>
 
+<h3>Histórico de Processos do Utente</h3>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Numero do Processo</th>
+            <th>Data de Abertura</th>
+            <th>Data de Fecho</th>
+            <th>Sintomas</th>
+            <th>Diagnóstico</th>
+            <th>Médico</th>
+            <th>Hospital</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.LISTAPRO)
+        {
+            <tr>
+                <th>@item.NumeroProcesso</th>
+                <th>@item.DataHoraAbertura</th>
+                <th>@item.DataHoraFecho</th>
+                <th>Sintomas</th>
+                <th>@item.DoencaId</th>
+                <th>@item.MedicoId</th>
+                <th>@item.HospitalId</th>
+            </tr>
+        }           
+    </tbody>
+</table>
