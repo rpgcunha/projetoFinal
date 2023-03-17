@@ -1,0 +1,29 @@
+﻿@model apoio_decisao_medica.Models.Utente
+
+<h2>Detalhes do Utente</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Numero de Utente</th>
+            <th>Data de Nascimento</th>
+            <th>Genero</th>
+            <th>Cidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>@Model.Nome</th>
+            <th>@Model.NumeroUtente</th>
+            <th>@Model.DataNascimento</th>
+            <th>@Model.Genero</th>
+            <th>@Model.Cidade</th>
+        </tr>
+    </tbody>
+</table>
+<a asp-controller="Utentes" asp-action="Edit" asp-route-id="@Model?.Id">Editar Dados</a>
+<br />
+<br />
+<a asp-controller="" asp-action="">Novo Processo</a>
+
