@@ -1,51 +1,83 @@
-﻿@model apoio_decisao_medica.Models.Utente
-@using (Html.BeginForm())
-{
-    <h4>Indique qual é o utente:</h4>
-    @Html.DropDownList("utente", (SelectList)ViewBag.UTENTES, "Escolha o utente")
-    <br />
-    <br />
-    <input type="submit" value="Aplicar">
-    <br />
-    @if (Model.NumeroUtente != 0)
-    {
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Numero de Utente</th>
-                    <th>Nome</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>@Model.NumeroUtente</th>
-                    <th>@Model.Nome</th>
-                    <th></th>
-                </tr>
-            </tbody>
-            <thead>
-                <tr>
-                    <th>Data de Nascimento</th>
-                    <th>Género</th>
-                    <th>Cidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>@Model.DataNascimento</th>
-                    <th>@Model.Genero</th>
-                    <th>@Model.Cidade</th>
-                </tr>
-            </tbody>
-        </table>
-        <a asp-action="Processo" asp-route-id="@Model?.Id">Abrir Processo</a>
-    }
-    else
-    {
-        <h5>Selecione um Utente!</h5>
-    }
-}
-<br />
-<br />
-<br />
+﻿<h2>Novo Processo Nº @ViewBag.PROC</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                @using (Html.BeginForm())
+                {
+                    <h4>Sintomas</h4>
+                    @foreach (var item in ViewBag.CATSIN)
+                    {
+                        <a asp-route-idCatSint="@item.Id">@item.Nome</a> @:|
+                    }
+                    <br />
+                    @if (@ViewBag.FILTROSINT == null)
+                    {
+                        <p><i>Escolha uma letra para filtrar os sintomas</i></p>
+                    }
+                    else
+                    {
+                        @foreach (var item in ViewBag.FILTROSINT)
+                        {
+                            <label>
+                                @Html.RadioButton("sintoma",$"{item.Id}")
+                                @item.Nome
+                            </label>
+                        }
+                        <br />
+                        <br />
+                        <input type="submit" value="Adicionar">
+                    }
+    @*                <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Lista de Sintomas do Utente
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.LISTASINT)
+                            {
+                                <tr>
+                                    <th>
+                                        @item
+                                    </th>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+*@              }
+           </div>
+            <div class="col-6">
+                @using (Html.BeginForm())
+            {
+                <h4>Exames</h4>
+                @foreach (var item in ViewBag.CATEXAM)
+                {
+                    <a asp-route-idCatExam="@item.Id">@item.Nome</a> @:|
+                }
+                <br />
+                @if (@ViewBag.FILTROEXAM == null)
+                {
+                    <p><i>Escolha uma letra para filtrar os exames</i></p>
+                }
+                else
+                {
+                    @foreach (var item in ViewBag.FILTROEXAM)
+                    {
+                        <label>
+                            @Html.RadioButton("exame",$"{item.Id}")
+                            @item.Nome
+                        </label>
+                    }
+                    <br />
+                    <br />
+                    <input type="submit" value="Adicionar">
+                }
+            }
+            </div>
+        </div>
+    </div>
+
+
+

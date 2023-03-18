@@ -16,78 +16,101 @@ namespace apoio_decisao_medica.Controllers
         {
             dbpointer = context;
         }
-        public IActionResult Index(string utente)
+        public IActionResult Index(int Id, int idCatSint, int idCatExam, int sintoma, int exame)
         {
-            //ir buscar o ultimo registo dos processos e verificar o numero
-            //acrescentar mais 1 para o novo processo
+            //obter novo numero de processo
+            var processo = (dbpointer.Tprocessos.OrderByDescending(x => x.Id).First());
+            int nProcesso = processo.NumeroProcesso; // nao esquecer de +1
+            ViewBag.PROC = nProcesso;
+            int idProcesso = dbpointer.Tprocessos
+                .Where(p => p.NumeroProcesso == nProcesso)
+                .Select(p => p.Id)
+                .Single();
 
-            //carregar utentes na drop
-            ViewBag.UTENTES = new SelectList(dbpointer.Tutentes, "Id", "Nome");
+            //inserir novo processo na base de dados
+            //Processo novo = new Processo();
+            //novo.NumeroProcesso = nProcesso;
+            //novo.UtenteId = Id;
+            //novo.MedicoId = 1; //necessoario automatizar
+            //novo.HospitalId = 1; //necessario automatizar
+            //novo.DataHoraAbertura = DateTime.Today.ToString("dd/MM/yyyy");
+            //dbpointer.Tprocessos.Add(novo);
+            //dbpointer.SaveChanges();
 
-            //enviar os dados do utente selecionado
-            Utente u = new Utente();
-            if (!utente.IsNullOrEmpty())
+            //Listar as gategorias dos sintomas
+            ViewBag.CATSIN = dbpointer.TcatSintomas.ToList();
+            //Listra as categorias dos exames
+            ViewBag.CATEXAM = dbpointer.TcatExames.ToList();
+
+
+            //listar os sintomas filtrados pela cat
+            if (idCatSint != 0)
             {
-                foreach (var item in dbpointer.Tutentes)
-                {
-                    if (utente == item.Id.ToString())
-                    {
-                        u.Id = item.Id;
-                        u.NumeroUtente = item.NumeroUtente;
-                        u.Nome = item.Nome;
-                        u.DataNascimento = item.DataNascimento;
-                        u.Genero = item.Genero;
-                        u.Cidade = item.Cidade;
-                    }
-                }
-            }
-            return View(u);
-        }
-        public IActionResult Processo(string catSint, string sintoma)
-        { 
-        //envia as categorias dos sintomas para a drop
-        ViewBag.CATSINT = new SelectList(dbpointer.TcatSintomas, "Id", "Nome");            
-
-            //cria uma lista com os sintoma da cat escolhida na drop
-            if (!catSint.IsNullOrEmpty())
-            {
-                List<CatSintoma> sintomasTemp = new List<CatSintoma>();
+                List<Sintoma> filtroSintomas = new List<Sintoma>();
                 foreach (var item in dbpointer.Tsintomas)
                 {
-                    if (catSint == item.CatSintomaId.ToString())
+                    if (idCatSint == item.CatSintomaId)
                     {
-                        CatSintoma sin = new CatSintoma();
-                        sin.Id = item.Id;
-                        sin.Nome = item.Nome;
-                        sintomasTemp.Add(sin);
+                        Sintoma s = new Sintoma();
+                        s.Id = item.Id;
+                        s.Nome = item.Nome;
+                        s.CatSintomaId = item.CatSintomaId;
+                        filtroSintomas.Add(s);
                     }
                 }
-                ViewBag.SINTOMAS = sintomasTemp.ToList();
+                ViewBag.FILTROSINT = filtroSintomas.ToList();
             }
             else
             {
-                ViewBag.SINTOMAS = "";
+                ViewBag.FILTROSINT = null;
             }
-            //adiciona o sintoma à tabela processo/sintoma
-            var sintomas = dbpointer.Tsintomas.ToList();
-            foreach (var item in sintomas)
+            //listar os exames filtrados pela cat
+            if (idCatExam != 0)
             {
-                if (sintoma == item.Id.ToString())
+                List<Exame> filtroExames = new List<Exame>();
+                foreach (var item in dbpointer.Texames)
                 {
-                    ProcessoSintoma s = new ProcessoSintoma();
-                    s.ProcessoId = 1;
-                    s.SintomaId = item.Id;
-                    dbpointer.TprocessoSintomas.Add(s);
-                    dbpointer.SaveChanges();
+                    if (idCatExam == item.CatExameId)
+                    {
+                        Exame e = new Exame();
+                        e.Id = item.Id;
+                        e.Nome = item.Nome;
+                        e.CatExameId = item.CatExameId;
+                        filtroExames.Add(e);
+                    }
+                }
+                ViewBag.FILTROEXAM = filtroExames.ToList();
+            }
+            else
+            {
+                ViewBag.FILTROEXAM = null;
+            }
+
+
+            //adiciona sintoma ao processo
+            if (sintoma != 0)
+            {
+                var tabelaSintomas = dbpointer.Tsintomas.ToList();
+                foreach (var item in tabelaSintomas)
+                {
+                    if (sintoma == item.Id)
+                    {
+                        ProcessoSintoma s = new ProcessoSintoma();
+                        s.ProcessoId = idProcesso;
+                        s.SintomaId = item.Id;
+                        dbpointer.TprocessoSintomas.Add(s);
+                        dbpointer.SaveChanges();
+                    }
                 }
             }
+
             //Lista os sintomas do processo aberto
             List<string> listaSintomas = new List<string>();
             foreach (var item in dbpointer.TprocessoSintomas)
             {
-                if (1 == item.ProcessoId)
+                if (idProcesso == item.ProcessoId)
                 {
-                    listaSintomas.Add(item.Sintoma.Nome);
+                    listaSintomas.Add(item.Sintoma.Nome); // ?????????????????????
                 }
             }
             if (!listaSintomas.IsNullOrEmpty())
@@ -96,8 +119,10 @@ namespace apoio_decisao_medica.Controllers
             }
             else
             {
-                ViewBag.LISTASINT = "";
+                ViewBag.LISTASINT = "Ainda não foi adicionado nenhum sintoma.";
             }
+
+
 
             return View();
         }
