@@ -21,7 +21,7 @@ namespace apoio_decisao_medica.Controllers
             if (pesquisaAbertos == null)
             {
                 List<Processo> processosAbertos = new List<Processo>();
-                foreach (var item in dbpointer.Tprocessos)
+                foreach (var item in dbpointer.Tprocessos.OrderByDescending(p => p.Id))
                 {
                     if (item.MedicoId == idMedico)
                     {
@@ -75,7 +75,7 @@ namespace apoio_decisao_medica.Controllers
             {
                 int contador = 1;
                 List<Processo> processosFechados = new List<Processo>();
-                foreach (var item in dbpointer.Tprocessos)
+                foreach (var item in dbpointer.Tprocessos.OrderByDescending(p => p.Id))
                 {
                     if (item.DataHoraFecho != null)
                     {
