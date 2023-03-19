@@ -15,26 +15,40 @@ namespace apoio_decisao_medica.Controllers
         {
             dbpointer = context;
         }
-        public IActionResult Index(int Id, int idCatSint, int idCatExam, int sintoma, int exame)
+        public IActionResult CriarProcesso(int idUtente)
         {
             //obter novo numero de processo
             var processo = (dbpointer.Tprocessos.OrderByDescending(x => x.Id).First());
-            int nProcesso = processo.NumeroProcesso; // nao esquecer de +1
-            ViewBag.PROC = nProcesso;
-            int idProcesso = dbpointer.Tprocessos
-                .Where(p => p.NumeroProcesso == nProcesso)
-                .Select(p => p.Id)
-                .Single();
+            int nProcesso = processo.NumeroProcesso + 1; // nao esquecer de +1
 
             //inserir novo processo na base de dados
-            //Processo novo = new Processo();
-            //novo.NumeroProcesso = nProcesso;
-            //novo.UtenteId = Id;
-            //novo.MedicoId = 1; //necessoario automatizar
-            //novo.HospitalId = 1; //necessario automatizar
-            //novo.DataHoraAbertura = DateTime.Today.ToString("dd/MM/yyyy");
-            //dbpointer.Tprocessos.Add(novo);
-            //dbpointer.SaveChanges();
+            Processo novo = new Processo();
+            novo.NumeroProcesso = nProcesso;
+            novo.UtenteId = idUtente;
+            novo.MedicoId = 1; //necessoario automatizar
+            novo.HospitalId = 1; //necessario automatizar
+            novo.DataHoraAbertura = DateTime.Today.ToString("dd/MM/yyyy");
+            dbpointer.Tprocessos.Add(novo);
+            dbpointer.SaveChanges();
+
+            return RedirectToAction("Index", new { nProcesso = nProcesso });
+        }
+        public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, int sintoma, int exame)
+        {
+            if (nProcesso == 0)
+            {
+                ViewBag.PROC = numProcesso;
+                idProcesso = dbpointer.Tprocessos
+                    .Where(p => p.NumeroProcesso == numProcesso)
+                    .Select(p => p.Id)
+                    .Single();
+                ViewBag.IDPROCESSO = idProcesso;
+            }
+            else
+            {
+                ViewBag.PROC = nProcesso;
+                ViewBag.IDPROCESSO = idProcesso;
+            }
 
             //Listar as gategorias dos sintomas
             ViewBag.CATSIN = dbpointer.TcatSintomas.ToList();
@@ -102,6 +116,23 @@ namespace apoio_decisao_medica.Controllers
                     }
                 }
             }
+            //adiciona exame ao processo
+            if (exame != 0)
+            {
+                var tabelaExames = dbpointer.Texames.ToList();
+                foreach (var item in tabelaExames)
+                {
+                    if (exame == item.Id)
+                    {
+                        ProcessoExame e = new ProcessoExame();
+                        e.ProcessoId = idProcesso;
+                        e.ExameId = item.Id;
+                        dbpointer.TprocessoExames.Add(e);
+                        dbpointer.SaveChanges();
+                    }
+                }
+            }
+
 
             //Lista os sintomas do processo aberto
             List<string> listaSintomas = new List<string>();
@@ -109,7 +140,7 @@ namespace apoio_decisao_medica.Controllers
             {
                 if (idProcesso == item.ProcessoId)
                 {
-                    listaSintomas.Add(item.Sintoma.Nome); // ?????????????????????
+                    listaSintomas.Add(item.Sintoma.Nome);
                 }
             }
             if (!listaSintomas.IsNullOrEmpty())
@@ -118,8 +149,27 @@ namespace apoio_decisao_medica.Controllers
             }
             else
             {
-                ViewBag.LISTASINT = "Ainda não foi adicionado nenhum sintoma.";
+                ViewBag.LISTASINT = null;
             }
+            //Lista os sintomas do processo aberto
+            List<string> listaExames = new List<string>();
+            foreach (var item in dbpointer.TprocessoExames.Include(p => p.Exame))
+            {
+                if (idProcesso == item.ProcessoId)
+                {
+                    listaExames.Add(item.Exame.Nome);
+                }
+            }
+            if (!listaExames.IsNullOrEmpty())
+            {
+                ViewBag.LISTAEXAM = listaExames.ToList();
+            }
+            else
+            {
+                ViewBag.LISTAEXAM = null;
+            }
+
+
 
 
 

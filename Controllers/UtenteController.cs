@@ -98,7 +98,7 @@ namespace apoio_decisao_medica.Controllers
 
             //historico de processos do utente
             List<HistoricoProcesso> listaProcessos = new List<HistoricoProcesso>();
-            var processos = dbpointer.Tprocessos.Include(p => p.Doenca).Include(p => p.Hospital).Include(p => p.Medico);
+            var processos = dbpointer.Tprocessos.OrderByDescending(p => p.Id).Include(p => p.Doenca).Include(p => p.Hospital).Include(p => p.Medico);
             foreach (var item in processos)
             {
                 if (item.UtenteId == Id)

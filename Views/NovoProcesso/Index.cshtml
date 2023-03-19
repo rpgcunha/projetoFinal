@@ -7,34 +7,99 @@
                     <h4>Sintomas</h4>
                     @foreach (var item in ViewBag.CATSIN)
                     {
-                        <a asp-route-idCatSint="@item.Id">@item.Nome</a> @:|
+                    <a asp-route-idCatSint="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
                     }
                     <br />
-                    @if (@ViewBag.FILTROSINT == null)
+                    @if (ViewBag.FILTROSINT == null)
                     {
                         <p><i>Escolha uma letra para filtrar os sintomas</i></p>
                     }
                     else
                     {
-                        @foreach (var item in ViewBag.FILTROSINT)
+                        if (ViewBag.FILTROSINT.Count != 0)
                         {
-                            <label>
-                                @Html.RadioButton("sintoma",$"{item.Id}")
-                                @item.Nome
-                            </label>
+                            @foreach (var item in ViewBag.FILTROSINT)
+                            {
+                                <label>
+                                    @Html.RadioButton("sintoma",$"{item.Id}")
+                                    @item.Nome
+                                </label>
+                            }
                         }
-                        <br />
-                        <br />
-                        <input type="submit" value="Adicionar">
+                        else
+                        {
+                            <p><i>Não existem sintomas nesta categoria!</i></p>
+                        }
                     }
-                    <table class="table">
-                        <thead>
+                    <br />
+                    <br />
+                    <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
+                    <a asp-controller="Sintomas" asp-action="Create">Criar Novo Sintoma</a>
+                    <br />
+              }
+           </div>
+            <div class="col-6">
+                @using (Html.BeginForm())
+                {
+                    <h4>Exames</h4>
+                    @foreach (var item in ViewBag.CATEXAM)
+                    {
+                        <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
+                    }
+                    <br />
+                    @if (ViewBag.FILTROEXAM == null)
+                    {
+                        <p><i>Escolha uma letra para filtrar os exames</i></p>
+                    }
+                    else
+                    {
+                        if (ViewBag.FILTROEXAM.Count != 0)
+                        {
+                            @foreach (var item in ViewBag.FILTROEXAM)
+                            {
+                                <label>
+                                    @Html.RadioButton("exame",$"{item.Id}")
+                                    @item.Nome
+                                </label>
+                            }
+                        }
+                        else
+                        {
+                            <p><i>Não existem exames nesta categoria!</i></p>
+                        }
+                    }
+                    <br />
+                    <br />
+                    <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
+                    <a asp-controller="Exames" asp-action="Create">Criar Novo Exame</a>
+                    <br />
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Lista de Sintomas do Utente
+                            </th>
+                        </tr>
+                    </thead>
+                    @if (ViewBag.LISTASINT == null)
+                    {
+                        <tbody>
                             <tr>
                                 <th>
-                                    Lista de Sintomas do Utente
+                                    <i>
+                                        Ainda não foi adicionado nenhum sintoma ao processo.
+                                    </i>
                                 </th>
                             </tr>
-                        </thead>
+                        </tbody>
+                    }
+                    else
+                    {
                         <tbody>
                             @foreach (var item in ViewBag.LISTASINT)
                             {
@@ -45,36 +110,44 @@
                                 </tr>
                             }
                         </tbody>
-                    </table>
-              }
-           </div>
-            <div class="col-6">
-                @using (Html.BeginForm())
-            {
-                <h4>Exames</h4>
-                @foreach (var item in ViewBag.CATEXAM)
-                {
-                    <a asp-route-idCatExam="@item.Id">@item.Nome</a> @:|
-                }
-                <br />
-                @if (@ViewBag.FILTROEXAM == null)
-                {
-                    <p><i>Escolha uma letra para filtrar os exames</i></p>
-                }
-                else
-                {
-                    @foreach (var item in ViewBag.FILTROEXAM)
-                    {
-                        <label>
-                            @Html.RadioButton("exame",$"{item.Id}")
-                            @item.Nome
-                        </label>
                     }
-                    <br />
-                    <br />
-                    <input type="submit" value="Adicionar">
-                }
-            }
+                </table>
+            </div>
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Lista de Exames do Utente
+                            </th>
+                        </tr>
+                    </thead>
+                    @if (ViewBag.LISTAEXAM == null)
+                    {
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <i>
+                                        Ainda não foi adicionado nenhum exame ao processo.
+                                    </i>
+                                </th>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <tbody>
+                            @foreach (var item in ViewBag.LISTAEXAM)
+                            {
+                                <tr>
+                                    <th>
+                                        @item
+                                    </th>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                </table>
             </div>
         </div>
     </div>

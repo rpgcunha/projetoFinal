@@ -28,7 +28,7 @@
 <br />
 <br />
 <div class="btnCriar">
-    <a asp-controller="NovoProcesso" asp-action="Index" asp-route-id="@ViewBag.UTENTE?.Id">Novo Processo</a>
+    <a asp-controller="NovoProcesso" asp-action="CriarProcesso" asp-route-idUtente="@ViewBag.UTENTE?.Id">Novo Processo</a>
 </div>
 @using (Html.BeginForm())
 {
@@ -50,7 +50,14 @@
             @foreach (var item in Model)
             {
                     <tr>
-                        <th><a asp-controller="Processo" asp-action="Index" asp-route-id="@item.Id">@item.numProcesso</a></th>
+                        @if (item.DataFecho == null)
+                        {
+                            <th><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.numProcesso">@item.numProcesso</a></th>
+                        }
+                        else
+                        {
+                            <th><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.numProcesso</a></th>
+                        }
                         <th>@item.DataAbertura</th>
                         <th>@item.DataFecho</th>
                         <th>@if (ViewBag.LISTA != item.Id)
