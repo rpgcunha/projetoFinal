@@ -1,20 +1,66 @@
 ﻿<h2>Meus processos</h2>
 <br />
 <br />
-<div class="container">
-    <div class="row">
-        <div class="col-9">
-            <h5>Processos Abertos</h5>
-        </div>
-        <div class="col-3">
-            @Html.TextBox("pesquisaAbertos")
-            <input class="btnCriar" type="submit" value="Procurar">
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h5>Processos Abertos</h5>
+            </div>
+            <div class="col-3">
+                @Html.TextBox("pesquisaAbertos")
+                <input class="btnCriar" type="submit" value="Procurar">
+            </div>
         </div>
     </div>
-</div>
-<table class="table">
-    <thead>
-        <tr>
+    <table class="table">
+        <thead>
+            <tr>
+                    <th>Numero do Processo</th>
+                    <th>Nome do Utente</th>
+                    <th>Numero do Utente</th>
+                    <th>Data de abertura</th>
+                    <th>Data de Fecho</th>
+                    <th>Doença</th>
+                    <th>Hospital</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.ABERTOS)
+                {
+                    <tr>
+                        <th><a asp-controller="Processo" asp-action="Aberto" asp-route-idProcesso="@item.Id">@item.numProcesso</a></th>
+                        <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NomeUtente</a></th>
+                        <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NumeroUtente</a></th>
+                        <th>@item.DataAbertura</th>
+                        <th>@item.DataFecho</th>
+                        <th>@item.Doenca</th>
+                        <th>@item.Hospital</th>
+                    </tr>
+                }
+        </tbody>
+    </table>
+}
+<br />
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h5>Processos Fechados</h5>
+            </div>
+            <div class="col-3">
+                @Html.TextBox("pesquisaFechados")
+                <input class="btnCriar" type="submit" value="Procurar">
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
                 <th>Numero do Processo</th>
                 <th>Nome do Utente</th>
                 <th>Numero do Utente</th>
@@ -22,61 +68,21 @@
                 <th>Data de Fecho</th>
                 <th>Doença</th>
                 <th>Hospital</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in ViewBag.ABERTOS)
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.FECHADOS)
             {
                 <tr>
-                    <th><a asp-controller="Processo" asp-action="Aberto" asp-route-idProcesso="@item.Id">@item.NumeroProcesso</a></th>
-                    <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.UtenteId</a></th>
-                    <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.UtenteId</a></th>
-                    <th>@item.DataHoraAbertura</th>
-                    <th>@item.DataHoraFecho</th>
-                    <th>@item.DoencaId</th>
-                    <th>@item.HospitalId</th>
+                    <th><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.numProcesso</a></th>
+                    <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NomeUtente</a></th>
+                    <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NumeroUtente</a></th>
+                    <th>@item.DataAbertura</th>
+                    <th>@item.DataFecho</th>
+                    <th>@item.Doenca</th>
+                    <th>@item.Hospital</th>
                 </tr>
             }
-    </tbody>
-</table>
-<br />
-<br />
-<br />
-<div class="container">
-    <div class="row">
-        <div class="col-9">
-            <h5>Processos Fechados</h5>
-        </div>
-        <div class="col-3">
-            @Html.TextBox("pesquisaFechados")
-            <input class="btnCriar" type="submit" value="Procurar">
-        </div>
-    </div>
-</div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Numero do Processo</th>
-            <th>Nome do Utente</th>
-            <th>Numero do Utente</th>
-            <th>Data de abertura</th>
-            <th>Data de Fecho</th>
-            <th>Doença</th>
-            <th>Hospital</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in ViewBag.FECHADOS)
-        {
-            <tr>
-                <th><a asp-controller="Processo" asp-action="Fechado" asp-route-idProcesso="@item.Id">@item.NumeroProcesso</a></th>
-                <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.UtenteId</a></th>
-                <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.UtenteId</a></th>
-                <th>@item.DataHoraAbertura</th>
-                <th>@item.DataHoraFecho</th>
-                <th>@item.DoencaId</th>
-                <th>@item.HospitalId</th>
-            </tr>
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
+}

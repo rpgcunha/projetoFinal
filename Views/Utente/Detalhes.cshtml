@@ -1,4 +1,4 @@
-﻿@model IEnumerable<apoio_decisao_medica.Models.Processo>
+﻿@model IEnumerable<apoio_decisao_medica.ViewsModels.HistoricoProcesso>
 
 <h2>Detalhes do Utente</h2>
 
@@ -30,44 +30,54 @@
 <div class="btnCriar">
     <a asp-controller="NovoProcesso" asp-action="Index" asp-route-id="@ViewBag.UTENTE?.Id">Novo Processo</a>
 </div>
-
-<h3>Histórico de Processos do Utente</h3>
-<br />
-<table class="table">
-    <thead>
-        <tr>
-            <th>Numero do Processo</th>
-            <th>Data de Abertura</th>
-            <th>Data de Fecho</th>
-            <th>Sintomas</th>
-            <th>Diagnóstico</th>
-            <th>Médico</th>
-            <th>Hospital</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            @if (item.UtenteId == ViewBag.ID)
+@using (Html.BeginForm())
+{
+    <h3>Histórico de Processos do Utente</h3>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numero do Processo</th>
+                <th>Data de Abertura</th>
+                <th>Data de Fecho</th>
+                <th>Sintomas</th>
+                <th>Diagnóstico</th>
+                <th>Médico</th>
+                <th>Hospital</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
             {
-                <tr>
-                    <th>@item.NumeroProcesso</th>
-                    <th>@item.DataHoraAbertura</th>
-                    <th>@item.DataHoraFecho</th>
-                    <th>@foreach (var itemS in ViewBag.SINTOMAS)
-                        {
-                            @itemS
-                            <br />
+                    <tr>
+                        <th><a asp-controller="Processo" asp-action="Index" asp-route-id="@item.Id">@item.numProcesso</a></th>
+                        <th>@item.DataAbertura</th>
+                        <th>@item.DataFecho</th>
+                        <th>@if (ViewBag.LISTA != item.Id)
+                            {
+                            <input type="submit" value="+" asp-route-idProc="@item.Id">
                         }
-                    </th>
-                    <th>@item.DoencaId</th>
-                    <th>@item.MedicoId</th>
-                    <th>@item.HospitalId</th>
-                </tr>
-            }
-        }           
-    </tbody>
-</table>
+                        else
+                        {
+                            if (ViewBag.LISTA == item.Id)
+                            {
+                                @foreach (var itemS in ViewBag.SINTOMAS)
+                                {
+                                    @itemS
+                                    <br />
+                                }
+                            }
+                        }
+                        </th>
+                        <th>@item.Doenca</th>
+                        <th>@item.Medico</th>
+                        <th>@item.Hospital</th>
+                    </tr>
+            }           
+        </tbody>
+    </table>
+}
+@ViewBag.TESTE
 <br />
 <br />
 <div class="btnCriar">

@@ -1,6 +1,8 @@
 ﻿using apoio_decisao_medica.Data;
 using apoio_decisao_medica.Models;
+using apoio_decisao_medica.ViewsModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -20,21 +22,22 @@ namespace apoio_decisao_medica.Controllers
             //enviar a lista de todos os processos abertos do medico
             if (pesquisaAbertos == null)
             {
-                List<Processo> processosAbertos = new List<Processo>();
-                foreach (var item in dbpointer.Tprocessos.OrderByDescending(p => p.Id))
+                List<HistoricoProcesso> processosAbertos = new List<HistoricoProcesso>();
+                foreach (var item in dbpointer.Tprocessos.Include(p => p.Doenca).Include(p => p.Medico).Include(p => p.Hospital).Include(p => p.Utente).OrderByDescending(p => p.Id))
                 {
                     if (item.MedicoId == idMedico)
                     {
                         if (item.DataHoraFecho == null)
                         {
-                            Processo p = new Processo();
+                            HistoricoProcesso p = new HistoricoProcesso();
                             p.Id = item.Id;
-                            p.NumeroProcesso = item.NumeroProcesso;
+                            p.numProcesso = item.NumeroProcesso;
                             p.UtenteId = item.UtenteId;
-                            p.MedicoId = item.MedicoId;
-                            p.HospitalId = item.HospitalId;
-                            p.DataHoraAbertura = item.DataHoraAbertura;
-                            p.DoencaId = item.DoencaId;
+                            p.NomeUtente = item.Utente?.Nome;
+                            p.NumeroUtente = item.Utente.NumeroUtente;
+                            p.Hospital = item.Hospital.Nome;
+                            p.DataAbertura = item.DataHoraAbertura;
+                            p.Doenca = item.Doenca?.Nome;
                             processosAbertos.Add(p);
                         }
                     }
@@ -43,26 +46,27 @@ namespace apoio_decisao_medica.Controllers
             }
             else
             {
-                List<Processo> processosAbertos = new List<Processo>();
-                foreach (var item in dbpointer.Tprocessos)
+                List<HistoricoProcesso> processosAbertos = new List<HistoricoProcesso>();
+                foreach (var item in dbpointer.Tprocessos.Include(p => p.Doenca).Include(p => p.Medico).Include(p => p.Hospital).Include(p => p.Utente).OrderByDescending(p => p.Id))
                 {
                     if (item.MedicoId == idMedico)
                     {
                         if (item.DataHoraFecho == null)
                         {
                             if (item.NumeroProcesso.ToString() == pesquisaAbertos ||
-                                item.DataHoraAbertura.ToString() == pesquisaAbertos)
+                                item.Utente.Nome.ToUpper().Contains(pesquisaAbertos.ToUpper()) ||
+                                item.Utente.NumeroUtente.ToString() == pesquisaAbertos ||
+                                item.DataHoraAbertura.ToString().Contains(pesquisaAbertos))
                             {
-                                Processo p = new Processo();
+                                HistoricoProcesso p = new HistoricoProcesso();
                                 p.Id = item.Id;
-                                p.NumeroProcesso = item.NumeroProcesso;
-                                p.UtenteId = item.UtenteId;
-                                p.MedicoId = item.MedicoId;
-                                p.HospitalId = item.HospitalId;
-                                p.DataHoraAbertura = item.DataHoraAbertura;
-                                p.DoencaId = item.DoencaId;
+                                p.numProcesso = item.NumeroProcesso;
+                                p.NomeUtente = item.Utente.Nome;
+                                p.NumeroUtente = item.Utente.NumeroUtente;
+                                p.Hospital = item.Hospital.Nome;
+                                p.DataAbertura = item.DataHoraAbertura;
+                                p.Doenca = item.Doenca?.Nome;
                                 processosAbertos.Add(p);
-
                             }
                         }
                     }
@@ -74,20 +78,21 @@ namespace apoio_decisao_medica.Controllers
             if (pesquisaFechados == null)
             {
                 int contador = 1;
-                List<Processo> processosFechados = new List<Processo>();
-                foreach (var item in dbpointer.Tprocessos.OrderByDescending(p => p.Id))
+                List<HistoricoProcesso> processosFechados = new List<HistoricoProcesso>();
+                foreach (var item in dbpointer.Tprocessos.Include(p => p.Doenca).Include(p => p.Medico).Include(p => p.Hospital).Include(p => p.Utente).OrderByDescending(p => p.Id))
                 {
                     if (item.DataHoraFecho != null)
                     {
-                        Processo p = new Processo();
+                        HistoricoProcesso p = new HistoricoProcesso();
                         p.Id = item.Id;
-                        p.NumeroProcesso = item.NumeroProcesso;
+                        p.numProcesso = item.NumeroProcesso;
                         p.UtenteId = item.UtenteId;
-                        p.MedicoId = item.MedicoId;
-                        p.HospitalId = item.HospitalId;
-                        p.DataHoraAbertura = item.DataHoraAbertura;
-                        p.DataHoraFecho = item.DataHoraFecho;
-                        p.DoencaId = item.DoencaId;
+                        p.NomeUtente = item.Utente?.Nome;
+                        p.NumeroUtente = item.Utente.NumeroUtente;
+                        p.Hospital = item.Hospital.Nome;
+                        p.DataAbertura = item.DataHoraAbertura;
+                        p.DataFecho = item.DataHoraFecho;
+                        p.Doenca = item.Doenca?.Nome;
                         processosFechados.Add(p);                   
                         contador++;
                     }
@@ -101,25 +106,29 @@ namespace apoio_decisao_medica.Controllers
             }
             else
             {
-                List<Processo> processosFechados = new List<Processo>();
-                foreach (var item in dbpointer.Tprocessos)
+                List<HistoricoProcesso> processosFechados = new List<HistoricoProcesso>();
+                foreach (var item in dbpointer.Tprocessos.Include(p => p.Doenca).Include(p => p.Medico).Include(p => p.Hospital).Include(p => p.Utente).OrderByDescending(p => p.Id))
                 {
                     if (item.MedicoId == idMedico)
                     {
                         if (item.DataHoraFecho != null)
                         {
-                            if (item.NumeroProcesso.ToString() == pesquisaFechados ||
-                                item.DataHoraAbertura.ToString() == pesquisaFechados ||
-                                item.DataHoraFecho.ToString() == pesquisaFechados)
+                            if (item.NumeroProcesso.ToString() == pesquisaAbertos ||
+                                item.Utente.Nome.ToUpper().Contains(pesquisaAbertos.ToUpper()) ||
+                                item.Utente.NumeroUtente.ToString() == pesquisaAbertos ||
+                                item.DataHoraAbertura.ToString().Contains(pesquisaAbertos) ||
+                                item.DataHoraFecho.ToString().Contains(pesquisaFechados))
                             {
-                                Processo p = new Processo();
+                                HistoricoProcesso p = new HistoricoProcesso();
                                 p.Id = item.Id;
-                                p.NumeroProcesso = item.NumeroProcesso;
+                                p.numProcesso = item.NumeroProcesso;
                                 p.UtenteId = item.UtenteId;
-                                p.MedicoId = item.MedicoId;
-                                p.HospitalId = item.HospitalId;
-                                p.DataHoraAbertura = item.DataHoraAbertura;
-                                p.DoencaId = item.DoencaId;
+                                p.NomeUtente = item.Utente?.Nome;
+                                p.NumeroUtente = item.Utente.NumeroUtente;
+                                p.Hospital = item.Hospital.Nome;
+                                p.DataAbertura = item.DataHoraAbertura;
+                                p.DataFecho = item.DataHoraFecho;
+                                p.Doenca = item.Doenca?.Nome;
                                 processosFechados.Add(p);
                             }
                         }

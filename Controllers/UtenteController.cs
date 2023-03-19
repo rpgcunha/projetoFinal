@@ -2,7 +2,9 @@
 using apoio_decisao_medica.Models;
 using apoio_decisao_medica.ViewsModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics.Metrics;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -75,7 +77,7 @@ namespace apoio_decisao_medica.Controllers
             return View(listaUtentes);
         }
 
-        public IActionResult Detalhes(int? Id)
+        public IActionResult Detalhes(int? Id, int idProc)
         {
             //detalhes do utente
             foreach (var item in dbpointer.Tutentes)
@@ -95,35 +97,44 @@ namespace apoio_decisao_medica.Controllers
 
 
             //historico de processos do utente
-            List<Processo> listaProcessos = new List<Processo>();
-            int nPro = 0;
-            foreach (var item in dbpointer.Tprocessos)
+            List<HistoricoProcesso> listaProcessos = new List<HistoricoProcesso>();
+            var processos = dbpointer.Tprocessos.Include(p => p.Doenca).Include(p => p.Hospital).Include(p => p.Medico);
+            foreach (var item in processos)
             {
                 if (item.UtenteId == Id)
                 {
-                    Processo p = new Processo();
-                    nPro = item.Id;
+                    HistoricoProcesso p = new HistoricoProcesso();
                     p.Id = item.Id;
-                    p.NumeroProcesso = item.NumeroProcesso;
-                    p.DataHoraAbertura = item.DataHoraAbertura;
-                    p.DataHoraFecho = item.DataHoraFecho;
-                    p.DoencaId = item.DoencaId;
-                    p.MedicoId = item.MedicoId;
-                    p.HospitalId = item.HospitalId;
+                    p.numProcesso = item.NumeroProcesso;
+                    p.DataAbertura = item.DataHoraAbertura;
+                    p.DataFecho = item.DataHoraFecho;
+                    p.Doenca = item.Doenca?.Nome;
+                    p.Medico = item.Medico.Nome;
+                    p.Hospital = item.Hospital.Nome;
                     listaProcessos.Add(p);
                 }
             }
-            ViewBag.ID = Id;
-            List<int> sintomas = new List<int>();
-            foreach (var item in dbpointer.TprocessoSintomas)
+
+            //quando se clica no mais carrega os sintomas daquele processo
+            if (idProc != 0)
             {
-                if (nPro == item.ProcessoId)
+                List<string> listaSintomas = new List<string>();
+                foreach (var item in dbpointer.TprocessoSintomas.Include(s => s.Sintoma))
                 {
-                    sintomas.Add(item.SintomaId);
+                    if (idProc == item.ProcessoId)
+                    {
+                        listaSintomas.Add(item.Sintoma.Nome);
+                    }
                 }
+                ViewBag.SINTOMAS = listaSintomas.ToList();
+                ViewBag.LISTA = idProc;
             }
-            ViewBag.SINTOMAS = sintomas.ToList();
-            return View(dbpointer.Tprocessos.ToList());
+            else
+            {
+                ViewBag.LISTA = 0;
+            }
+
+            return View(listaProcessos.ToList());
         }
     }
 }

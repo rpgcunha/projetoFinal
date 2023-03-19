@@ -1,6 +1,5 @@
 ﻿using apoio_decisao_medica.Data;
 using apoio_decisao_medica.Models;
-using apoio_decisao_medica.ViewsModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -106,7 +105,7 @@ namespace apoio_decisao_medica.Controllers
 
             //Lista os sintomas do processo aberto
             List<string> listaSintomas = new List<string>();
-            foreach (var item in dbpointer.TprocessoSintomas)
+            foreach (var item in dbpointer.TprocessoSintomas.Include(p => p.Sintoma))
             {
                 if (idProcesso == item.ProcessoId)
                 {
