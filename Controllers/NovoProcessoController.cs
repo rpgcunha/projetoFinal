@@ -1,5 +1,6 @@
 ﻿using apoio_decisao_medica.Data;
 using apoio_decisao_medica.Models;
+using apoio_decisao_medica.ViewsModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +34,8 @@ namespace apoio_decisao_medica.Controllers
 
             return RedirectToAction("Index", new { nProcesso = nProcesso });
         }
-        public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, int sintoma, int exame)
+        public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
+            int sintoma, int exame, int sug)
         {
             if (nProcesso == 0)
             {
@@ -135,12 +137,17 @@ namespace apoio_decisao_medica.Controllers
 
 
             //Lista os sintomas do processo aberto
-            List<string> listaSintomas = new List<string>();
+            List<Sintoma> listaSintomas = new List<Sintoma>();
             foreach (var item in dbpointer.TprocessoSintomas.Include(p => p.Sintoma))
             {
                 if (idProcesso == item.ProcessoId)
                 {
-                    listaSintomas.Add(item.Sintoma.Nome);
+                    Sintoma s = new Sintoma();
+                    s.Id = item.Sintoma.Id;
+                    s.Nome= item.Sintoma.Nome;
+                    s.CatSintoma = item.Sintoma.CatSintoma;
+                    
+                    listaSintomas.Add(s);
                 }
             }
             if (!listaSintomas.IsNullOrEmpty())
@@ -152,12 +159,16 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.LISTASINT = null;
             }
             //Lista os sintomas do processo aberto
-            List<string> listaExames = new List<string>();
+            List<Exame> listaExames = new List<Exame>();
             foreach (var item in dbpointer.TprocessoExames.Include(p => p.Exame))
             {
                 if (idProcesso == item.ProcessoId)
                 {
-                    listaExames.Add(item.Exame.Nome);
+                    Exame e = new Exame();
+                    e.Id = item.Exame.Id;
+                    e.Nome = item.Exame.Nome;
+                    e.CatExame = item.Exame.CatExame;
+                    listaExames.Add(e);
                 }
             }
             if (!listaExames.IsNullOrEmpty())
@@ -169,8 +180,38 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.LISTAEXAM = null;
             }
 
+            List<int> doencas = new List<int>();
+            if (sug == 1)
+            {
+                foreach (var itemS in listaSintomas)
+                {
+                    foreach (var itemD in dbpointer.TdoencaSintomas)
+                    {
+                        if (itemS.Id == itemD.SintomaId)
+                        {
+                            if (itemD.Relevancia >= 60)
+                            {
+                                doencas.Add(itemD.DoencaId);
+                            }
+                        }
+                    }
+                }
+                ViewBag.TESTE1 = doencas.ToList();
+            }
+            if (doencas != null)
+            {
+                List<Contagem> contagem = new List<Contagem>();
+                foreach (var itemD in doencas)
+                {
+                    foreach (var itemC in contagem)
+                    {
+                        if (itemD == itemC.DoencaId)
+                        {
 
-
+                        }
+                    }
+                }
+            }
 
 
             return View();

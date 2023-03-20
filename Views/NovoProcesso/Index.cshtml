@@ -105,7 +105,7 @@
                             {
                                 <tr>
                                     <th>
-                                        @item
+                                        @item.Nome
                                     </th>
                                 </tr>
                             }
@@ -141,7 +141,7 @@
                             {
                                 <tr>
                                     <th>
-                                        @item
+                                        @item.Nome
                                     </th>
                                 </tr>
                             }
@@ -152,5 +152,17 @@
         </div>
     </div>
 
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Apresentar Sugestões" asp-route-numProcesso="@ViewBag.PROC" asp-route-sug="1">
+    <br />
+    @if (ViewBag.TESTE1 != null)
+    {
+        @foreach (var item in ViewBag.TESTE1)
+        {
+            @item
+            <br />
+        }
 
-
+    }
+}
