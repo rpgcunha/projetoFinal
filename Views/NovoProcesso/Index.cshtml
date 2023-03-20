@@ -169,21 +169,45 @@
                         <h5>@item.Nome</h5>
                         <label>Especialidade: @item.CatDoenca.Nome</label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <h6>Sintomas:</h6>
                         @foreach (var itemS in ViewBag.TODOSSINTOMAS)
                         {
                             if (item.Id == itemS.DoencaId)
                             {
-                                @itemS.Sintoma.Nome @:->
-                                @itemS.Relevancia@:%
+                                int sim = 0;
+                                foreach (var itemX in ViewBag.LISTASINT)
+                                {
+
+                                    if (itemS.SintomaId == itemX.Id)
+                                    {
+                                        <label class="text-success">
+                                            @itemS.Sintoma.Nome ->
+                                            @itemS.Relevancia%
+                                        </label>
+                                        sim = 1;
+                                        break;
+                                    }
+                                }
+                                if (sim == 0)
+                                {
+                                    <label class="text-secondary">
+                                        @itemS.Sintoma.Nome ->
+                                        @itemS.Relevancia%
+                                    </label>
+                                }
                                 <br />
                             }
                         }
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         Exames Sugeridos:
                     </div>
+                    <div class="col-2">
+                        Decisão<br>
+                        @Html.RadioButton("decisao","@item.Id")
+                    </div>
+
                 </div>
             }
         </div>

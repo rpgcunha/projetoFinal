@@ -216,6 +216,7 @@ namespace apoio_decisao_medica.Controllers
                             contagem[item] = 1;
                         }
                     }
+                    //verifica qual a doença que se repete mais vezes
                     int maior = contagem[doencas[0]];
                     int idMaior = doencas[0];
                     foreach (KeyValuePair<int, int> par in contagem)
@@ -233,6 +234,7 @@ namespace apoio_decisao_medica.Controllers
                             doencasSugeridas.Add(par.Key);
                         }
                     }
+                    //envia a(s) doença(s) para a view
                     ViewBag.PERCENTAGEMSINT = (100 * maior) / listaSintomas.Count();
                     List<Doenca> doencasSugestao1 = new List<Doenca>();
                     foreach (var item in doencasSugeridas)
