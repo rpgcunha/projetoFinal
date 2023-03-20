@@ -1,4 +1,4 @@
-﻿<h2>Novo Processo Nº @ViewBag.PROC</h2>
+﻿<h2>Numero do Processo Nº @ViewBag.PROC</h2>
     <div class="container">
         <div class="row">
             <div class="col-6">
@@ -156,13 +156,36 @@
 {
     <input type="submit" value="Apresentar Sugestões" asp-route-numProcesso="@ViewBag.PROC" asp-route-sug="1">
     <br />
-    @if (ViewBag.TESTE1 != null)
+    <br />
+    @if (ViewBag.SUGESTAO1 != null)
     {
-        @foreach (var item in ViewBag.TESTE1)
-        {
-            @item
-            <br />
-        }
-
+        <h3>Sugestão</h3>
+        <h5>@ViewBag.PERCENTAGEMSINT% dos Sintomas correspondem aos seguintes diagnósticos:</h5>
+        <div class="container">
+            @foreach (var item in ViewBag.SUGESTAO1)
+            {
+                <div class="row border">
+                    <div class="col-4">
+                        <h5>@item.Nome</h5>
+                        <label>Especialidade: @item.CatDoenca.Nome</label>
+                    </div>
+                    <div class="col-4">
+                        <h6>Sintomas:</h6>
+                        @foreach (var itemS in ViewBag.TODOSSINTOMAS)
+                        {
+                            if (item.Id == itemS.DoencaId)
+                            {
+                                @itemS.Sintoma.Nome @:->
+                                @itemS.Relevancia@:%
+                                <br />
+                            }
+                        }
+                    </div>
+                    <div class="col-4">
+                        Exames Sugeridos:
+                    </div>
+                </div>
+            }
+        </div>
     }
 }

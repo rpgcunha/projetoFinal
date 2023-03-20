@@ -180,6 +180,9 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.LISTAEXAM = null;
             }
 
+
+            //carrega para a lista doencas as doenças cujo os sintomas apresentados tenham
+            //uma relevancia igual ou superior a 60%
             List<int> doencas = new List<int>();
             if (sug == 1)
             {
@@ -197,19 +200,57 @@ namespace apoio_decisao_medica.Controllers
                     }
                 }
                 ViewBag.TESTE1 = doencas.ToList();
-            }
-            if (doencas != null)
-            {
-                List<Contagem> contagem = new List<Contagem>();
-                foreach (var itemD in doencas)
+                List<int> doencasSugeridas = new List<int>();
+                //se houver doenças na lista verifica qual a que aparece mais vezes
+                if (doencas != null)
                 {
-                    foreach (var itemC in contagem)
+                    Dictionary<int, int> contagem = new Dictionary<int, int>();
+                    foreach (var item in doencas)
                     {
-                        if (itemD == itemC.DoencaId)
+                        if (contagem.ContainsKey(item))
                         {
-
+                            contagem[item]++;
+                        }
+                        else
+                        {
+                            contagem[item] = 1;
                         }
                     }
+                    int maior = contagem[doencas[0]];
+                    int idMaior = doencas[0];
+                    foreach (KeyValuePair<int, int> par in contagem)
+                    {
+                        if (par.Value > maior)
+                        {
+                            maior = par.Value;
+                            idMaior = par.Key;
+                        }
+                    }
+                    foreach (KeyValuePair<int, int> par in contagem)
+                    {
+                        if (par.Value == maior)
+                        {
+                            doencasSugeridas.Add(par.Key);
+                        }
+                    }
+                    ViewBag.PERCENTAGEMSINT = (100 * maior) / listaSintomas.Count();
+                    List<Doenca> doencasSugestao1 = new List<Doenca>();
+                    foreach (var item in doencasSugeridas)
+                    {
+                        foreach (var itemD in dbpointer.Tdoencas.Include(d => d.CatDoenca).Include(d => d.DoencaSintoma))
+                        {
+                            if (item == itemD.Id)
+                            {
+                                Doenca d = new Doenca();
+                                d.Id = itemD.Id;
+                                d.Nome = itemD.Nome;
+                                d.CatDoenca = itemD.CatDoenca;
+                                doencasSugestao1.Add(d);
+                            }
+                        }
+                    }
+                    ViewBag.SUGESTAO1 = doencasSugestao1;
+                    ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas.OrderBy(p=>p.Relevancia).Include(s => s.Sintoma);
                 }
             }
 
