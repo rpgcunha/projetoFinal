@@ -212,4 +212,12 @@
             }
         </div>
     }
+    <br />
+    <br />
+    <input type="submit" value="Outras Patologias" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1">
+    <br />
+    <br />
+    <br />
+    <br />
+    @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag)
 }

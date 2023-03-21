@@ -36,7 +36,7 @@ namespace apoio_decisao_medica.Controllers
             return RedirectToAction("Index", new { nProcesso = nProcesso });
         }
         public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
-            int sintoma, int exame, int sug)
+            int sintoma, int exame, int sug, int maisDoencas)
         {
             if (nProcesso == 0)
             {
@@ -265,6 +265,10 @@ namespace apoio_decisao_medica.Controllers
                 }
             }
 
+            if (maisDoencas == 1)
+            {
+                ViewBag.CATDOENCA = new SelectList(dbpointer.TcatDoencas.OrderBy(d => d.Nome), "Id", "Nome");
+            }
 
             return View();
         }
