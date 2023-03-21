@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using NuGet.Packaging.Rules;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -183,7 +184,7 @@ namespace apoio_decisao_medica.Controllers
 
             //carrega para a lista doencas as doenças cujo os sintomas apresentados tenham
             //uma relevancia igual ou superior a 60%
-            List<int> doencas = new List<int>();
+            Dictionary<int, int> doencasPercentagem = new Dictionary<int, int>();
             if (sug == 1)
             {
                 foreach (var itemS in listaSintomas)
@@ -192,50 +193,58 @@ namespace apoio_decisao_medica.Controllers
                     {
                         if (itemS.Id == itemD.SintomaId)
                         {
-                            if (itemD.Relevancia >= 60)
+                            if (!doencasPercentagem.ContainsKey(itemD.DoencaId))
                             {
-                                doencas.Add(itemD.DoencaId);
+                                doencasPercentagem[itemD.DoencaId] = 0;
                             }
                         }
                     }
                 }
-                ViewBag.TESTE1 = doencas.ToList();
-                List<int> doencasSugeridas = new List<int>();
-                //se houver doenças na lista verifica qual a que aparece mais vezes
-                if (doencas != null)
+                //se houver doenças na lista verifica a relevancia em relaçao aos sintomas apresentados
+                if (doencasPercentagem != null)
                 {
-                    Dictionary<int, int> contagem = new Dictionary<int, int>();
-                    foreach (var item in doencas)
+                    foreach (KeyValuePair<int, int> par in doencasPercentagem)
                     {
-                        if (contagem.ContainsKey(item))
+                        int total = 0;
+                        int contU = 0;
+                        foreach (var item in dbpointer.TdoencaSintomas)
                         {
-                            contagem[item]++;
+                            if (par.Key == item.DoencaId)
+                            {
+                                total++;
+                                foreach (var itemS in listaSintomas)
+                                {
+                                    if (itemS.Id == item.SintomaId)
+                                    {
+                                        contU++;
+                                    }
+                                }
+                            }
                         }
-                        else
-                        {
-                            contagem[item] = 1;
-                        }
+                        doencasPercentagem[par.Key] = (100 * contU) / total;
                     }
                     //verifica qual a doença que se repete mais vezes
-                    int maior = contagem[doencas[0]];
-                    int idMaior = doencas[0];
-                    foreach (KeyValuePair<int, int> par in contagem)
+                    KeyValuePair<int, int> primeiroPar = doencasPercentagem.First();
+
+                    int maior = primeiroPar.Value;
+                    foreach (KeyValuePair<int, int> par in doencasPercentagem)
                     {
                         if (par.Value > maior)
                         {
                             maior = par.Value;
-                            idMaior = par.Key;
                         }
                     }
-                    foreach (KeyValuePair<int, int> par in contagem)
+                    ViewBag.PERCENTAGEMSINT = maior;
+
+                    List<int> doencasSugeridas = new List<int>();
+                    foreach(KeyValuePair<int, int> par in doencasPercentagem)
                     {
-                        if (par.Value == maior)
+                        if (maior == par.Value)
                         {
                             doencasSugeridas.Add(par.Key);
                         }
                     }
                     //envia a(s) doença(s) para a view
-                    ViewBag.PERCENTAGEMSINT = (100 * maior) / listaSintomas.Count();
                     List<Doenca> doencasSugestao1 = new List<Doenca>();
                     foreach (var item in doencasSugeridas)
                     {
