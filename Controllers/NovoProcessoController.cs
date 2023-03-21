@@ -1,11 +1,15 @@
 ﻿using apoio_decisao_medica.Data;
+using apoio_decisao_medica.Migrations;
 using apoio_decisao_medica.Models;
 using apoio_decisao_medica.ViewsModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NuGet.Packaging.Rules;
+using System;
+using System.Collections.Immutable;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -36,7 +40,7 @@ namespace apoio_decisao_medica.Controllers
             return RedirectToAction("Index", new { nProcesso = nProcesso });
         }
         public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
-            int sintoma, int exame, int sug, int maisDoencas)
+            int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao)
         {
             if (nProcesso == 0)
             {
@@ -159,7 +163,7 @@ namespace apoio_decisao_medica.Controllers
             {
                 ViewBag.LISTASINT = null;
             }
-            //Lista os sintomas do processo aberto
+            //Lista os exames do processo aberto
             List<Exame> listaExames = new List<Exame>();
             foreach (var item in dbpointer.TprocessoExames.Include(p => p.Exame))
             {
@@ -182,8 +186,7 @@ namespace apoio_decisao_medica.Controllers
             }
 
 
-            //carrega para a lista doencas as doenças cujo os sintomas apresentados tenham
-            //uma relevancia igual ou superior a 60%
+            //carrega para a lista doencas as doenças que correspondem com os sintomas
             Dictionary<int, int> doencasPercentagem = new Dictionary<int, int>();
             if (sug == 1)
             {
@@ -236,13 +239,25 @@ namespace apoio_decisao_medica.Controllers
                     }
                     ViewBag.PERCENTAGEMSINT = maior;
 
+                    //se a maior percentagem for abaixo de 40% apresenta todas as sugestoes
                     List<int> doencasSugeridas = new List<int>();
-                    foreach(KeyValuePair<int, int> par in doencasPercentagem)
+                    if (maior <= 40)
                     {
-                        if (maior == par.Value)
+                        foreach (KeyValuePair<int, int> par in doencasPercentagem)
                         {
                             doencasSugeridas.Add(par.Key);
                         }
+                    }
+                    else
+                    {
+                        foreach (KeyValuePair<int, int> par in doencasPercentagem)
+                        {
+                            if (maior == par.Value)
+                            {
+                                doencasSugeridas.Add(par.Key);
+                            }
+                        }
+
                     }
                     //envia a(s) doença(s) para a view
                     List<Doenca> doencasSugestao1 = new List<Doenca>();
@@ -261,15 +276,108 @@ namespace apoio_decisao_medica.Controllers
                         }
                     }
                     ViewBag.SUGESTAO1 = doencasSugestao1;
-                    ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas.OrderBy(p=>p.Relevancia).Include(s => s.Sintoma);
+                    ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas.OrderByDescending(p=>p.Relevancia).Include(s => s.Sintoma);
                 }
             }
 
+            //carregar todas as doenças se nao quiser usar a sugerida
             if (maisDoencas == 1)
             {
+                ViewBag.MAIS = maisDoencas;
                 ViewBag.CATDOENCA = new SelectList(dbpointer.TcatDoencas.OrderBy(d => d.Nome), "Id", "Nome");
+
+                if (IdCatDoenca != 0)
+                {
+                    List<Doenca> listaMaisDoencas = new List<Doenca>();
+                    foreach (var item in dbpointer.Tdoencas.Include(d => d.CatDoenca).Include(d => d.DoencaSintoma))
+                    {
+                        if (IdCatDoenca == item.CatDoencaId)
+                        {
+                            Doenca d = new Doenca();
+                            d.Id = item.Id;
+                            d.Nome = item.Nome;
+                            d.CatDoenca = item.CatDoenca;
+                            listaMaisDoencas.Add(d);
+                        }
+                    }
+                    ViewBag.MAISDOENCAS = listaMaisDoencas;
+                }
             }
 
+            //fechar processo
+            if (fechar == 1)
+            {
+                if (decisao != 0)
+                {
+                    var fecharProcesso = dbpointer.Tprocessos.First(p => p.NumeroProcesso == numProcesso);
+                    fecharProcesso.DoencaId = decisao;
+                    fecharProcesso.DataHoraFecho = DateTime.Today.ToString("dd/MM/yyyy");
+                    dbpointer.SaveChanges();
+                    return RedirectToAction("FecharProcesso", new {numProcesso = numProcesso});
+                }
+                else
+                {
+                    ViewBag.ERRO = "Deve escolher uma patologia antes de fechar o processo!";
+                }
+            }
+
+            return View();
+        }
+
+        public IActionResult FecharProcesso(int numProcesso)
+        {
+            int idProcesso = dbpointer.Tprocessos
+                    .Where(p => p.NumeroProcesso == numProcesso)
+                    .Select(p => p.Id)
+                    .Single();
+
+            var processos = dbpointer.TprocessoSintomas.ToList();
+            foreach (var item in processos)
+            {
+                if (idProcesso == item.ProcessoId)
+                {
+                    List<DoencaSintoma> doencaSintoma = new List<DoencaSintoma>();
+                    Dictionary<int, int> contarSintomas = new Dictionary<int, int>();
+                    foreach (var itemS in dbpointer.TprocessoSintomas.Include(p=>p.Processo))
+                    {
+                        if (item.SintomaId == itemS.SintomaId)
+                        {
+                            if (itemS.Processo.DoencaId != null)
+                            {
+                                if (contarSintomas.ContainsKey(Convert.ToInt32(itemS.Processo.DoencaId)))
+                                {
+                                    contarSintomas[Convert.ToInt32(itemS.Processo.DoencaId)]++;
+                                }
+                                else
+                                {
+                                    contarSintomas[Convert.ToInt32(itemS.Processo.DoencaId)] = 1;
+                                }
+                            }
+                        }
+                    }
+                    int total = contarSintomas.Values.Sum();
+
+                    foreach (KeyValuePair<int, int> par in contarSintomas)
+                    {
+                        var relevancia = dbpointer.TdoencaSintomas.FirstOrDefault(p => p.SintomaId == item.SintomaId && p.DoencaId == par.Key);
+                        if (relevancia != null)
+                        {
+                            relevancia.Relevancia = (100 * par.Value) / total;
+                            dbpointer.SaveChanges();
+                        }
+                        else
+                        {
+                            DoencaSintoma ds = new DoencaSintoma();
+                            ds.DoencaId = par.Key;
+                            ds.SintomaId = item.SintomaId;
+                            ds.Relevancia = (100 * par.Value) / total;
+                            dbpointer.TdoencaSintomas.Add(ds);
+                            dbpointer.SaveChanges();
+                        }
+                    }
+                }
+            }
+            ViewBag.TESTE = "chegou aqui, por aqui avaliçao dos exames";
             return View();
         }
     }

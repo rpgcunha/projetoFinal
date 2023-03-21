@@ -160,7 +160,7 @@
     @if (ViewBag.SUGESTAO1 != null)
     {
         <h3>Sugestão</h3>
-        <h5>@ViewBag.PERCENTAGEMSINT% dos Sintomas correspondem aos seguintes diagnósticos:</h5>
+        <h5>Os Sintomas tem @ViewBag.PERCENTAGEMSINT% de correspondência aos seguintes diagnósticos:</h5>
         <div class="container">
             @foreach (var item in ViewBag.SUGESTAO1)
             {
@@ -205,19 +205,83 @@
                     </div>
                     <div class="col-2">
                         Decisão<br>
-                        @Html.RadioButton("decisao","@item.Id")
+                        @Html.RadioButton("decisao",$"{item.Id}")
                     </div>
-
-                </div>
+                </div>                
             }
         </div>
+        <br />
+        <br />
+        <input type="submit" value="Outras Patologias" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
+        <br />
+        <br />
+        <br />
+        <br />
+        @if (ViewBag.CATDOENCA != null)
+        {
+            @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag.CATDOENCA)
+            <input type="submit" value="Aplicar" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
+            <br />
+            <br />
+            if (ViewBag.MAISDOENCAS != null)
+            {
+                <div class="container">
+                    @foreach (var item in ViewBag.MAISDOENCAS)
+                    {
+                        <div class="row border">
+                            <div class="col-4">
+                                <h5>@item.Nome</h5>
+                                <label>Especialidade: @item.CatDoenca.Nome</label>
+                            </div>
+                            <div class="col-3">
+                                <h6>Sintomas:</h6>
+                                @foreach (var itemS in ViewBag.TODOSSINTOMAS)
+                                {
+                                    if (item.Id == itemS.DoencaId)
+                                    {
+                                        int sim = 0;
+                                        foreach (var itemX in ViewBag.LISTASINT)
+                                        {
+
+                                            if (itemS.SintomaId == itemX.Id)
+                                            {
+                                                <label class="text-success">
+                                                    @itemS.Sintoma.Nome ->
+                                                    @itemS.Relevancia%
+                                                </label>
+                                                sim = 1;
+                                                break;
+                                            }
+                                        }
+                                        if (sim == 0)
+                                        {
+                                            <label class="text-secondary">
+                                                @itemS.Sintoma.Nome ->
+                                                @itemS.Relevancia%
+                                            </label>
+                                        }
+                                        <br />
+                                    }
+                                }
+                            </div>
+                            <div class="col-3">
+                                Exames Sugeridos:
+                            </div>
+                            <div class="col-2">
+                                Decisão<br>
+                                @Html.RadioButton("decisao", $"{item.Id}")
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            <br />
+            <br />
+        }
+        <input type="submit" value="Fechar Processo" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="@ViewBag.MAIS" asp-route-sug="1" asp-route-fechar="1">
+        @if (ViewBag.ERRO != null)
+        {
+            <p><i>@ViewBag.ERRO</i></p>
+        }
     }
-    <br />
-    <br />
-    <input type="submit" value="Outras Patologias" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1">
-    <br />
-    <br />
-    <br />
-    <br />
-    @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag)
 }
