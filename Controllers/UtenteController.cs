@@ -37,6 +37,7 @@ namespace apoio_decisao_medica.Controllers
                         listaUtentes.Add(u);
                     }
                 }
+                return View(listaUtentes);
             }
             //procurar pelo numero de utente
             if (numUtente != null)
@@ -55,6 +56,7 @@ namespace apoio_decisao_medica.Controllers
                         listaUtentes.Add(u);
                     }
                 }
+                return View(listaUtentes);
             }
             //procurar pelo nome de utente
             if (dataNasc != null)
@@ -73,16 +75,17 @@ namespace apoio_decisao_medica.Controllers
                         listaUtentes.Add(u);
                     }
                 }
+                return View(listaUtentes);
             }
-            return View(listaUtentes);
+            return View(dbpointer.Tutentes.ToList());
         }
 
-        public IActionResult Detalhes(int? Id, int idProc)
+        public IActionResult Detalhes(int? id, int idProc)
         {
             //detalhes do utente
             foreach (var item in dbpointer.Tutentes)
             {
-                if (Id == item.Id)
+                if (id == item.Id)
                 {
                     Utente u = new Utente();
                     u.Id = item.Id;
@@ -101,7 +104,7 @@ namespace apoio_decisao_medica.Controllers
             var processos = dbpointer.Tprocessos.OrderByDescending(p => p.Id).Include(p => p.Doenca).Include(p => p.Hospital).Include(p => p.Medico);
             foreach (var item in processos)
             {
-                if (item.UtenteId == Id)
+                if (item.UtenteId == id)
                 {
                     HistoricoProcesso p = new HistoricoProcesso();
                     p.Id = item.Id;
@@ -136,5 +139,77 @@ namespace apoio_decisao_medica.Controllers
 
             return View(listaProcessos.ToList());
         }
+
+        //criar novo utente
+        public IActionResult Novo()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Novo([Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
+        {
+            if (ModelState.IsValid)
+            {
+                dbpointer.Add(utente);
+                await dbpointer.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction("Index");
+        }
+
+
+        //editar dados do utente
+        public async Task<IActionResult> Editar(int? id)
+        {
+            if (id == null || dbpointer.Tutentes == null)
+            {
+                return NotFound();
+            }
+
+            var utente = await dbpointer.Tutentes.FindAsync(id);
+            if (utente == null)
+            {
+                return NotFound();
+            }
+            return View(utente);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Editar(int id, [Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
+        {
+            if (id != utente.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    dbpointer.Update(utente);
+                    await dbpointer.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UtenteExists(utente.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Detalhes", new { id = id});
+            }
+            return View(utente);
+        }
+        private bool UtenteExists(int id)
+        {
+            return (dbpointer.Tutentes?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+
     }
 }

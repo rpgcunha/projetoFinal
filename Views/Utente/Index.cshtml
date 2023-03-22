@@ -3,7 +3,7 @@
 <hr />
 <br />
 <div class="btnCriar">
-    <a asp-controller="Utentes" asp-action="Create">Novo Utente</a>
+    <a asp-action="Novo">Novo Utente</a>
 </div>
 <br />
 @using (Html.BeginForm())
@@ -24,13 +24,13 @@
             </tr>
         </tbody>
     </table>
-    <input  class="btnCriar" type="submit" value="Aplicar">
+    <input  class="btnCriar" type="submit" value="Procurar">
 }
 <br />
 <br />
 @using (Html.BeginForm())
 {
-    <h4>Utentes Filtrados</h4>
+    <h4>Utentes</h4>
     <table class="table">
         <thead>
             <tr>

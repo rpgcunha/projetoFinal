@@ -3,6 +3,7 @@ using apoio_decisao_medica.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace apoio_decisao_medica.Controllers
 {
     public class ProcessoController : Controller
@@ -15,6 +16,7 @@ namespace apoio_decisao_medica.Controllers
         }
         public IActionResult Index(int idProcesso)
         {
+            ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
             ViewBag.IDPROCESSO = idProcesso;
 
             List<string> sintomas = new List<string>();

@@ -64,7 +64,7 @@ namespace apoio_decisao_medica.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(utente);
+            return RedirectToAction("Index");
         }
 
         // GET: Utentes/Edit/5

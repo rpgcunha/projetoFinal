@@ -23,12 +23,12 @@
     </tbody>
 </table>
 <div class="btnCriar">
-    <a asp-controller="Utentes" asp-action="Edit" asp-route-id="@ViewBag.UTENTE?.Id">Editar Dados</a>
+    <a asp-action="Editar" asp-route-id="@ViewBag.UTENTE?.Id">Editar Dados</a>
 </div>
 <br />
 <br />
 <div class="btnCriar">
-    <a asp-controller="NovoProcesso" asp-action="CriarProcesso" asp-route-idUtente="@ViewBag.UTENTE?.Id">Novo Processo</a>
+    <a asp-controller="NovoProcesso" asp-action="CriarProcesso" asp-route-id="@ViewBag.UTENTE?.Id">Novo Processo</a>
 </div>
 @using (Html.BeginForm())
 {
