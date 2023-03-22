@@ -1,8 +1,13 @@
-﻿namespace apoio_decisao_medica.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace apoio_decisao_medica.Models
 {
     public class Medico
     {
         public int Id { get; set; }
+
+        [Display(Name = "Numero do BI")]
+        [RegularExpression("[0-9]{8}", ErrorMessage = "Numero do BI incorreto")]
         public int Bi { get; set; }
         public string Nome { get; set; }
         public string Especialidade { get; set; }
