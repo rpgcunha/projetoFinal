@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pAB/afd6lXcSfF4LKoyT97NbIK6ZkOTudz4f9ZhRA0GyvbA73PIYP7IUti9BOfEJ5ieLItefyitS6AvGASf0SA==",
+  "dgSpecHash": "iII84ux34DCl+dlUAGXi+LOzKq1G5OmfZRhDwOriXjCes/gh5Ex1EjpuG1ynhOpd8d8BLkee8aIUoO/3iGbsRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\apoio_decisao_medica.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\PROJ\\GIT\\projetoFinal\\apoio_decisao_medica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -187,12 +187,5 @@
     "C:\\Users\\admin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
