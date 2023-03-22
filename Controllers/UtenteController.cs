@@ -108,7 +108,7 @@ namespace apoio_decisao_medica.Controllers
                 {
                     HistoricoProcesso p = new HistoricoProcesso();
                     p.Id = item.Id;
-                    p.numProcesso = item.NumeroProcesso;
+                    p.NumProcesso = item.NumeroProcesso;
                     p.DataAbertura = item.DataHoraAbertura;
                     p.DataFecho = item.DataHoraFecho;
                     p.Doenca = item.Doenca?.Nome;

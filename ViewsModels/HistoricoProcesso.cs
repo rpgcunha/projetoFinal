@@ -3,7 +3,7 @@
     public class HistoricoProcesso
     {
         public int? Id { get; set; }
-        public int numProcesso { get; set; }
+        public int NumProcesso { get; set; }
         public int? UtenteId { get; set; }
         public string? NomeUtente { get; set; }
         public int? NumeroUtente { get; set; }

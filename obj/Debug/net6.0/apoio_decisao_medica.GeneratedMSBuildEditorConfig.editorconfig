@@ -9,361 +9,361 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = apoio_decisao_medica
 build_property.RootNamespace = apoio_decisao_medica
-build_property.ProjectDir = C:\Users\admin\Desktop\Projeto\projetoFinal\
+build_property.ProjectDir = D:\code\apoio_decisao_medica\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\admin\Desktop\Projeto\projetoFinal
+build_property.MSBuildProjectDirectory = D:\code\apoio_decisao_medica
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatDoencas/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatDoencas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatDoencas/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatDoencas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatDoencas/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatDoencas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatDoencas/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatDoencas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatDoencas/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatDoencas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatExames/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatExames/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RXhhbWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatExames/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatExames/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RXhhbWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatExames/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatExames/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RXhhbWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatExames/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatExames/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RXhhbWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatExames/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatExames/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RXhhbWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatSintomas/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatSintomas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0U2ludG9tYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatSintomas/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatSintomas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0U2ludG9tYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatSintomas/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatSintomas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0U2ludG9tYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatSintomas/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatSintomas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0U2ludG9tYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/CatSintomas/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/CatSintomas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0U2ludG9tYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaExames/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaExames/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhRXhhbWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaExames/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaExames/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhRXhhbWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaExames/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaExames/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhRXhhbWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaExames/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaExames/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhRXhhbWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaExames/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaExames/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhRXhhbWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaSintomas/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaSintomas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhU2ludG9tYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaSintomas/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaSintomas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhU2ludG9tYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaSintomas/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaSintomas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhU2ludG9tYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaSintomas/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaSintomas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhU2ludG9tYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/DoencaSintomas/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/DoencaSintomas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhU2ludG9tYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Doencas/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/Doencas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Doencas/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/Doencas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Doencas/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/Doencas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Doencas/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/Doencas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Doencas/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Doencas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Exames/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/Exames/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Exames/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/Exames/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Exames/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/Exames/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Exames/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/Exames/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Exames/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Exames/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Home/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Home/Privacy.cshtml]
+[D:/code/apoio_decisao_medica/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Hospitais/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/Hospitais/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Hospitais/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/Hospitais/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Hospitais/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/Hospitais/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Hospitais/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/Hospitais/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Hospitais/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Hospitais/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Login/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Medicos/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/Medicos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Medicos/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/Medicos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Medicos/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/Medicos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Medicos/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/Medicos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Medicos/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Medicos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/MeusProcessos/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/MeusProcessos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV1c1Byb2Nlc3Nvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/NovoProcesso/FecharProcesso.cshtml]
+[D:/code/apoio_decisao_medica/Views/NovoProcesso/FecharProcesso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXEZlY2hhclByb2Nlc3NvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/NovoProcesso/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/NovoProcesso/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/NovoProcesso/NovoExame.cshtml]
+[D:/code/apoio_decisao_medica/Views/NovoProcesso/NovoExame.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXE5vdm9FeGFtZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/NovoProcesso/NovoSintoma.cshtml]
+[D:/code/apoio_decisao_medica/Views/NovoProcesso/NovoSintoma.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXE5vdm9TaW50b21hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoExames/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoExames/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29FeGFtZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoExames/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoExames/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29FeGFtZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoExames/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoExames/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29FeGFtZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoExames/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoExames/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29FeGFtZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoExames/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoExames/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29FeGFtZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoSintomas/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoSintomas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29TaW50b21hc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoSintomas/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoSintomas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29TaW50b21hc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoSintomas/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoSintomas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29TaW50b21hc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoSintomas/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoSintomas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29TaW50b21hc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/ProcessoSintomas/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/ProcessoSintomas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29TaW50b21hc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Processos/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/Processos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Processos/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/Processos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Processos/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/Processos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Processos/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/Processos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Processos/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Processos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Processo/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Processo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Shared/Error.cshtml]
+[D:/code/apoio_decisao_medica/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/code/apoio_decisao_medica/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Sintomas/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/Sintomas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Sintomas/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/Sintomas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Sintomas/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/Sintomas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Sintomas/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/Sintomas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Sintomas/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Sintomas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utentes/Create.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utentes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utentes/Delete.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utentes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utentes/Details.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utentes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utentes/Edit.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utentes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utentes/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utentes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utente/Detalhes.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utente/Detalhes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXERldGFsaGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utente/Editar.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utente/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utente/Index.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Utente/Novo.cshtml]
+[D:/code/apoio_decisao_medica/Views/Utente/Novo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXE5vdm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/_ViewImports.cshtml]
+[D:/code/apoio_decisao_medica/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/_ViewStart.cshtml]
+[D:/code/apoio_decisao_medica/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/projetoFinal/Views/Shared/_Layout.cshtml]
+[D:/code/apoio_decisao_medica/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hdqxvguyds

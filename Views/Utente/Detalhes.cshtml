@@ -52,11 +52,11 @@
                     <tr>
                         @if (item.DataFecho == null)
                         {
-                            <th><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.numProcesso">@item.numProcesso</a></th>
+                            <th><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.NumProcesso">@item.NumProcesso</a></th>
                         }
                         else
                         {
-                            <th><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.numProcesso</a></th>
+                            <th><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.NumProcesso</a></th>
                         }
                         <th>@item.DataAbertura</th>
                         <th>@item.DataFecho</th>

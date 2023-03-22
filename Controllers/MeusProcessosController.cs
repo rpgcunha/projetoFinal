@@ -31,7 +31,7 @@ namespace apoio_decisao_medica.Controllers
                         {
                             HistoricoProcesso p = new HistoricoProcesso();
                             p.Id = item.Id;
-                            p.numProcesso = item.NumeroProcesso;
+                            p.NumProcesso = item.NumeroProcesso;
                             p.UtenteId = item.UtenteId;
                             p.NomeUtente = item.Utente?.Nome;
                             p.NumeroUtente = item.Utente.NumeroUtente;
@@ -60,7 +60,7 @@ namespace apoio_decisao_medica.Controllers
                             {
                                 HistoricoProcesso p = new HistoricoProcesso();
                                 p.Id = item.Id;
-                                p.numProcesso = item.NumeroProcesso;
+                                p.NumProcesso = item.NumeroProcesso;
                                 p.NomeUtente = item.Utente.Nome;
                                 p.NumeroUtente = item.Utente.NumeroUtente;
                                 p.Hospital = item.Hospital.Nome;
@@ -85,7 +85,7 @@ namespace apoio_decisao_medica.Controllers
                     {
                         HistoricoProcesso p = new HistoricoProcesso();
                         p.Id = item.Id;
-                        p.numProcesso = item.NumeroProcesso;
+                        p.NumProcesso = item.NumeroProcesso;
                         p.UtenteId = item.UtenteId;
                         p.NomeUtente = item.Utente?.Nome;
                         p.NumeroUtente = item.Utente.NumeroUtente;
@@ -121,7 +121,7 @@ namespace apoio_decisao_medica.Controllers
                             {
                                 HistoricoProcesso p = new HistoricoProcesso();
                                 p.Id = item.Id;
-                                p.numProcesso = item.NumeroProcesso;
+                                p.NumProcesso = item.NumeroProcesso;
                                 p.UtenteId = item.UtenteId;
                                 p.NomeUtente = item.Utente?.Nome;
                                 p.NumeroUtente = item.Utente.NumeroUtente;
