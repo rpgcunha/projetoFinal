@@ -380,5 +380,52 @@ namespace apoio_decisao_medica.Controllers
             ViewBag.TESTE = "chegou aqui, por aqui avaliçao dos exames";
             return View();
         }
+
+
+        //criar novo sintoma
+        public IActionResult NovoSintoma(int numProcesso)
+        {
+            @ViewBag.PROC = numProcesso;
+            ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
+            ViewData["CatSintomaId"] = new SelectList(dbpointer.TcatSintomas, "Id", "Nome");
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> NovoSintoma([Bind("Id,Nome,CatSintomaId")] Sintoma sintoma, int numProcesso)
+        {
+            if (ModelState.IsValid)
+            {
+                dbpointer.Add(sintoma);
+                await dbpointer.SaveChangesAsync();
+                return RedirectToAction("Index", new {numProcesso = numProcesso});
+            }
+            ViewData["CatSintomaId"] = new SelectList(dbpointer.TcatSintomas, "Id", "Id", sintoma.CatSintomaId);
+            return View(sintoma);
+        }
+
+
+        //novo exame
+        public IActionResult NovoExame(int numProcesso)
+        {
+            @ViewBag.PROC = numProcesso;
+            ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
+            ViewData["CatExameId"] = new SelectList(dbpointer.TcatExames, "Id", "Nome");
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> NovoExame([Bind("Id,Nome,CatExameId")] Exame exame, int numProcesso)
+        {
+            if (ModelState.IsValid)
+            {
+                dbpointer.Add(exame);
+                await dbpointer.SaveChangesAsync();
+                return RedirectToAction("Index", new { numProcesso = numProcesso });
+            }
+            ViewData["CatExameId"] = new SelectList(dbpointer.TcatExames, "Id", "Id", exame.CatExameId);
+            return View(exame);
+        }
+
     }
 }
