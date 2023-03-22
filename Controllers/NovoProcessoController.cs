@@ -40,7 +40,8 @@ namespace apoio_decisao_medica.Controllers
             return RedirectToAction("Index", new { nProcesso = nProcesso });
         }
         public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
-            int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao)
+            int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
+            int removerSint)
         {
             if (nProcesso == 0)
             {
@@ -140,6 +141,14 @@ namespace apoio_decisao_medica.Controllers
                 }
             }
 
+
+            //remove um sintoma da lista
+            if (removerSint != 0)
+            {
+                var registo = dbpointer.TprocessoSintomas.Where(r=>r.SintomaId == removerSint);
+                dbpointer.TprocessoSintomas.RemoveRange(registo);
+                dbpointer.SaveChanges();
+            }
 
             //Lista os sintomas do processo aberto
             List<Sintoma> listaSintomas = new List<Sintoma>();
@@ -317,7 +326,7 @@ namespace apoio_decisao_medica.Controllers
                 }
                 else
                 {
-                    ViewBag.ERRO = "Deve escolher uma patologia antes de fechar o processo!";
+                    ViewBag.ERRO = "Deve escolher uma doença antes de fechar o processo!";
                 }
             }
 

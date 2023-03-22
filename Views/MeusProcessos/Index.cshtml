@@ -30,7 +30,7 @@
             @foreach (var item in ViewBag.ABERTOS)
                 {
                     <tr>
-                    <th><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.numProcesso">@item.numProcesso</a></th>
+                    <th><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.NumProcesso">@item.NumProcesso</a></th>
                         <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NomeUtente</a></th>
                         <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NumeroUtente</a></th>
                         <th>@item.DataAbertura</th>
@@ -74,7 +74,7 @@
             @foreach (var item in ViewBag.FECHADOS)
             {
                 <tr>
-                    <th><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.numProcesso</a></th>
+                    <th><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.NumProcesso</a></th>
                     <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NomeUtente</a></th>
                     <th><a asp-controller="Utente" asp-action="Detalhes" asp-route-Id="@item.UtenteId">@item.NumeroUtente</a></th>
                     <th>@item.DataAbertura</th>

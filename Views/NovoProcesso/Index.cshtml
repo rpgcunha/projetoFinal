@@ -71,84 +71,91 @@
                     <br />
                     <br />
                     <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
-                    <a asp-controller="Exames" asp-action="Create">Criar Novo Exame</a>
+                <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Criar Novo Exame</a>
                     <br />
                 }
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                Lista de Sintomas do Utente
-                            </th>
-                        </tr>
-                    </thead>
-                    @if (ViewBag.LISTASINT == null)
-                    {
-                        <tbody>
+            @using (Html.BeginForm())
+            {
+                <div class="col-6">
+                    <table class="table">
+                        <thead>
                             <tr>
                                 <th>
-                                    <i>
-                                        Ainda não foi adicionado nenhum sintoma ao processo.
-                                    </i>
+                                    Lista de Sintomas do Utente
                                 </th>
+                                <th></th>
                             </tr>
-                        </tbody>
-                    }
-                    else
-                    {
-                        <tbody>
-                            @foreach (var item in ViewBag.LISTASINT)
-                            {
+                        </thead>
+                        @if (ViewBag.LISTASINT == null)
+                        {
+                            <tbody>
                                 <tr>
                                     <th>
-                                        @item.Nome
+                                        <i>
+                                            Ainda não foi adicionado nenhum sintoma ao processo.
+                                        </i>
                                     </th>
                                 </tr>
-                            }
-                        </tbody>
-                    }
-                </table>
-            </div>
-            <div class="col-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                Lista de Exames do Utente
-                            </th>
-                        </tr>
-                    </thead>
-                    @if (ViewBag.LISTAEXAM == null)
-                    {
-                        <tbody>
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tbody>
+                                @foreach (var item in ViewBag.LISTASINT)
+                                {
+                                    <tr>
+                                        <th>
+                                            @item.Nome
+                                        </th>
+                                        <th>
+                                        <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerSint="@item.Id">
+                                        </th>
+                                    </tr>
+                                }
+                            </tbody>
+                        }
+                    </table>
+                </div>
+                <div class="col-6">
+                    <table class="table">
+                        <thead>
                             <tr>
                                 <th>
-                                    <i>
-                                        Ainda não foi adicionado nenhum exame ao processo.
-                                    </i>
+                                    Lista de Exames do Utente
                                 </th>
                             </tr>
-                        </tbody>
-                    }
-                    else
-                    {
-                        <tbody>
-                            @foreach (var item in ViewBag.LISTAEXAM)
-                            {
+                        </thead>
+                        @if (ViewBag.LISTAEXAM == null)
+                        {
+                            <tbody>
                                 <tr>
                                     <th>
-                                        @item.Nome
+                                        <i>
+                                            Ainda não foi adicionado nenhum exame ao processo.
+                                        </i>
                                     </th>
                                 </tr>
-                            }
-                        </tbody>
-                    }
-                </table>
-            </div>
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tbody>
+                                @foreach (var item in ViewBag.LISTAEXAM)
+                                {
+                                    <tr>
+                                        <th>
+                                            @item.Nome
+                                        </th>
+                                    </tr>
+                                }
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            }
         </div>
     </div>
 
@@ -212,7 +219,7 @@
         </div>
         <br />
         <br />
-        <input type="submit" value="Outras Patologias" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
+        <input type="submit" value="Outras Doenças" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
         <br />
         <br />
         <br />
