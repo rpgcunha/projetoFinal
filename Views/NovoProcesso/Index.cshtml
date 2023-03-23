@@ -71,14 +71,14 @@
                     <br />
                     <br />
                     <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
-                <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Criar Novo Exame</a>
+                    <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Criar Novo Exame</a>
                     <br />
                 }
             </div>
         </div>
-        <div class="row">
-            @using (Html.BeginForm())
-            {
+        @using (Html.BeginForm())
+        {
+            <div class="row">
                 <div class="col-6">
                     <table class="table">
                         <thead>
@@ -126,6 +126,7 @@
                                 <th>
                                     Lista de Exames do Utente
                                 </th>
+                                <th></th>
                             </tr>
                         </thead>
                         @if (ViewBag.LISTAEXAM == null)
@@ -149,19 +150,26 @@
                                         <th>
                                             @item.Nome
                                         </th>
+                                        <th>
+                                            <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerExam="@item.Id">
+                                        </th>
                                     </tr>
                                 }
                             </tbody>
                         }
                     </table>
                 </div>
-            }
-        </div>
+            </div>
+        }
     </div>
 
 @using (Html.BeginForm())
 {
     <input type="submit" value="Apresentar Sugestões" asp-route-numProcesso="@ViewBag.PROC" asp-route-sug="1">
+    @if (ViewBag.ERROSEMSINT != null)
+    {
+        <p><i>@ViewBag.ERROSEMSINT</i></p>
+    }
     <br />
     <br />
     @if (ViewBag.SUGESTAO1 != null)
@@ -228,6 +236,7 @@
         {
             @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag.CATDOENCA)
             <input type="submit" value="Aplicar" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
+            <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">Criar Nova Doença</a>
             <br />
             <br />
             if (ViewBag.MAISDOENCAS != null)

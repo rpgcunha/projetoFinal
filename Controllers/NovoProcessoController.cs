@@ -41,7 +41,7 @@ namespace apoio_decisao_medica.Controllers
         }
         public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
             int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
-            int removerSint)
+            int removerSint, int removerExam)
         {
             if (nProcesso == 0)
             {
@@ -149,6 +149,14 @@ namespace apoio_decisao_medica.Controllers
                 dbpointer.TprocessoSintomas.RemoveRange(registo);
                 dbpointer.SaveChanges();
             }
+            //remove um exame da lista
+            if (removerExam != 0)
+            {
+                var registo = dbpointer.TprocessoExames.Where(r => r.ExameId == removerExam);
+                dbpointer.TprocessoExames.RemoveRange(registo);
+                dbpointer.SaveChanges();
+            }
+
 
             //Lista os sintomas do processo aberto
             List<Sintoma> listaSintomas = new List<Sintoma>();
@@ -199,93 +207,102 @@ namespace apoio_decisao_medica.Controllers
             Dictionary<int, int> doencasPercentagem = new Dictionary<int, int>();
             if (sug == 1)
             {
-                foreach (var itemS in listaSintomas)
+                if (listaSintomas.Count != 0)
                 {
-                    foreach (var itemD in dbpointer.TdoencaSintomas)
+                    foreach (var itemS in listaSintomas)
                     {
-                        if (itemS.Id == itemD.SintomaId)
+                        foreach (var itemD in dbpointer.TdoencaSintomas)
                         {
-                            if (!doencasPercentagem.ContainsKey(itemD.DoencaId))
+                            if (itemS.Id == itemD.SintomaId)
                             {
-                                doencasPercentagem[itemD.DoencaId] = 0;
-                            }
-                        }
-                    }
-                }
-                //se houver doenças na lista verifica a relevancia em relaçao aos sintomas apresentados
-                if (doencasPercentagem != null)
-                {
-                    foreach (KeyValuePair<int, int> par in doencasPercentagem)
-                    {
-                        int total = 0;
-                        int contU = 0;
-                        foreach (var item in dbpointer.TdoencaSintomas)
-                        {
-                            if (par.Key == item.DoencaId)
-                            {
-                                total++;
-                                foreach (var itemS in listaSintomas)
+                                if (!doencasPercentagem.ContainsKey(itemD.DoencaId))
                                 {
-                                    if (itemS.Id == item.SintomaId)
-                                    {
-                                        contU++;
-                                    }
+                                    doencasPercentagem[itemD.DoencaId] = 0;
                                 }
                             }
                         }
-                        doencasPercentagem[par.Key] = (100 * contU) / total;
                     }
-                    //verifica qual a doença que se repete mais vezes
-                    KeyValuePair<int, int> primeiroPar = doencasPercentagem.First();
-
-                    int maior = primeiroPar.Value;
-                    foreach (KeyValuePair<int, int> par in doencasPercentagem)
-                    {
-                        if (par.Value > maior)
-                        {
-                            maior = par.Value;
-                        }
-                    }
-                    ViewBag.PERCENTAGEMSINT = maior;
-
-                    //se a maior percentagem for abaixo de 40% apresenta todas as sugestoes
-                    List<int> doencasSugeridas = new List<int>();
-                    if (maior <= 40)
+                    //se houver doenças na lista verifica a relevancia em relaçao aos sintomas apresentados
+                    if (doencasPercentagem != null)
                     {
                         foreach (KeyValuePair<int, int> par in doencasPercentagem)
                         {
-                            doencasSugeridas.Add(par.Key);
+                            int total = 0;
+                            int contU = 0;
+                            foreach (var item in dbpointer.TdoencaSintomas)
+                            {
+                                if (par.Key == item.DoencaId)
+                                {
+                                    total++;
+                                    foreach (var itemS in listaSintomas)
+                                    {
+                                        if (itemS.Id == item.SintomaId)
+                                        {
+                                            contU++;
+                                        }
+                                    }
+                                }
+                            }
+                            doencasPercentagem[par.Key] = (100 * contU) / total;
                         }
-                    }
-                    else
-                    {
+                        //verifica qual a doença que se repete mais vezes
+                        KeyValuePair<int, int> primeiroPar = doencasPercentagem.First();
+
+                        int maior = primeiroPar.Value;
                         foreach (KeyValuePair<int, int> par in doencasPercentagem)
                         {
-                            if (maior == par.Value)
+                            if (par.Value > maior)
+                            {
+                                maior = par.Value;
+                            }
+                        }
+                        ViewBag.PERCENTAGEMSINT = maior;
+
+                        //se a maior percentagem for abaixo de 40% apresenta todas as sugestoes
+                        List<int> doencasSugeridas = new List<int>();
+                        if (maior <= 40)
+                        {
+                            foreach (KeyValuePair<int, int> par in doencasPercentagem)
                             {
                                 doencasSugeridas.Add(par.Key);
                             }
                         }
-
-                    }
-                    //envia a(s) doença(s) para a view
-                    List<Doenca> doencasSugestao1 = new List<Doenca>();
-                    foreach (var item in doencasSugeridas)
-                    {
-                        foreach (var itemD in dbpointer.Tdoencas.Include(d => d.CatDoenca).Include(d => d.DoencaSintoma))
+                        else
                         {
-                            if (item == itemD.Id)
+                            foreach (KeyValuePair<int, int> par in doencasPercentagem)
                             {
-                                Doenca d = new Doenca();
-                                d.Id = itemD.Id;
-                                d.Nome = itemD.Nome;
-                                d.CatDoenca = itemD.CatDoenca;
-                                doencasSugestao1.Add(d);
+                                if (maior == par.Value)
+                                {
+                                    doencasSugeridas.Add(par.Key);
+                                }
+                            }
+
+                        }
+                        //envia a(s) doença(s) para a view
+                        List<Doenca> doencasSugestao1 = new List<Doenca>();
+                        foreach (var item in doencasSugeridas)
+                        {
+                            foreach (var itemD in dbpointer.Tdoencas.Include(d => d.CatDoenca).Include(d => d.DoencaSintoma))
+                            {
+                                if (item == itemD.Id)
+                                {
+                                    Doenca d = new Doenca();
+                                    d.Id = itemD.Id;
+                                    d.Nome = itemD.Nome;
+                                    d.CatDoenca = itemD.CatDoenca;
+                                    doencasSugestao1.Add(d);
+                                }
                             }
                         }
+                        ViewBag.SUGESTAO1 = doencasSugestao1;
+                        ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas.OrderByDescending(p => p.Relevancia).Include(s => s.Sintoma);
                     }
-                    ViewBag.SUGESTAO1 = doencasSugestao1;
-                    ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas.OrderByDescending(p=>p.Relevancia).Include(s => s.Sintoma);
+
+                }
+                else
+                {
+                    ViewBag.ERROSEMSINT = "Ainda não adicionou nenhum sintoma ao processo! Adicione pelo menos um sintoma para " +
+                        "obter sugestões!";
                 }
             }
 
@@ -434,6 +451,28 @@ namespace apoio_decisao_medica.Controllers
             }
             ViewData["CatExameId"] = new SelectList(dbpointer.TcatExames, "Id", "Id", exame.CatExameId);
             return View(exame);
+        }
+
+        //nova doenca
+        public IActionResult NovaDoenca(int numProcesso)
+        {
+            @ViewBag.PROC = numProcesso;
+            ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
+            ViewData["CatDoencaId"] = new SelectList(dbpointer.TcatDoencas, "Id", "Nome");
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> NovaDoenca([Bind("Id,Nome,CatDoencaId")] Doenca doenca, int numProcesso)
+        {
+            if (ModelState.IsValid)
+            {
+                dbpointer.Add(doenca);
+                await dbpointer.SaveChangesAsync();
+                return RedirectToAction("Index", new {maisDoencas = 1, sug = 1, numProcesso = numProcesso });
+            }
+            ViewData["CatDoencaId"] = new SelectList(dbpointer.TcatDoencas, "Id", "Id", doenca.CatDoencaId);
+            return View(doenca);
         }
 
     }
