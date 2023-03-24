@@ -2870,8 +2870,6 @@ D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.AssemblyInfoI
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.AssemblyInfo.cs
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.csproj.CoreCompileInputs.cache
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.MvcApplicationPartsAssemblyInfo.cache
-D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.RazorAssemblyInfo.cache
-D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.RazorAssemblyInfo.cs
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\staticwebassets\msbuild.apoio_decisao_medica.Microsoft.AspNetCore.StaticWebAssets.props
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\staticwebassets\msbuild.build.apoio_decisao_medica.props
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.apoio_decisao_medica.props
@@ -2879,9 +2877,7 @@ D:\code\apoio_decisao_medica\obj\Debug\net6.0\staticwebassets\msbuild.buildTrans
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\staticwebassets.pack.json
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\staticwebassets.build.json
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\staticwebassets.development.json
-D:\code\apoio_decisao_medica\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\scopedcss\bundle\apoio_decisao_medica.styles.css
-D:\code\apoio_decisao_medica\obj\Debug\net6.0\scopedcss\projectbundle\apoio_decisao_medica.bundle.scp.css
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.csproj.CopyComplete
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.dll
 D:\code\apoio_decisao_medica\obj\Debug\net6.0\refint\apoio_decisao_medica.dll
@@ -3177,3 +3173,7 @@ C:\Users\admin\Desktop\ultimaVersao\projetoFinal\obj\Debug\net6.0\refint\apoio_d
 C:\Users\admin\Desktop\ultimaVersao\projetoFinal\obj\Debug\net6.0\apoio_decisao_medica.pdb
 C:\Users\admin\Desktop\ultimaVersao\projetoFinal\obj\Debug\net6.0\apoio_decisao_medica.genruntimeconfig.cache
 C:\Users\admin\Desktop\ultimaVersao\projetoFinal\obj\Debug\net6.0\ref\apoio_decisao_medica.dll
+D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.RazorAssemblyInfo.cache
+D:\code\apoio_decisao_medica\obj\Debug\net6.0\apoio_decisao_medica.RazorAssemblyInfo.cs
+D:\code\apoio_decisao_medica\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\code\apoio_decisao_medica\obj\Debug\net6.0\scopedcss\projectbundle\apoio_decisao_medica.bundle.scp.css

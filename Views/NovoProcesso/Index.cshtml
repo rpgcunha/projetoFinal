@@ -4,7 +4,9 @@
             <div class="col-6">
                 @using (Html.BeginForm())
                 {
-                    <h4>Sintomas</h4>
+                    @:Sintomas 
+                    @Html.TextBox("pesquisaSint")
+                    <br />
                     @foreach (var item in ViewBag.CATSIN)
                     {
                     <a asp-route-idCatSint="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
@@ -18,14 +20,15 @@
                     {
                         if (ViewBag.FILTROSINT.Count != 0)
                         {
-                            @foreach (var item in ViewBag.FILTROSINT)
+@*                            @foreach (var item in ViewBag.FILTROSINT)
                             {
                                 <label>
                                     @Html.RadioButton("sintoma",$"{item.Id}")
                                     @item.Nome
                                 </label>
+                                <br />
                             }
-                        }
+*@                        }
                         else
                         {
                             <p><i>Não existem sintomas nesta categoria!</i></p>
@@ -41,7 +44,9 @@
             <div class="col-6">
                 @using (Html.BeginForm())
                 {
-                    <h4>Exames</h4>
+                    @:Exames
+                    @Html.TextBox("pesquisaExam")
+                    <br />
                     @foreach (var item in ViewBag.CATEXAM)
                     {
                         <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
@@ -217,6 +222,34 @@
                     </div>
                     <div class="col-3">
                         Exames Sugeridos:
+                        @foreach (var ItemE in ViewBag.TODOSEXAMES)
+                        {
+                            if (item.Id == ItemE.DoencaId)
+                            {
+                                int sim = 0;
+                                foreach (var itemX in ViewBag.LISTAEXAM)
+                                {
+
+                                    if (ItemE.SintomaId == itemX.Id)
+                                    {
+                                        <label class="text-success">
+                                            @ItemE.Exame.Nome ->
+                                            @ItemE.Relevancia%
+                                        </label>
+                                        sim = 1;
+                                        break;
+                                    }
+                                }
+                                if (sim == 0)
+                                {
+                                    <label class="text-secondary">
+                                        @ItemE.Exame.Nome ->
+                                        @ItemE.Relevancia%
+                                    </label>
+                                }
+                                <br />
+                            }
+                        }
                     </div>
                     <div class="col-2">
                         Decisão<br>

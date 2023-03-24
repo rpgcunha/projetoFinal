@@ -41,7 +41,7 @@ namespace apoio_decisao_medica.Controllers
         }
         public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
             int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
-            int removerSint, int removerExam)
+            int removerSint, int removerExam, string pesquisaSint, string pesquisaExam)
         {
             if (nProcesso == 0)
             {
@@ -64,19 +64,36 @@ namespace apoio_decisao_medica.Controllers
             ViewBag.CATEXAM = dbpointer.TcatExames.ToList();
 
 
-            //listar os sintomas filtrados pela cat
-            if (idCatSint != 0)
+            //listar os sintomas filtrados pela cat ou pela pesquisa
+            if (idCatSint != 0 || pesquisaSint != null)
             {
                 List<Sintoma> filtroSintomas = new List<Sintoma>();
-                foreach (var item in dbpointer.Tsintomas)
+                if (idCatSint != 0)
                 {
-                    if (idCatSint == item.CatSintomaId)
+                    foreach (var item in dbpointer.Tsintomas)
                     {
-                        Sintoma s = new Sintoma();
-                        s.Id = item.Id;
-                        s.Nome = item.Nome;
-                        s.CatSintomaId = item.CatSintomaId;
-                        filtroSintomas.Add(s);
+                        if (idCatSint == item.CatSintomaId)
+                        {
+                            Sintoma s = new Sintoma();
+                            s.Id = item.Id;
+                            s.Nome = item.Nome;
+                            s.CatSintomaId = item.CatSintomaId;
+                            filtroSintomas.Add(s);
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (var item in dbpointer.Tsintomas)
+                    {
+                        if (item.Nome.ToUpper().Contains(pesquisaSint.ToUpper()))
+                        {
+                            Sintoma s = new Sintoma();
+                            s.Id = item.Id;
+                            s.Nome = item.Nome;
+                            s.CatSintomaId = item.CatSintomaId;
+                            filtroSintomas.Add(s);
+                        }
                     }
                 }
                 ViewBag.FILTROSINT = filtroSintomas.ToList();
@@ -86,18 +103,35 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.FILTROSINT = null;
             }
             //listar os exames filtrados pela cat
-            if (idCatExam != 0)
+            if (idCatExam != 0 || pesquisaExam != null)
             {
                 List<Exame> filtroExames = new List<Exame>();
-                foreach (var item in dbpointer.Texames)
+                if (idCatExam != 0)
                 {
-                    if (idCatExam == item.CatExameId)
+                    foreach (var item in dbpointer.Texames)
                     {
-                        Exame e = new Exame();
-                        e.Id = item.Id;
-                        e.Nome = item.Nome;
-                        e.CatExameId = item.CatExameId;
-                        filtroExames.Add(e);
+                        if (idCatExam == item.CatExameId)
+                        {
+                            Exame e = new Exame();
+                            e.Id = item.Id;
+                            e.Nome = item.Nome;
+                            e.CatExameId = item.CatExameId;
+                            filtroExames.Add(e);
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (var item in dbpointer.Texames)
+                    {
+                        if (item.Nome.ToUpper().Contains(pesquisaExam.ToUpper()))
+                        {
+                            Exame e = new Exame();
+                            e.Id = item.Id;
+                            e.Nome = item.Nome;
+                            e.CatExameId = item.CatExameId;
+                            filtroExames.Add(e);
+                        }
                     }
                 }
                 ViewBag.FILTROEXAM = filtroExames.ToList();
@@ -306,6 +340,7 @@ namespace apoio_decisao_medica.Controllers
                         }
                         ViewBag.SUGESTAO1 = doencasSugestao1;
                         ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas.OrderByDescending(p => p.Relevancia).Include(s => s.Sintoma);
+                        ViewBag.TODOSEXAMES = dbpointer.TdoencaExames.OrderByDescending(p => p.Relevancia).Include(e => e.Exame);
                     }
 
                 }
@@ -372,8 +407,8 @@ namespace apoio_decisao_medica.Controllers
             {
                 if (idProcesso == item.ProcessoId)
                 {
-                    List<DoencaSintoma> doencaSintoma = new List<DoencaSintoma>();
-                    Dictionary<int, int> contarSintomas = new Dictionary<int, int>();
+                    List<DoencaSintoma> doencaSintoma = new();
+                    Dictionary<int, int> contarSintomas = new();
                     foreach (var itemS in dbpointer.TprocessoSintomas.Include(p=>p.Processo))
                     {
                         if (item.SintomaId == itemS.SintomaId)
