@@ -111,33 +111,43 @@ namespace apoio_decisao_medica.Controllers
             //adiciona sintoma ao processo
             if (sintoma != 0)
             {
-                var tabelaSintomas = dbpointer.Tsintomas.ToList();
-                foreach (var item in tabelaSintomas)
+                var existe = dbpointer.TprocessoSintomas.FirstOrDefault(s=>s.SintomaId== sintoma && s.ProcessoId==idProcesso);
+                if (existe == default)
                 {
-                    if (sintoma == item.Id)
+                    var tabelaSintomas = dbpointer.Tsintomas.ToList();
+                    foreach (var item in tabelaSintomas)
                     {
-                        ProcessoSintoma s = new ProcessoSintoma();
-                        s.ProcessoId = idProcesso;
-                        s.SintomaId = item.Id;
-                        dbpointer.TprocessoSintomas.Add(s);
-                        dbpointer.SaveChanges();
+                        if (sintoma == item.Id)
+                        {
+                            ProcessoSintoma s = new ProcessoSintoma();
+                            s.ProcessoId = idProcesso;
+                            s.SintomaId = item.Id;
+                            dbpointer.TprocessoSintomas.Add(s);
+                            dbpointer.SaveChanges();
+                        }
                     }
+
                 }
             }
             //adiciona exame ao processo
             if (exame != 0)
             {
-                var tabelaExames = dbpointer.Texames.ToList();
-                foreach (var item in tabelaExames)
+                var existe = dbpointer.TprocessoExames.FirstOrDefault(e => e.ExameId == exame && s.ProcessoId == idProcesso);
+                if (existe == default)
                 {
-                    if (exame == item.Id)
+                    var tabelaExames = dbpointer.Texames.ToList();
+                    foreach (var item in tabelaExames)
                     {
-                        ProcessoExame e = new ProcessoExame();
-                        e.ProcessoId = idProcesso;
-                        e.ExameId = item.Id;
-                        dbpointer.TprocessoExames.Add(e);
-                        dbpointer.SaveChanges();
+                        if (exame == item.Id)
+                        {
+                            ProcessoExame e = new ProcessoExame();
+                            e.ProcessoId = idProcesso;
+                            e.ExameId = item.Id;
+                            dbpointer.TprocessoExames.Add(e);
+                            dbpointer.SaveChanges();
+                        }
                     }
+
                 }
             }
 

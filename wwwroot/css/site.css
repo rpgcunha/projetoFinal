@@ -1,4 +1,4 @@
-html {
+ html {
   font-size: 14px;
 }
 
@@ -19,14 +19,14 @@ body {
     color: #688698 !important;
 }
 
-/*a {
+a {
     color: #228B22;
     text-decoration: none;
 }
 a:hover {
         color: black;
         text-decoration: none;
-    }*/
+    }
 .btnCriar a {
     color: #688698;
     text-decoration: none;
@@ -66,7 +66,7 @@ a:hover {
 input[type="text" i] {
     border: none;
     background-color: 
-    /*border: 2px solid black;*/
+    border: 2px solid black;
 }
 
     input[type="text" i]:focus {
