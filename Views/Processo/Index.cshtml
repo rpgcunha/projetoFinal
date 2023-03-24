@@ -2,90 +2,97 @@
 
 @foreach (var item in Model)
 {
-    if (ViewBag.IDPROCESSO == item.Id)
-    {
-        <h1>Processo Nº @item.NumeroProcesso</h1>
-        <br />
-        <br />
-        <br />
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h3>Dados do Utente</h3>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="col-2">Numero de Utente</th>
-                                <th>Nome</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>@item.Utente.NumeroUtente</th>
-                                <th>@item.Utente.Nome</th>
-                                <th></th>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Data de Nascimento</th>
-                                <th>Genero</th>
-                                <th>Cidade</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>@item.Utente.DataNascimento</th>
-                                <th>@item.Utente.Genero</th>
-                                <th>@item.Utente.Cidade</th>
-                            </tr>
-                        </tbody>
-                    </table>
+    <h1>Processo Nº @item.NumeroProcesso</h1>
+    <br />
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Dados do Utente</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="col-2">Numero de Utente</th>
+                            <th>Nome</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>@item.Utente.NumeroUtente</th>
+                            <th>@item.Utente.Nome</th>
+                            <th></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Data de Nascimento</th>
+                            <th>Genero</th>
+                            <th>Cidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>@item.Utente.DataNascimento</th>
+                            <th>@item.Utente.Genero</th>
+                            <th>@item.Utente.Cidade</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h3>Sintomas</h3>
+                <div class="fixed-height overflow-auto">
+                    @foreach (var itemS in ViewBag.SINTOMAS)
+                    {
+                        @itemS
+                        <br />
+                    }
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6">
-                    <h3>Sintomas</h3>
-                    <table class="table">
-                        @foreach (var itemS in ViewBag.SINTOMAS)
-                        {
-                            <tr>
-                                <th>
-                                    @itemS
-                                </th>
-                            </tr>
-                        }
-                    </table>
-                </div>
-                <div class="col-6">
-                    <h3>Exames</h3>
-                    <table class="table">
-                        @foreach (var itemE in ViewBag.EXAMES)
-                        {
-                            <tr>
-                                <th>
-                                    @itemE
-                                </th>
-                            </tr>
-                        }
-                    </table>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h3>Diagnóstico</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h3>Datas</h3>
+            <div class="col-6">
+                <h3>Exames</h3>
+                <div class="fixed-height overflow-auto">
+                    @foreach (var itemE in ViewBag.EXAMES)
+                    {
+                        @itemE
+                        <br />
+                    }
                 </div>
             </div>
         </div>
-        <a href="@ViewBag.ReturnUrl">Voltar</a>
-    }
+        <div class="row">
+            <div class="col-12">
+                <h3>Diagnóstico</h3>
+                <p>O diagnóstico final foi de <i>@item.Doenca.Nome</i>.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h3>Datas</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Data de Abertura</th>
+                            <th>Data de Fecho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>@item.DataHoraAbertura</th>
+                            <th>@item.DataHoraFecho</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a href="@ViewBag.ReturnUrl">Voltar</a>
+    <br />
+    <a asp-controller="NovoProcesso" asp-action="Index" asp-route-numProcesso="@item.NumeroProcesso" asp-route-reabrir="1">Reabrir Processo</a>
 }

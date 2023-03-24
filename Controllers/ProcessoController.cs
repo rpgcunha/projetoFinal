@@ -16,30 +16,26 @@ namespace apoio_decisao_medica.Controllers
         }
         public IActionResult Index(int idProcesso)
         {
+            //para voltar à pagina anterior
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
-            ViewBag.IDPROCESSO = idProcesso;
 
-            List<string> sintomas = new List<string>();
-            foreach (var item in dbpointer.TprocessoSintomas.Include(s => s.Sintoma))
-            {
-                if (idProcesso == item.ProcessoId)
-                {
-                    sintomas.Add(item.Sintoma.Nome);
-                }
-            }
+            //listar sintomas do processo
+            List<string> sintomas = new();
+            sintomas = dbpointer.TprocessoSintomas
+                .Include(s => s.Sintoma)
+                .Where(p=>p.ProcessoId==idProcesso)
+                .Select(p=>p.Sintoma.Nome).ToList();
             ViewBag.SINTOMAS = sintomas;
 
-            List<string> exames = new List<string>();
-            foreach (var item in dbpointer.TprocessoExames.Include(e => e.Exame))
-            {
-                if (idProcesso == item.ProcessoId)
-                {
-                    exames.Add(item.Exame.Nome);
-                }
-            }
+            //listar exames do processo
+            List<string> exames = new();
+            exames = dbpointer.TprocessoExames
+                .Include(e => e.Exame)
+                .Where(p => p.ProcessoId == idProcesso)
+                .Select(p => p.Exame.Nome).ToList();
             ViewBag.EXAMES = exames;
 
-            return View(dbpointer.Tprocessos.Include(p=> p.Utente));
+            return View(dbpointer.Tprocessos.Include(p=> p.Utente).Include(p=>p.Doenca).Where(p=>p.Id == idProcesso));
         }
     }
 }

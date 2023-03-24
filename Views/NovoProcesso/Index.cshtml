@@ -1,7 +1,7 @@
 ﻿<h2>Numero do Processo Nº @ViewBag.PROC</h2>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+        <div class="col-6">
                 @using (Html.BeginForm())
                 {
                     @:Sintomas 
@@ -12,28 +12,30 @@
                     <a asp-route-idCatSint="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
                     }
                     <br />
-                    @if (ViewBag.FILTROSINT == null)
-                    {
-                        <p><i>Escolha uma letra para filtrar os sintomas</i></p>
-                    }
-                    else
-                    {
-                        if (ViewBag.FILTROSINT.Count != 0)
+                    <div class="fixed-height overflow-auto">
+                        @if (ViewBag.FILTROSINT == null)
                         {
-                            @foreach (var item in ViewBag.FILTROSINT)
-                            {
-                                <label>
-                                    @Html.RadioButton("sintoma",$"{item.Id}")
-                                    @item.Nome
-                                </label>
-                                <br />
-                            }
+                            <p><i>Escolha uma letra para filtrar os sintomas</i></p>
                         }
                         else
                         {
-                            <p><i>Não existem sintomas nesta categoria!</i></p>
+                            if (ViewBag.FILTROSINT.Count != 0)
+                            {
+                                @foreach (var item in ViewBag.FILTROSINT)
+                                {
+                                    <label>
+                                        @Html.RadioButton("sintoma",$"{item.Id}")
+                                        @item.Nome
+                                    </label>
+                                    <br />
+                                }
+                            }
+                            else
+                            {
+                                <p><i>Não existem sintomas nesta categoria!</i></p>
+                            }
                         }
-                    }
+                    </div>
                     <br />
                     <br />
                     <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
@@ -52,27 +54,30 @@
                         <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
                     }
                     <br />
-                    @if (ViewBag.FILTROEXAM == null)
-                    {
-                        <p><i>Escolha uma letra para filtrar os exames</i></p>
-                    }
-                    else
-                    {
-                        if (ViewBag.FILTROEXAM.Count != 0)
+                    <div class="fixed-height overflow-auto">
+                        @if (ViewBag.FILTROEXAM == null)
                         {
-                            @foreach (var item in ViewBag.FILTROEXAM)
-                            {
-                                <label>
-                                    @Html.RadioButton("exame",$"{item.Id}")
-                                    @item.Nome
-                                </label>
-                            }
+                            <p><i>Escolha uma letra para filtrar os exames</i></p>
                         }
                         else
                         {
-                            <p><i>Não existem exames nesta categoria!</i></p>
+                            if (ViewBag.FILTROEXAM.Count != 0)
+                            {
+                                @foreach (var item in ViewBag.FILTROEXAM)
+                                {
+                                    <label>
+                                        @Html.RadioButton("exame",$"{item.Id}")
+                                        @item.Nome
+                                    </label>
+                                    <br />
+                                }
+                            }
+                            else
+                            {
+                                <p><i>Não existem exames nesta categoria!</i></p>
+                            }
                         }
-                    }
+                    </div>
                     <br />
                     <br />
                     <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
@@ -224,30 +229,33 @@
                         Exames Sugeridos:
                         @foreach (var ItemE in ViewBag.TODOSEXAMES)
                         {
-                            if (item.Id == ItemE.DoencaId)
+                            if (ViewBag.LISTAEXAM != null)
                             {
-                                int sim = 0;
-                                foreach (var itemX in ViewBag.LISTAEXAM)
+                                if (item.Id == ItemE.DoencaId)
                                 {
-
-                                    if (ItemE.SintomaId == itemX.Id)
+                                    int sim = 0;
+                                    foreach (var itemX in ViewBag.LISTAEXAM)
                                     {
-                                        <label class="text-success">
+
+                                        if (ItemE.SintomaId == itemX.Id)
+                                        {
+                                            <label class="text-success">
+                                                @ItemE.Exame.Nome ->
+                                                @ItemE.Relevancia%
+                                            </label>
+                                            sim = 1;
+                                            break;
+                                        }
+                                    }
+                                    if (sim == 0)
+                                    {
+                                        <label class="text-secondary">
                                             @ItemE.Exame.Nome ->
                                             @ItemE.Relevancia%
                                         </label>
-                                        sim = 1;
-                                        break;
                                     }
+                                    <br />
                                 }
-                                if (sim == 0)
-                                {
-                                    <label class="text-secondary">
-                                        @ItemE.Exame.Nome ->
-                                        @ItemE.Relevancia%
-                                    </label>
-                                }
-                                <br />
                             }
                         }
                     </div>

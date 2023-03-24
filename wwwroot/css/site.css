@@ -116,3 +116,11 @@ th {
           font-size: 3.5rem;
         }
       }
+
+.fixed-height {
+    height: 300px; /* altura fixa */
+}
+
+.fixed-height-pequena {
+    height: 150px; /* altura fixa */
+}

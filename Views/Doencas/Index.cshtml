@@ -1,24 +1,38 @@
 ﻿@model IEnumerable<apoio_decisao_medica.Models.Doenca>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Doenças";
+}
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-9">
+            <h1>Doenças</h1>
+        </div>
+        <div class="col-3">
+            @Html.TextBox("pesquisa")
+        </div>
+    </div>
 }
 
-<h1>Doenças</h1>
-
-<div class="btnCriar">
-    <a asp-action="Create">Create New</a>
-</div>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Nome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CatDoenca)
+                Categoria
             </th>
-            <th></th>
+            <th>
+                Sintomas -> Relevância
+            </th>
+            <th>
+                Exames -> Relevância
+            </th>
+            <th>
+                Percentagem de Casos
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -30,10 +44,40 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CatDoenca.Nome)
             </td>
-            <td align="right">
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <td>
+                <div class="fixed-height-pequena overflow-auto">
+                @foreach (var itemS in ViewBag.TODOSSINTOMAS)
+                {
+                    if (itemS.DoencaId == item.Id)
+                    {
+                        @itemS.Sintoma.Nome @:-> @itemS.Relevancia%
+                        <br />
+                    }
+                }
+                </div>
+            </td>
+            <td>
+                <div class="fixed-height-pequena overflow-auto">
+                    @foreach (var itemE in ViewBag.TODOSEXAMES)
+                    {
+                        if (itemE.DoencaId == item.Id)
+                        {
+                            @itemE.Exame.Nome @:-> @itemE.Relevancia%
+                            <br />
+                        }
+                    }
+                </div>
+            </td>
+            <td>
+                <div class="d-none">@(ViewBag.CONT = 0)</div>
+                @foreach (var cont in ViewBag.TODOSPROCESSOS)
+                {
+                    if (cont.DoencaId == item.Id)
+                    {
+                        <div class="d-none">@(ViewBag.CONT++)</div>
+                    }
+                }
+                @(100 * ViewBag.CONT / ViewBag.TOTAL)%
             </td>
         </tr>
 }

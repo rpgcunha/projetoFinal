@@ -43,7 +43,7 @@ namespace apoio_decisao_medica.Controllers
         }
         public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
             int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
-            int removerSint, int removerExam, string pesquisaSint, string pesquisaExam)
+            int removerSint, int removerExam, string pesquisaSint, string pesquisaExam, int reabrir)
         {
             if (nProcesso == 0)
             {
@@ -60,6 +60,16 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.IDPROCESSO = idProcesso;
             }
 
+            if (reabrir == 1)
+            {
+                var processo = dbpointer.Tprocessos.Single(p=>p.Id==idProcesso);
+                processo.DataHoraFecho = null;
+                dbpointer.SaveChanges();
+            }
+
+
+
+
             //Listar as gategorias dos sintomas
             ViewBag.CATSIN = dbpointer.TcatSintomas.ToList();
             //Listra as categorias dos exames
@@ -72,7 +82,7 @@ namespace apoio_decisao_medica.Controllers
                 List<Sintoma> filtroSintomas = new List<Sintoma>();
                 if (idCatSint != 0)
                 {
-                    foreach (var item in dbpointer.Tsintomas)
+                    foreach (var item in dbpointer.Tsintomas.OrderBy(s=> s.Nome))
                     {
                         if (idCatSint == item.CatSintomaId)
                         {
@@ -86,7 +96,7 @@ namespace apoio_decisao_medica.Controllers
                 }
                 else
                 {
-                    foreach (var item in dbpointer.Tsintomas)
+                    foreach (var item in dbpointer.Tsintomas.OrderBy(s => s.Nome))
                     {
                         if (item.Nome.ToUpper().Contains(pesquisaSint.ToUpper()))
                         {
@@ -110,7 +120,7 @@ namespace apoio_decisao_medica.Controllers
                 List<Exame> filtroExames = new List<Exame>();
                 if (idCatExam != 0)
                 {
-                    foreach (var item in dbpointer.Texames)
+                    foreach (var item in dbpointer.Texames.OrderBy(e => e.Nome))
                     {
                         if (idCatExam == item.CatExameId)
                         {
@@ -124,7 +134,7 @@ namespace apoio_decisao_medica.Controllers
                 }
                 else
                 {
-                    foreach (var item in dbpointer.Texames)
+                    foreach (var item in dbpointer.Texames.OrderBy(e => e.Nome))
                     {
                         if (item.Nome.ToUpper().Contains(pesquisaExam.ToUpper()))
                         {
