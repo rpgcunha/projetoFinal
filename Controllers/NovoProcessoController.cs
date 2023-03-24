@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using NuGet.Packaging.Rules;
 using System;
 using System.Collections.Immutable;
+using System.ComponentModel;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -395,8 +397,9 @@ namespace apoio_decisao_medica.Controllers
             return View();
         }
 
-        public IActionResult FecharProcesso(int numProcesso)
+        public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao)
         {
+            int numProcesso = 2023000009;
             int idProcesso = dbpointer.Tprocessos
                     .Where(p => p.NumeroProcesso == numProcesso)
                     .Select(p => p.Id)
@@ -448,8 +451,101 @@ namespace apoio_decisao_medica.Controllers
                     }
                 }
             }
-            ViewBag.TESTE = "chegou aqui, por aqui avaliçao dos exames";
-            return View();
+
+            //apresentar os exames para avaliar
+            Processo p = new();
+            foreach (var item in dbpointer.Tprocessos.Include(p => p.Doenca))
+            {
+                if (item.Id == idProcesso)
+                {
+                    p.Id = item.Id;
+                    p.NumeroProcesso = item.NumeroProcesso;
+                    p.DataHoraAbertura = item.DataHoraAbertura;
+                    p.DoencaId = item.DoencaId;
+                    ViewBag.DOENCA = item.Doenca.Nome;
+                }
+            }
+            ViewBag.PROCESSO = p;
+            List<AvaliarExame> listaExames = new();
+            foreach (var item in dbpointer.TprocessoExames.Include(e=>e.Exame))
+            {
+                if (item.ProcessoId == p.Id)
+                {
+                    AvaliarExame e = new();
+                    e.Id = item.ExameId;
+                    e.Nome = item.Exame.Nome;
+                    e.Selecionado = false;
+                    listaExames.Add(e);
+                }
+            }
+
+            //verificar se nao escolheu nenhum para confirmar se deseja continuar
+            if (submeter != 0)
+            {
+                bool continuar = false;
+                foreach (var item in selectlistaExames)
+                {
+                    if (item.Selecionado)
+                    {
+                        continuar = true;
+                        break;
+                    }
+                }
+                if (continuar || confirmacao == 1)
+                {
+                    //atualizar relevancia dos exames para a doença
+                    int i = 0;
+                    List<string> teste = new();
+                    foreach (var item in selectlistaExames)
+                    {
+                        if (item.Selecionado)
+                        {
+                            var updateRelevancia = dbpointer.TdoencaExames.FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
+                            if (updateRelevancia != null)
+                            {
+                                if (updateRelevancia.Relevancia < 100)
+                                {
+                                    updateRelevancia.Relevancia = updateRelevancia.Relevancia + 5;
+                                    dbpointer.SaveChanges();
+                                }
+                            }
+                            else
+                            {
+                                DoencaExame r = new();
+                                r.DoencaId = Convert.ToInt32(p.DoencaId);
+                                r.ExameId = listaExames[i].Id;
+                                r.Relevancia = 50;
+                                dbpointer.TdoencaExames.Add(r);
+                                dbpointer.SaveChanges();
+                            }
+                        }
+                        else
+                        {
+                            var updateRelevancia = dbpointer.TdoencaExames.FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
+                            if (updateRelevancia != null)
+                            {
+                                if (updateRelevancia.Relevancia > 0)
+                                {
+                                    updateRelevancia.Relevancia = updateRelevancia.Relevancia - 5;
+                                    dbpointer.SaveChanges();
+                                }
+                            }
+                        }
+                        i++;
+                    }
+                    ViewBag.SUBMETER = 1;
+                }
+                else
+                {
+                    ViewBag.CONTINUAR = 1;
+                    ViewBag.SUBMETER = 0;
+                }
+            }
+            else
+            {
+                ViewBag.SUBMETER = 0;
+            }            
+            return View(listaExames);
         }
 
 

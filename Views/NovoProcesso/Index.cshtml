@@ -20,7 +20,7 @@
                     {
                         if (ViewBag.FILTROSINT.Count != 0)
                         {
-@*                            @foreach (var item in ViewBag.FILTROSINT)
+                            @foreach (var item in ViewBag.FILTROSINT)
                             {
                                 <label>
                                     @Html.RadioButton("sintoma",$"{item.Id}")
@@ -28,7 +28,7 @@
                                 </label>
                                 <br />
                             }
-*@                        }
+                        }
                         else
                         {
                             <p><i>Não existem sintomas nesta categoria!</i></p>

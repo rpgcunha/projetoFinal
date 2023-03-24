@@ -1,1 +1,48 @@
-﻿@ViewBag.TESTE
+﻿@model List<apoio_decisao_medica.ViewsModels.AvaliarExame>
+@using (Html.BeginForm())
+{
+    <h5>Fechado o processo numero: @ViewBag.PROCESSO.NumeroProcesso</h5>
+    <br />
+    <h6>Doença: @ViewBag.DOENCA</h6>
+    <br />
+    <br />
+    <br />
+    @if (Model.Count > 0)
+    {
+        if (ViewBag.SUBMETER == 0)
+        {
+            <p>Indique quais os exames foram uteis para chegar ao diagnostico final:</p>
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                <div>
+                    @Html.CheckBoxFor(m => m[i].Selecionado, new { @value = true })
+                    @Html.Label(Model[i].Nome)
+                </div>
+            }
+            <br />
+            <br />
+            <br />
+            <input type="submit" value="Submeter" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="1">
+            if (ViewBag.CONTINUAR != null)
+            {
+                <p><i>Não Selecionou nenhum exame, deseja continuar?</i></p>
+                <input type="submit" value="Sim" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="1" asp-route-confirmacao="1">
+                <input type="submit" value="Não" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="0">
+            }
+        }
+        else
+        {
+            <p><i>Submetido com sucesso, pode prosseguir!</i></p>
+            <a asp-controller="Home" asp-action="Index">Concluir</a>
+        }
+        <br />
+        <br />
+
+    }
+    else
+    {
+        <h6>Não existem exames para validar pode prosseguir.</h6>
+
+        <a asp-controller="Home" asp-action="Index">Concluir</a>
+    }
+}
