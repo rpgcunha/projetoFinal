@@ -132,7 +132,7 @@ namespace apoio_decisao_medica.Controllers
             //adiciona exame ao processo
             if (exame != 0)
             {
-                var existe = dbpointer.TprocessoExames.FirstOrDefault(e => e.ExameId == exame && s.ProcessoId == idProcesso);
+                var existe = dbpointer.TprocessoExames.FirstOrDefault(e => e.ExameId == exame && e.ProcessoId == idProcesso);
                 if (existe == default)
                 {
                     var tabelaExames = dbpointer.Texames.ToList();

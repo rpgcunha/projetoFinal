@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\apoio_decisao_medica.csproj": {}
+    "C:\\Users\\admin\\Desktop\\ultimaVersao\\projetoFinal\\apoio_decisao_medica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\apoio_decisao_medica.csproj": {
+    "C:\\Users\\admin\\Desktop\\ultimaVersao\\projetoFinal\\apoio_decisao_medica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\apoio_decisao_medica.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\ultimaVersao\\projetoFinal\\apoio_decisao_medica.csproj",
         "projectName": "apoio_decisao_medica",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\apoio_decisao_medica.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\ultimaVersao\\projetoFinal\\apoio_decisao_medica.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\ultimaVersao\\projetoFinal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

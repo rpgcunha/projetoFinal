@@ -1,5 +1,8 @@
-﻿for (var i = 0; i < document.links.length; i++) {
-    if (document.links[i].href == document.URL && document.links[i] != "http://localhost:5268/") {
-        document.links[i].className = 'linkAtivo';
+﻿var navbar = document.getElementById("myNavbar");
+var links = navbar.getElementsByTagName("a");
+
+for (var i = 0; i < links.length; i++) {
+    if (links[i].href == document.URL && links[i] != "http://localhost:5268/") {
+        links[i].className = "linkAtivo";
     }
 }
