@@ -8,6 +8,7 @@ using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.VisualBasic;
 using NuGet.Packaging.Rules;
 using System;
 using System.Collections.Immutable;
@@ -27,7 +28,16 @@ namespace apoio_decisao_medica.Controllers
         {
             //obter novo numero de processo
             var processo = (dbpointer.Tprocessos.OrderByDescending(x => x.Id).First());
-            int nProcesso = processo.NumeroProcesso + 1; // nao esquecer de +1
+            int nProcesso;
+            if (processo.NumeroProcesso.ToString().Substring(0, 4) == DateTime.Today.ToString("yyyy"))
+            {
+                nProcesso = processo.NumeroProcesso + 1; // nao esquecer de +1
+            }
+            else
+            {
+                nProcesso = Convert.ToInt32(DateTime.Today.ToString("yyyy") + "000001");
+            }
+            
 
             //inserir novo processo na base de dados
             Processo novo = new Processo();
