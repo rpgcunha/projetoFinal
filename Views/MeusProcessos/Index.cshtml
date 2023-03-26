@@ -1,25 +1,38 @@
-﻿<h2>Meus processos</h2>
+﻿<h2>MEUS PROCESSOS</h2>
 <br />
 <br />
 @using (Html.BeginForm())
 {
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <h5>Processos Abertos</h5>
-            </div>
-            <div class="col-4">
-                <div>
-                    @Html.TextBox("pesquisaAbertos")
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    </div>
-                </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h5>Processos Abertos</h5>
+        </div>
+    </div>
+    <hr />
+        
+    <div class="grupoPesquisa">
+        <div class="textbox">
+            @Html.TextBox("pesquisaAbertos")
+            <div class="botaolupa">
+                <button class="lupa" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
+    <br />
+   @* <div class="input-group w-50">
+        <span class="input-group-text" id="basic-addon1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+            </svg>
+        </span>
+        <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1" wtx-context="5505C860-8F8E-483E-8BDE-6AEEA7669DEE">
+    </div>*@
+   
     <table class="table">
         <thead>
             <tr>
@@ -53,17 +66,26 @@
 <br />
 @using (Html.BeginForm())
 {
-    <div class="container">
-        <div class="row">
-            <div class="col-9">
-                <h5>Processos Fechados</h5>
-            </div>
-            <div class="col-3">
-                @Html.TextBox("pesquisaFechados")
-                <input class="btnCriar" type="submit" value="Procurar">
+    <div class="row">
+        <div class="col-12">
+            <h5>Processos Fechados</h5>
+        </div>
+    </div>
+    <hr />
+        
+    <div class="grupoPesquisa">
+        <div class="textbox">
+            @Html.TextBox("pesquisaFechados")
+            <div class="botaolupa">
+                <button class="lupa" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
+    <br />
     <table class="table">
         <thead>
             <tr>
@@ -91,4 +113,6 @@
             }
         </tbody>
     </table>
+    <br />
+    <br />
 }
