@@ -19,35 +19,27 @@ namespace apoio_decisao_medica.Controllers
             _context = context;
         }
 
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = _context.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
         // GET: Sintomas
         public async Task<IActionResult> Index()
         {
+            ViewBag.USER = UserLogado();
+
             var applicationDbContext = _context.Tsintomas.Include(s => s.CatSintoma);
             return View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: Sintomas/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Tsintomas == null)
-            {
-                return NotFound();
-            }
-
-            var sintoma = await _context.Tsintomas
-                .Include(s => s.CatSintoma)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (sintoma == null)
-            {
-                return NotFound();
-            }
-
-            return View(sintoma);
         }
 
         // GET: Sintomas/Create
         public IActionResult Create()
         {
+            ViewBag.USER = UserLogado();
+
             ViewData["CatSintomaId"] = new SelectList(_context.TcatSintomas, "Id", "Nome");
             return View();
         }
@@ -59,6 +51,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,CatSintomaId")] Sintoma sintoma)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 _context.Add(sintoma);
@@ -72,6 +66,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Sintomas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Tsintomas == null)
             {
                 return NotFound();
@@ -93,6 +89,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CatSintomaId")] Sintoma sintoma)
         {
+            ViewBag.USER = UserLogado();
+
             if (id != sintoma.Id)
             {
                 return NotFound();
@@ -125,6 +123,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Sintomas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Tsintomas == null)
             {
                 return NotFound();
@@ -146,6 +146,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            ViewBag.USER = UserLogado();
+
             if (_context.Tsintomas == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Tsintomas'  is null.");

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using apoio_decisao_medica.Data;
 using apoio_decisao_medica.Models;
+using System.Reflection;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -14,39 +15,30 @@ namespace apoio_decisao_medica.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public CatDoencasController(ApplicationDbContext context)
+		public CatDoencasController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: CatDoencas
-        public async Task<IActionResult> Index()
-        {
-              return View(await _context.TcatDoencas.ToListAsync());
-        }
+		public Utilizador UserLogado()
+		{
+			int? idUSer = HttpContext.Session.GetInt32("idUser");
+			var utilizador = _context.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+			return utilizador;
+		}
 
-        // GET: CatDoencas/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.TcatDoencas == null)
-            {
-                return NotFound();
-            }
-
-            var catDoenca = await _context.TcatDoencas
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (catDoenca == null)
-            {
-                return NotFound();
-            }
-
-            return View(catDoenca);
+		// GET: CatDoencas
+		public async Task<IActionResult> Index()
+        {        
+			ViewBag.USER = UserLogado();
+			return View(await _context.TcatDoencas.ToListAsync());
         }
 
         // GET: CatDoencas/Create
         public IActionResult Create()
         {
-            return View();
+			ViewBag.USER = UserLogado();
+			return View();
         }
 
         // POST: CatDoencas/Create
@@ -56,7 +48,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome")] CatDoenca catDoenca)
         {
-            if (ModelState.IsValid)
+			ViewBag.USER = UserLogado();
+			if (ModelState.IsValid)
             {
                 _context.Add(catDoenca);
                 await _context.SaveChangesAsync();
@@ -68,7 +61,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: CatDoencas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.TcatDoencas == null)
+			ViewBag.USER = UserLogado();
+			if (id == null || _context.TcatDoencas == null)
             {
                 return NotFound();
             }
@@ -88,7 +82,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] CatDoenca catDoenca)
         {
-            if (id != catDoenca.Id)
+			ViewBag.USER = UserLogado();
+			if (id != catDoenca.Id)
             {
                 return NotFound();
             }
@@ -119,7 +114,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: CatDoencas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.TcatDoencas == null)
+			ViewBag.USER = UserLogado();
+			if (id == null || _context.TcatDoencas == null)
             {
                 return NotFound();
             }
@@ -139,7 +135,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.TcatDoencas == null)
+			ViewBag.USER = UserLogado();
+			if (_context.TcatDoencas == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.TcatDoencas'  is null.");
             }

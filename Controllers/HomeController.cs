@@ -1,20 +1,34 @@
-﻿using apoio_decisao_medica.Models;
+﻿using apoio_decisao_medica.Data;
+using apoio_decisao_medica.Migrations;
+using apoio_decisao_medica.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace apoio_decisao_medica.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        Utilizador userLogado = new Utilizador();
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext dbpointer;
+
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            dbpointer = context;
         }
 
-        public IActionResult Index()
+        public Utilizador UserLogado()
         {
+			int? idUSer = HttpContext.Session.GetInt32("idUser");
+			var utilizador = dbpointer.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+			return utilizador;
+		}
+
+		public IActionResult Index()
+        {
+            ViewBag.USER = UserLogado();
             return View();
         }
 
@@ -22,11 +36,17 @@ namespace apoio_decisao_medica.Controllers
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Login(string user, string pass)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            HttpContext.Session.SetInt32("idUser", 0);
+            var utilizador = dbpointer.Tutilizador.SingleOrDefault(u => u.Pass == pass && u.User == user);
+
+            if (utilizador != null)
+            {                
+                HttpContext.Session.SetInt32("idUser", utilizador.Id);
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }

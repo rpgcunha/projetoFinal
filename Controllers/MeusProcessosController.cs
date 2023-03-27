@@ -15,8 +15,18 @@ namespace apoio_decisao_medica.Controllers
             dbpointer = context;
         }
 
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = dbpointer.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
+
         public IActionResult Index(string pesquisaAbertos, string pesquisaFechados)
         {
+            ViewBag.USER = UserLogado();
+
             //provisorio
             int idMedico = 1;
             //enviar a lista de todos os processos abertos do medico

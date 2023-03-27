@@ -14,8 +14,18 @@ namespace apoio_decisao_medica.Controllers
         {
             dbpointer = context;
         }
+
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = dbpointer.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
         public IActionResult Index(int idProcesso)
         {
+            ViewBag.USER = UserLogado();
+
             //para voltar à pagina anterior
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
 

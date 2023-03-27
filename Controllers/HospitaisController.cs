@@ -19,35 +19,29 @@ namespace apoio_decisao_medica.Controllers
             _context = context;
         }
 
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = _context.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
+
         // GET: Hospitais
         public async Task<IActionResult> Index()
         {
-              return _context.Thospitais != null ? 
+            ViewBag.USER = UserLogado();
+
+            return _context.Thospitais != null ? 
                           View(await _context.Thospitais.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Thospitais'  is null.");
-        }
-
-        // GET: Hospitais/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Thospitais == null)
-            {
-                return NotFound();
-            }
-
-            var hospital = await _context.Thospitais
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (hospital == null)
-            {
-                return NotFound();
-            }
-
-            return View(hospital);
         }
 
         // GET: Hospitais/Create
         public IActionResult Create()
         {
+            ViewBag.USER = UserLogado();
+
             return View();
         }
 
@@ -58,6 +52,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Cidade")] Hospital hospital)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 _context.Add(hospital);
@@ -70,6 +66,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Hospitais/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Thospitais == null)
             {
                 return NotFound();
@@ -90,6 +88,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Cidade")] Hospital hospital)
         {
+            ViewBag.USER = UserLogado();
+
             if (id != hospital.Id)
             {
                 return NotFound();
@@ -121,6 +121,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Hospitais/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Thospitais == null)
             {
                 return NotFound();
@@ -141,6 +143,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            ViewBag.USER = UserLogado();
+
             if (_context.Thospitais == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Thospitais'  is null.");

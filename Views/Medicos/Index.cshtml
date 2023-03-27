@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<apoio_decisao_medica.Models.Medico>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Médicos";
 }
 
 <h1>Médicos</h1>
 
-<div class="btnCriar">
-    <a asp-action="Create">Create New</a>
-</div>
+<p>
+    <a asp-action="Create">Adicionar Novo</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -17,6 +17,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                Utilizador
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Especialidade)
@@ -34,12 +37,14 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Utilizador.User)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Especialidade)
             </td>
-            <td align="right">
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
             </td>
         </tr>
 }

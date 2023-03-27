@@ -32,9 +32,15 @@ namespace apoio_decisao_medica.Data
         public DbSet<ProcessoExame> TprocessoExames { get; set; }
         public DbSet<ProcessoSintoma> TprocessoSintomas { get; set; }
 
+        public DbSet<Utilizador> Tutilizador { get; set; }
 
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			modelBuilder.Entity<Medico>()
+				.HasOne(p => p.Utilizador)
+				.WithOne(e => e.Medico)
+				.HasForeignKey<Utilizador>(e => e.MedicoId);
+		}
 
-
-
-    }
+	}
 }

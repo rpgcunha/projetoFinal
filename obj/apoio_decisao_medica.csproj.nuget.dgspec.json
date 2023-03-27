@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\apoio_decisao_medica\\apoio_decisao_medica.csproj": {}
+    "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\manualmente\\apoio_decisao_medica\\apoio_decisao_medica.csproj": {}
   },
   "projects": {
-    "D:\\code\\apoio_decisao_medica\\apoio_decisao_medica.csproj": {
+    "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\manualmente\\apoio_decisao_medica\\apoio_decisao_medica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
+        "projectUniqueName": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\manualmente\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
         "projectName": "apoio_decisao_medica",
-        "projectPath": "D:\\code\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
+        "projectPath": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\manualmente\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
         "packagesPath": "C:\\Users\\rpcun\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\apoio_decisao_medica\\obj\\",
+        "outputPath": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\manualmente\\apoio_decisao_medica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

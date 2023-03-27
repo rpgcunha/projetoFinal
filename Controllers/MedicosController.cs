@@ -19,35 +19,29 @@ namespace apoio_decisao_medica.Controllers
             _context = context;
         }
 
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = _context.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
+
         // GET: Medicos
         public async Task<IActionResult> Index()
         {
-              return _context.Tmedicos != null ? 
+            ViewBag.USER = UserLogado();
+
+            return _context.Tmedicos != null ? 
                           View(await _context.Tmedicos.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Tmedicos'  is null.");
-        }
-
-        // GET: Medicos/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Tmedicos == null)
-            {
-                return NotFound();
-            }
-
-            var medico = await _context.Tmedicos
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (medico == null)
-            {
-                return NotFound();
-            }
-
-            return View(medico);
         }
 
         // GET: Medicos/Create
         public IActionResult Create()
         {
+            ViewBag.USER = UserLogado();
+
             return View();
         }
 
@@ -56,8 +50,10 @@ namespace apoio_decisao_medica.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Bi,Nome,Especialidade")] Medico medico)
+        public async Task<IActionResult> Create([Bind("Id,Bi,Nome,UtilizadorId,Especialidade")] Medico medico)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 _context.Add(medico);
@@ -70,6 +66,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Medicos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Tmedicos == null)
             {
                 return NotFound();
@@ -88,8 +86,10 @@ namespace apoio_decisao_medica.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Bi,Nome,Especialidade")] Medico medico)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Bi,Nome,UtilizadorId,Especialidade")] Medico medico)
         {
+            ViewBag.USER = UserLogado();
+
             if (id != medico.Id)
             {
                 return NotFound();
@@ -121,6 +121,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Medicos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Tmedicos == null)
             {
                 return NotFound();
@@ -141,6 +143,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            ViewBag.USER = UserLogado();
+
             if (_context.Tmedicos == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Tmedicos'  is null.");

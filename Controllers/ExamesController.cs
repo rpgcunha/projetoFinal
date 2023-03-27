@@ -19,35 +19,28 @@ namespace apoio_decisao_medica.Controllers
             _context = context;
         }
 
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = _context.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
+
         // GET: Exames
         public async Task<IActionResult> Index()
         {
+            ViewBag.USER = UserLogado();
+
             var applicationDbContext = _context.Texames.Include(e => e.CatExame);
             return View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: Exames/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Texames == null)
-            {
-                return NotFound();
-            }
-
-            var exame = await _context.Texames
-                .Include(e => e.CatExame)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (exame == null)
-            {
-                return NotFound();
-            }
-
-            return View(exame);
         }
 
         // GET: Exames/Create
         public IActionResult Create()
         {
+            ViewBag.USER = UserLogado();
+
             ViewData["CatExameId"] = new SelectList(_context.TcatExames, "Id", "Nome");
             return View();
         }
@@ -59,6 +52,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,CatExameId")] Exame exame)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 _context.Add(exame);
@@ -72,6 +67,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Exames/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Texames == null)
             {
                 return NotFound();
@@ -93,6 +90,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CatExameId")] Exame exame)
         {
+            ViewBag.USER = UserLogado();
+
             if (id != exame.Id)
             {
                 return NotFound();
@@ -125,6 +124,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Exames/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Texames == null)
             {
                 return NotFound();
@@ -146,6 +147,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            ViewBag.USER = UserLogado();
+
             if (_context.Texames == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Texames'  is null.");

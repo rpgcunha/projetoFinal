@@ -1,20 +1,22 @@
 ﻿@model IEnumerable<apoio_decisao_medica.Models.Doenca>
 
 @{
-    ViewData["Title"] = "Doenças";
-}
-@using (Html.BeginForm())
-{
-    <div class="row">
-        <div class="col-9">
-            <h1>Doenças</h1>
-        </div>
-        <div class="col-3">
-            @Html.TextBox("pesquisa")
-        </div>
-    </div>
+    ViewData["Title"] = "DOENÇAS";
 }
 
+<div class="row">
+    <div class="col-md-12">
+        <h1>DOENÇAS</h1>
+    </div>
+</div>
+<hr />
+@using (Html.BeginForm())
+{
+    <div class="col-3">
+        @Html.TextBox("pesquisa")
+    </div>
+}
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -25,10 +27,10 @@
                 Categoria
             </th>
             <th>
-                Sintomas -> Relevância
+                Sintomas (Relevância)
             </th>
             <th>
-                Exames -> Relevância
+                Exames (Relevância)
             </th>
             <th>
                 Percentagem de Casos
@@ -36,50 +38,54 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CatDoenca.Nome)
-            </td>
-            <td>
-                <div class="fixed-height-pequena overflow-auto">
-                @foreach (var itemS in ViewBag.TODOSSINTOMAS)
-                {
-                    if (itemS.DoencaId == item.Id)
-                    {
-                        @itemS.Sintoma.Nome @:-> @itemS.Relevancia%
-                        <br />
-                    }
-                }
-                </div>
-            </td>
-            <td>
-                <div class="fixed-height-pequena overflow-auto">
-                    @foreach (var itemE in ViewBag.TODOSEXAMES)
-                    {
-                        if (itemE.DoencaId == item.Id)
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CatDoenca.Nome)
+                </td>
+                <td>
+                    <div class="fixed-height-pequena overflow-auto">
+                        @foreach (var itemS in ViewBag.TODOSSINTOMAS)
                         {
-                            @itemE.Exame.Nome @:-> @itemE.Relevancia%
-                            <br />
+                            if (itemS.DoencaId == item.Id)
+                            {
+                                @itemS.Sintoma.Nome @:(@itemS.Relevancia%)
+                                <br />
+                            }
+                        }
+                    </div>
+                </td>
+                <td>
+                    <div class="fixed-height-pequena overflow-auto">
+                        @foreach (var itemE in ViewBag.TODOSEXAMES)
+                        {
+                            if (itemE.DoencaId == item.Id)
+                            {
+                                @itemE.Exame.Nome @:(@itemE.Relevancia%)
+                                <br />
+                            }
+                        }
+                    </div>
+                </td>
+                <td>
+                    <div class="d-none">@(ViewBag.CONT = 0)</div>
+                    @foreach (var cont in ViewBag.TODOSPROCESSOS)
+                    {
+                        if (cont.DoencaId == item.Id)
+                        {
+                            <div class="d-none">@(ViewBag.CONT++)</div>
                         }
                     }
-                </div>
-            </td>
-            <td>
-                <div class="d-none">@(ViewBag.CONT = 0)</div>
-                @foreach (var cont in ViewBag.TODOSPROCESSOS)
-                {
-                    if (cont.DoencaId == item.Id)
-                    {
-                        <div class="d-none">@(ViewBag.CONT++)</div>
-                    }
-                }
-                @(100 * ViewBag.CONT / ViewBag.TOTAL)%
-            </td>
-        </tr>
-}
+                    @(100 * ViewBag.CONT / ViewBag.TOTAL)%
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<br />
+<br />
+

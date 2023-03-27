@@ -3,8 +3,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddSession();
 
 
 //escolhe a string connection a usar
@@ -25,8 +29,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseSession();
+
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Login}/{id?}");
 
 app.Run();

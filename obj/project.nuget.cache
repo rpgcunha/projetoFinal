@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "njXixelZxXVcvWwrXkck5P5b2gFF4muTpvGceWNNS2F9VjBKUc1jR89QeAasC/Ii4ktC6Cj2KIWih+j3jfDsjg==",
+  "dgSpecHash": "sodM0vLfYkdZJi7T2DCEK2tzLz+B+q8ZFXTsUkWlJJspkAjmsV53XKOv9ha02S3bz24aKElzfZGBw5Vc08b0hA==",
   "success": true,
-  "projectFilePath": "D:\\code\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
+  "projectFilePath": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\manualmente\\apoio_decisao_medica\\apoio_decisao_medica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rpcun\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\rpcun\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

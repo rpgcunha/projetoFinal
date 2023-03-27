@@ -9,6 +9,8 @@ namespace apoio_decisao_medica.Models
         [Display(Name = "Numero de Utente")]
         [RegularExpression("[0-9]{9}", ErrorMessage = "Numero de Utente incorreto")]
         public int NumeroUtente { get; set; }
+
+        [Display(Name = "Nome Completo")]
         public string Nome { get; set; }
 
         [Display(Name = "Data de Nascimento 'DD/MM/AAAA'")]

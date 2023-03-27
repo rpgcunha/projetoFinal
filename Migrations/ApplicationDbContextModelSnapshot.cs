@@ -209,6 +209,9 @@ namespace apoio_decisao_medica.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UtilizadorId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Tmedicos");
@@ -355,6 +358,36 @@ namespace apoio_decisao_medica.Migrations
                     b.ToTable("Tutentes");
                 });
 
+            modelBuilder.Entity("apoio_decisao_medica.Models.Utilizador", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MedicoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Pass")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("User")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MedicoId")
+                        .IsUnique();
+
+                    b.ToTable("Tutilizador");
+                });
+
             modelBuilder.Entity("apoio_decisao_medica.Models.Doenca", b =>
                 {
                     b.HasOne("apoio_decisao_medica.Models.CatDoenca", "CatDoenca")
@@ -497,6 +530,17 @@ namespace apoio_decisao_medica.Migrations
                     b.Navigation("CatSintoma");
                 });
 
+            modelBuilder.Entity("apoio_decisao_medica.Models.Utilizador", b =>
+                {
+                    b.HasOne("apoio_decisao_medica.Models.Medico", "Medico")
+                        .WithOne("Utilizador")
+                        .HasForeignKey("apoio_decisao_medica.Models.Utilizador", "MedicoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Medico");
+                });
+
             modelBuilder.Entity("apoio_decisao_medica.Models.CatDoenca", b =>
                 {
                     b.Navigation("Doencas");
@@ -536,6 +580,8 @@ namespace apoio_decisao_medica.Migrations
             modelBuilder.Entity("apoio_decisao_medica.Models.Medico", b =>
                 {
                     b.Navigation("Processos");
+
+                    b.Navigation("Utilizador");
                 });
 
             modelBuilder.Entity("apoio_decisao_medica.Models.Sintoma", b =>

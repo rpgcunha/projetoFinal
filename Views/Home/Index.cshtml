@@ -3,10 +3,22 @@
 }
 
 
+
 <div class="text-center">
     <img src="~/img/usericon.jpg" alt="" width="80" height="80" class="rounded-circle me-2"><br />
-    <strong>Utilizador</strong>
 </div>
 <div class="row">
-
+    <div class="col-12">
+        Nome do Utilizador: @ViewBag.USER.Medico.Nome
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        Especialidade: @ViewBag.USER.Medico.Especialidade
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <button type="submit">Mudar Password</button>
+    </div>
 </div>

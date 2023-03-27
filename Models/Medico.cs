@@ -10,9 +10,13 @@ namespace apoio_decisao_medica.Models
         [RegularExpression("[0-9]{8}", ErrorMessage = "Numero do BI incorreto")]
         public int Bi { get; set; }
         public string Nome { get; set; }
+
+        [Display(Name = "ID do Utilizador")]
+        public int UtilizadorId { get; set; }
         public string Especialidade { get; set; }
 
-        public virtual ICollection<Processo>? Processos { get; set; }
+		public virtual Utilizador? Utilizador { get; set; }
+		public virtual ICollection<Processo>? Processos { get; set; }
 
     }
 }

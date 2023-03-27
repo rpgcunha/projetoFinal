@@ -8,6 +8,7 @@ using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.VisualBasic;
 using NuGet.Packaging.Rules;
 using System;
 using System.Collections.Immutable;
@@ -23,11 +24,28 @@ namespace apoio_decisao_medica.Controllers
         {
             dbpointer = context;
         }
+
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = dbpointer.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
         public IActionResult CriarProcesso(int idUtente)
         {
             //obter novo numero de processo
             var processo = (dbpointer.Tprocessos.OrderByDescending(x => x.Id).First());
-            int nProcesso = processo.NumeroProcesso + 1; // nao esquecer de +1
+            int nProcesso;
+            if (processo.NumeroProcesso.ToString().Substring(0, 4) == DateTime.Today.ToString("yyyy"))
+            {
+                nProcesso = processo.NumeroProcesso + 1; // nao esquecer de +1
+            }
+            else
+            {
+                nProcesso = Convert.ToInt32(DateTime.Today.ToString("yyyy") + "000001");
+            }
+            
 
             //inserir novo processo na base de dados
             Processo novo = new Processo();
@@ -45,6 +63,8 @@ namespace apoio_decisao_medica.Controllers
             int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
             int removerSint, int removerExam, string pesquisaSint, string pesquisaExam, int reabrir)
         {
+            ViewBag.USER = UserLogado();
+
             if (nProcesso == 0)
             {
                 ViewBag.PROC = numProcesso;
@@ -409,6 +429,8 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao)
         {
+            ViewBag.USER = UserLogado();
+
             int numProcesso = 2023000009;
             int idProcesso = dbpointer.Tprocessos
                     .Where(p => p.NumeroProcesso == numProcesso)
@@ -562,6 +584,8 @@ namespace apoio_decisao_medica.Controllers
         //criar novo sintoma
         public IActionResult NovoSintoma(int numProcesso)
         {
+            ViewBag.USER = UserLogado();
+
             @ViewBag.PROC = numProcesso;
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
             ViewData["CatSintomaId"] = new SelectList(dbpointer.TcatSintomas, "Id", "Nome");
@@ -571,6 +595,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> NovoSintoma([Bind("Id,Nome,CatSintomaId")] Sintoma sintoma, int numProcesso)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 dbpointer.Add(sintoma);
@@ -585,6 +611,8 @@ namespace apoio_decisao_medica.Controllers
         //novo exame
         public IActionResult NovoExame(int numProcesso)
         {
+            ViewBag.USER = UserLogado();
+
             @ViewBag.PROC = numProcesso;
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
             ViewData["CatExameId"] = new SelectList(dbpointer.TcatExames, "Id", "Nome");
@@ -594,6 +622,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> NovoExame([Bind("Id,Nome,CatExameId")] Exame exame, int numProcesso)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 dbpointer.Add(exame);
@@ -607,6 +637,8 @@ namespace apoio_decisao_medica.Controllers
         //nova doenca
         public IActionResult NovaDoenca(int numProcesso)
         {
+            ViewBag.USER = UserLogado();
+
             @ViewBag.PROC = numProcesso;
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
             ViewData["CatDoencaId"] = new SelectList(dbpointer.TcatDoencas, "Id", "Nome");
@@ -616,6 +648,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> NovaDoenca([Bind("Id,Nome,CatDoencaId")] Doenca doenca, int numProcesso)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 dbpointer.Add(doenca);

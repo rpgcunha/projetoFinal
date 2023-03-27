@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<apoio_decisao_medica.Models.Sintoma>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Sintomas";
 }
 
 <h1>Sintomas</h1>
 
 <div class="btnCriar">
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Adicionar Novo</a>
 </div>
 <table class="table">
     <thead>
@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CatSintoma)
+                Categoria
             </th>
             <th></th>
         </tr>
@@ -31,9 +31,8 @@
                 @Html.DisplayFor(modelItem => item.CatSintoma.Nome)
             </td>
             <td align="right">
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
             </td>
         </tr>
 }

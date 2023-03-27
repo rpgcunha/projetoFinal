@@ -18,36 +18,29 @@ namespace apoio_decisao_medica.Controllers
         {
             _context = context;
         }
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = _context.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
 
         // GET: Utentes
         public async Task<IActionResult> Index()
         {
-              return _context.Tutentes != null ? 
+            ViewBag.USER = UserLogado();
+
+            return _context.Tutentes != null ? 
                           View(await _context.Tutentes.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Tutentes'  is null.");
         }
 
-        // GET: Utentes/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Tutentes == null)
-            {
-                return NotFound();
-            }
-
-            var utente = await _context.Tutentes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (utente == null)
-            {
-                return NotFound();
-            }
-
-            return View(utente);
-        }
 
         // GET: Utentes/Create
         public IActionResult Create()
         {
+            ViewBag.USER = UserLogado();
+
             return View();
         }
 
@@ -58,6 +51,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
         {
+            ViewBag.USER = UserLogado();
+
             if (ModelState.IsValid)
             {
                 _context.Add(utente);
@@ -70,6 +65,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Utentes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Tutentes == null)
             {
                 return NotFound();
@@ -90,6 +87,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
         {
+            ViewBag.USER = UserLogado();
+
             if (id != utente.Id)
             {
                 return NotFound();
@@ -121,6 +120,8 @@ namespace apoio_decisao_medica.Controllers
         // GET: Utentes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || _context.Tutentes == null)
             {
                 return NotFound();
@@ -141,6 +142,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            ViewBag.USER = UserLogado();
+
             if (_context.Tutentes == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Tutentes'  is null.");

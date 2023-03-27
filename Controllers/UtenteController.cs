@@ -16,8 +16,17 @@ namespace apoio_decisao_medica.Controllers
         {
             dbpointer = context;
         }
+        public Utilizador UserLogado()
+        {
+            int? idUSer = HttpContext.Session.GetInt32("idUser");
+            var utilizador = dbpointer.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            return utilizador;
+        }
+
         public IActionResult Index(string nome, string numUtente, string dataNasc)
         {
+            ViewBag.USER = UserLogado();
+
             List<Utente> listaUtentes = new List<Utente>();
 
             //procurar pelo nome de utente
@@ -82,6 +91,8 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult Detalhes(int? id, int idProc)
         {
+            ViewBag.USER = UserLogado();
+
             //detalhes do utente
             foreach (var item in dbpointer.Tutentes)
             {
@@ -143,12 +154,17 @@ namespace apoio_decisao_medica.Controllers
         //criar novo utente
         public IActionResult Novo()
         {
+            ViewBag.USER = UserLogado();
+
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Novo([Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
         {
+            ViewBag.USER = UserLogado();
+
+
             if (ModelState.IsValid)
             {
                 dbpointer.Add(utente);
@@ -162,6 +178,8 @@ namespace apoio_decisao_medica.Controllers
         //editar dados do utente
         public async Task<IActionResult> Editar(int? id)
         {
+            ViewBag.USER = UserLogado();
+
             if (id == null || dbpointer.Tutentes == null)
             {
                 return NotFound();
@@ -178,6 +196,8 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Editar(int id, [Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
         {
+            ViewBag.USER = UserLogado();
+
             if (id != utente.Id)
             {
                 return NotFound();
