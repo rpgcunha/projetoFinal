@@ -26,16 +26,43 @@ namespace apoio_decisao_medica.Controllers
 			return utilizador;
 		}
 
-		public IActionResult Index()
+		public IActionResult Index(int change, string antiga, string nova, string nova2)
         {
             ViewBag.USER = UserLogado();
+
+            if (change == 1)
+            {
+                ViewBag.CHANGE = 1;
+            }
+
+            if (change == 2)
+            {
+                if (antiga == null || nova == null || nova2 == null)
+                {
+                    ViewBag.ERRO = "Tem de preencher os 3 campos!";
+                    ViewBag.CHANGE = 1;
+                }
+                else
+                {
+                    if (nova != nova2)
+                    {
+                        ViewBag.ERRO = "A nova password não corresponde, tente novamente";
+                        ViewBag.CHANGE = 1;
+                    }
+                    else
+                    {
+                        var utilizador = dbpointer.Tutilizador.Single(p => p.Id == UserLogado().Id);
+                        utilizador.Pass = nova;
+                        dbpointer.SaveChanges();
+                        ViewBag.SUCESS = "Password alterada com sucesso!";
+                    }
+                }
+
+
+            }
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
         public IActionResult Login(string user, string pass)
         {
             HttpContext.Session.SetInt32("idUser", 0);
@@ -46,6 +73,13 @@ namespace apoio_decisao_medica.Controllers
                 HttpContext.Session.SetInt32("idUser", utilizador.Id);
                 return RedirectToAction("Index");
             }
+            else
+            {
+                if (user != null || pass != null)
+                {
+					ViewBag.ERRO = "Username ou Password incorretos!";
+				}
+			}
             return View();
         }
     }

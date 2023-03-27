@@ -17,8 +17,33 @@
         Especialidade: @ViewBag.USER.Medico.Especialidade
     </div>
 </div>
-<div class="row">
-    <div class="col-12">
-        <button type="submit">Mudar Password</button>
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-12">
+            <button type="submit" asp-route-change="1">Mudar Password</button>
+        </div>
     </div>
-</div>
+    @if (ViewBag.CHANGE != null)
+    {
+        if (ViewBag.ERRO != null)
+        {
+            @ViewBag.ERRO
+            <br />
+        }
+        <input type="password" name="antiga" placeholder="Password Antiga">
+        <br />
+        <input type="password" name="nova" placeholder="Nova Password">
+        <br />
+        <input type="password" name="nova2" placeholder="Repita a Nova Password">
+        <br />
+        <button type="submit" asp-route-change="2">Confirmar</button>
+    }
+    @if (ViewBag.SUCESS != null)
+    {
+        @ViewBag.SUCESS
+    }
+}
+
+
+
