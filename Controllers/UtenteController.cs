@@ -67,7 +67,7 @@ namespace apoio_decisao_medica.Controllers
                 }
                 return View(listaUtentes);
             }
-            //procurar pelo nome de utente
+            //procurar pela Data de nascimento
             if (dataNasc != null)
             {
                 foreach (var item in dbpointer.Tutentes)
