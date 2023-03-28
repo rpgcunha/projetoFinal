@@ -1,40 +1,59 @@
 ﻿@model IEnumerable<apoio_decisao_medica.ViewsModels.HistoricoProcesso>
-
-<h2>Detalhes do Utente</h2>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Numero de Utente</th>
-            <th>Data de Nascimento</th>
-            <th>Genero</th>
-            <th>Cidade</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>@ViewBag.UTENTE.Nome</th>
-            <th>@ViewBag.UTENTE.NumeroUtente</th>
-            <th>@ViewBag.UTENTE.DataNascimento</th>
-            <th>@ViewBag.UTENTE.Genero</th>
-            <th>@ViewBag.UTENTE.Cidade</th>
-        </tr>
-    </tbody>
-</table>
-<div class="btnCriar">
-    <a asp-action="Editar" asp-route-id="@ViewBag.UTENTE?.Id">Editar Dados</a>
+<div class="sticky-top" style="background-color: #ebf4fa">
+    <div class="row">
+        <div class="col-md-10"><h2>Detalhes do Utente</h2></div>
+        <div class="col-md-2">
+            <div class="btnCriar">
+                <a asp-action="Index">Voltar</a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="container fichaUtente d-flex" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; margin-bottom: 3px;">
+        <div class="row p-3">
+            <div class="col-md-4 imgUtilizador"><img src="~/img/usericon.jpg" width="50%" class="rounded-circle" /></div>
+            <div class="col-md-4" >
+                <div class="row">
+                    <div class="col-md-12"><h4>@ViewBag.UTENTE.Nome</h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">@ViewBag.IDADE anos, @ViewBag.UTENTE.Genero</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">Número de utente: @ViewBag.UTENTE.NumeroUtente</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">Cidade: @ViewBag.UTENTE.Cidade</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="btnCriar mb-3" style="margin-left: 50%; transform: translateX(-50%);">
+                            <a asp-action="Editar" asp-route-id="@ViewBag.UTENTE?.Id">Editar Dados</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="btnCriar mt-3" style="margin-left: 50%; transform: translateX(-50%);">
+                            <a asp-controller="NovoProcesso" asp-action="CriarProcesso" asp-route-idUtente="@ViewBag.UTENTE?.Id">Novo Processo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <br />
-<br />
-<div class="btnCriar">
-    <a asp-controller="NovoProcesso" asp-action="CriarProcesso" asp-route-idUtente="@ViewBag.UTENTE?.Id">Novo Processo</a>
-</div>
+
 @using (Html.BeginForm())
 {
-    <h3>Histórico de Processos do Utente</h3>
+
+    <div><h3>Histórico de Processos do Utente</h3></div>
+ 
     <br />
-    <table class="table">
+    <table class="table tableProcessosUtentes" style="height: 30px;">
         <thead>
             <tr>
                 <th>Numero do Processo</th>
@@ -52,15 +71,15 @@
                     <tr>
                         @if (item.DataFecho == null)
                         {
-                            <th><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.NumProcesso">@item.NumProcesso</a></th>
+                            <td><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.NumProcesso">@item.NumProcesso</a></td>
                         }
                         else
                         {
-                            <th><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.NumProcesso</a></th>
+                            <td><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.NumProcesso</a></td>
                         }
-                        <th>@item.DataAbertura</th>
-                        <th>@item.DataFecho</th>
-                        <th>@if (ViewBag.LISTA != item.Id)
+                        <td>@item.DataAbertura</td>
+                        <td>@item.DataFecho</td>
+                        <td>@if (ViewBag.LISTA != item.Id)
                             {
                             <input type="submit" value="+" asp-route-idProc="@item.Id">
                         }
@@ -75,18 +94,13 @@
                                 }
                             }
                         }
-                        </th>
-                        <th>@item.Doenca</th>
-                        <th>@item.Medico</th>
-                        <th>@item.Hospital</th>
+                        </td>
+                        <td>@item.Doenca</td>
+                        <td>@item.Medico</td>
+                        <td>@item.Hospital</td>
                     </tr>
             }           
         </tbody>
     </table>
 }
-@ViewBag.TESTE
-<br />
-<br />
-<div class="btnCriar">
-    <a asp-action="Index">Voltar</a>
-</div>
+

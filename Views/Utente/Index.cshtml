@@ -10,45 +10,58 @@
         <div class="col-md-3 col-sm-3 col-xs-12 p-3">Nome</div>
         <div class="col-md-3 col-sm-3 col-xs-12 p-3">Número de utente</div>
         <div class="col-md-3 col-sm-3 col-xs-12 p-3">Data de Nascimento</div>
+        <div class="col-md-3 col-sm-3 col-xs-12 p-3">Cidade</div>
     </div>
     <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-12">@Html.TextBox("nome")</div>
-        <div class="col-md-3 col-sm-3 col-xs-12">@Html.TextBox("numUtente")</div>
-        <div class="col-md-3 col-sm-3 col-xs-12">@Html.TextBox("dataNasc")</div>
-        <div class="col-md-3 col-sm-3 col-xs-12">
-            <button class="btnCriar" type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
-                &nbspProcurar
-            </button>
-        </div>
-
-    </div>
-@*    <table class="table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Numero de Utente</th>
-                <th>Data de Nascimento</th>
-            </tr>
-        </thead>
-        <tbody>
-                        <tr>
-                <th>@Html.TextBox("nome")</th>
-                <th>@Html.TextBox("numUtente")</th>
-                <th>@Html.TextBox("dataNasc")</th>
-                <th><button class="btnCriar" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                        &nbspProcurar
+        <div class="grupoPesquisa col-md-3">
+            <div class="textbox">
+                @Html.TextBox("nome")
+                <div class="botaolupa">
+                    <button class="lupa" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
                     </button>
-                </th> 
-            </tr>
-        </tbody>
-    </table>*@
-    
+                </div>
+            </div>
+        </div>
+        <div class="grupoPesquisa col-md-3">
+            <div class="textbox">
+                @Html.TextBox("numUtente")
+                <div class="botaolupa">
+                    <button class="lupa" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="grupoPesquisa col-md-3">
+            <div class="textbox">
+                @Html.TextBox("dataNasc")
+                <div class="botaolupa">
+                    <button class="lupa" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+                <div class="grupoPesquisa col-md-3">
+            <div class="textbox">
+                @Html.TextBox("cidade")
+                <div class="botaolupa">
+                    <button class="lupa" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 }
 <br />
 <br />

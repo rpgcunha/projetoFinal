@@ -23,7 +23,7 @@ namespace apoio_decisao_medica.Controllers
             return utilizador;
         }
 
-        public IActionResult Index(string nome, string numUtente, string dataNasc)
+        public IActionResult Index(string nome, string numUtente, string dataNasc, string cidade)
         {
             ViewBag.USER = UserLogado();
 
@@ -86,6 +86,25 @@ namespace apoio_decisao_medica.Controllers
                 }
                 return View(listaUtentes);
             }
+            if (cidade != null)
+            {
+                foreach (var item in dbpointer.Tutentes)
+                {
+                    if (item.Cidade != null && item.Cidade.ToString().ToUpper().Contains(cidade.ToUpper()))
+                    {
+                        Utente u = new Utente();
+                        u.Id = item.Id;
+                        u.Nome = item.Nome;
+                        u.NumeroUtente = item.NumeroUtente;
+                        u.DataNascimento = item.DataNascimento;
+                        u.Genero = item.Genero;
+                        u.Cidade = item.Cidade;
+                        listaUtentes.Add(u);
+                    }
+                }
+                return View(listaUtentes);
+            }
+
             return View(dbpointer.Tutentes.ToList());
         }
 
@@ -103,9 +122,16 @@ namespace apoio_decisao_medica.Controllers
                     u.Nome = item.Nome;
                     u.NumeroUtente = item.NumeroUtente;
                     u.DataNascimento = item.DataNascimento;
+                    DateTime dataNascimento = DateTime.ParseExact(item.DataNascimento, "dd/MM/yyyy", null);
+                    int idade = DateTime.Today.Year - dataNascimento.Year;
+                    if (DateTime.Today < dataNascimento.AddYears(idade))
+                    {
+                        idade--;
+                    }
                     u.Genero = item.Genero;
                     u.Cidade = item.Cidade;
                     ViewBag.UTENTE = u;
+                    ViewBag.IDADE = idade;
                 }
             }
 

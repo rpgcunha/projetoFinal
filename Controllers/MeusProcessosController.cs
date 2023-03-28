@@ -25,6 +25,7 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult Index(string pesquisaAbertos, string pesquisaFechados)
         {
+            var user = UserLogado();
             ViewBag.USER = UserLogado();
 
             //provisorio
@@ -86,12 +87,12 @@ namespace apoio_decisao_medica.Controllers
 
             //enviar a lista dos ultimos 10 processos fechados do medico
             if (pesquisaFechados == null)
-            {
+            {             
                 int contador = 1;
                 List<HistoricoProcesso> processosFechados = new List<HistoricoProcesso>();
                 foreach (var item in dbpointer.Tprocessos.Include(p => p.Doenca).Include(p => p.Medico).Include(p => p.Hospital).Include(p => p.Utente).OrderByDescending(p => p.Id))
                 {
-                    if (item.DataHoraFecho != null)
+                    if (item.DataHoraFecho != null && user.Medico.Id == item.MedicoId)
                     {
                         HistoricoProcesso p = new HistoricoProcesso();
                         p.Id = item.Id;
@@ -123,10 +124,10 @@ namespace apoio_decisao_medica.Controllers
                     {
                         if (item.DataHoraFecho != null)
                         {
-                            if (item.NumeroProcesso.ToString() == pesquisaAbertos ||
-                                item.Utente.Nome.ToUpper().Contains(pesquisaAbertos.ToUpper()) ||
-                                item.Utente.NumeroUtente.ToString() == pesquisaAbertos ||
-                                item.DataHoraAbertura.ToString().Contains(pesquisaAbertos) ||
+                            if (item.NumeroProcesso.ToString() == pesquisaFechados ||
+                                item.Utente.Nome.ToUpper().Contains(pesquisaFechados.ToUpper()) ||
+                                item.Utente.NumeroUtente.ToString() == pesquisaFechados ||
+                                item.DataHoraAbertura.ToString().Contains(pesquisaFechados) ||
                                 item.DataHoraFecho.ToString().Contains(pesquisaFechados))
                             {
                                 HistoricoProcesso p = new HistoricoProcesso();

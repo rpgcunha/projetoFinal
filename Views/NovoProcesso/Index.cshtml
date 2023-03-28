@@ -1,11 +1,47 @@
 ﻿<h2>Numero do Processo Nº @ViewBag.PROC</h2>
-    <div class="container">
+<hr />
+<div class="container fichaUtente align-items-center mb-3" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; height: 150px /*margin-left: 0px;*/">
+    <div class="row p-3">
+        <div class="col-md-6 imgUtilizador"><img src="~/img/usericon.jpg" width="116px" height="116px" class="rounded-circle" /></div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12"><h4>@ViewBag.UTENTE.Utente.Nome</h4></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">@ViewBag.IDADE anos, @ViewBag.UTENTE.Utente.Genero</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">Número de utente: @ViewBag.UTENTE.Utente.NumeroUtente</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">Cidade: @ViewBag.UTENTE.Utente.Cidade</div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+    <div class="">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Quais são os sintomas apresentados pelo utente?</h5>
+            </div>
+        </div>
         <div class="row">
         <div class="col-6">
                 @using (Html.BeginForm())
                 {
-                    @:Sintomas 
-                    @Html.TextBox("pesquisaSint")
+                    <div class="grupoPesquisa col-md-3">
+                        <div class="textbox">
+                        @Html.TextBox("pesquisaSint", null, new {@class = "pesquisaSint",  placeholder = "Pesquisar sintomas" })
+                            <div class="botaolupa">
+                                <button class="lupa" type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <br />
                     @foreach (var item in ViewBag.CATSIN)
                     {
@@ -24,6 +60,7 @@
                                 @foreach (var item in ViewBag.FILTROSINT)
                                 {
                                     <label>
+
                                         @Html.RadioButton("sintoma",$"{item.Id}")
                                         @item.Nome
                                     </label>
@@ -38,58 +75,16 @@
                     </div>
                     <br />
                     <br />
-                    <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
-                    <a asp-action="NovoSintoma" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Sintoma</a>
+
+                    <button type="submit" id="submitButton" class="btnCriar" asp-route-numProcesso="@ViewBag.PROC">Adicionar ao processo</button>
+                    <a asp-action="NovoSintoma" asp-route-numProcesso="@ViewBag.PROC">Criar Novo Sintoma</a>
                     <br />
               }
            </div>
+        
             <div class="col-6">
                 @using (Html.BeginForm())
                 {
-                    @:Exames
-                    @Html.TextBox("pesquisaExam")
-                    <br />
-                    @foreach (var item in ViewBag.CATEXAM)
-                    {
-                        <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
-                    }
-                    <br />
-                    <div class="fixed-height overflow-auto">
-                        @if (ViewBag.FILTROEXAM == null)
-                        {
-                            <p><i>Escolha uma letra para filtrar os exames</i></p>
-                        }
-                        else
-                        {
-                            if (ViewBag.FILTROEXAM.Count != 0)
-                            {
-                                @foreach (var item in ViewBag.FILTROEXAM)
-                                {
-                                    <label>
-                                        @Html.RadioButton("exame",$"{item.Id}")
-                                        @item.Nome
-                                    </label>
-                                    <br />
-                                }
-                            }
-                            else
-                            {
-                                <p><i>Não existem exames nesta categoria!</i></p>
-                            }
-                        }
-                    </div>
-                    <br />
-                    <br />
-                    <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
-                    <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Exame</a>
-                    <br />
-                }
-            </div>
-        </div>
-        @using (Html.BeginForm())
-        {
-            <div class="row">
-                <div class="col-6">
                     <table class="table">
                         <thead>
                             <tr>
@@ -121,14 +116,61 @@
                                             @item.Nome
                                         </th>
                                         <th>
-                                        <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerSint="@item.Id">
+                                            <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerSint="@item.Id">
                                         </th>
                                     </tr>
                                 }
                             </tbody>
                         }
                     </table>
+                }                       
+           </div>
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <div class="col-6">
+                    @using (Html.BeginForm())
+                    {
+                        @:Exames
+                        @Html.TextBox("pesquisaExam")
+                        <br />
+                        @foreach (var item in ViewBag.CATEXAM)
+                        {
+                            <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
+                        }
+                        <br />
+                        <div class="fixed-height overflow-auto">
+                            @if (ViewBag.FILTROEXAM == null)
+                            {
+                                <p><i>Escolha uma letra para filtrar os exames</i></p>
+                            }
+                            else
+                            {
+                                if (ViewBag.FILTROEXAM.Count != 0)
+                                {
+                                    @foreach (var item in ViewBag.FILTROEXAM)
+                                    {
+                                        <label>
+                                            @Html.RadioButton("exame",$"{item.Id}")
+                                            @item.Nome
+                                        </label>
+                                        <br />
+                                    }
+                                }
+                                else
+                                {
+                                    <p><i>Não existem exames nesta categoria!</i></p>
+                                }
+                            }
+                        </div>
+                        <br />
+                        <br />
+                        <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
+                        <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Criar Novo Exame</a>
+                        <br />
+                    }
                 </div>
+            
                 <div class="col-6">
                     <table class="table">
                         <thead>
@@ -277,7 +319,7 @@
         {
             @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag.CATDOENCA)
             <input type="submit" value="Aplicar" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
-            <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">Adicionar Nova Doença</a>
+            <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">Criar Nova Doença</a>
             <br />
             <br />
             if (ViewBag.MAISDOENCAS != null)

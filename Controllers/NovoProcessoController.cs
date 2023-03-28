@@ -80,6 +80,17 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.IDPROCESSO = idProcesso;
             }
 
+            //calcular idade
+            var ficha = dbpointer.Tprocessos.Include(p => p.Utente).Single(p => p.NumeroProcesso == numProcesso || p.NumeroProcesso == nProcesso);
+            ViewBag.UTENTE = ficha;
+            DateTime dataNascimento = DateTime.ParseExact(ficha.Utente.DataNascimento, "dd/MM/yyyy", null);
+            int idade = DateTime.Today.Year - dataNascimento.Year;
+            if (DateTime.Today < dataNascimento.AddYears(idade))
+            {
+                idade--;
+            }
+            ViewBag.IDADE = idade;
+
             if (reabrir == 1)
             {
                 var processo = dbpointer.Tprocessos.Single(p=>p.Id==idProcesso);
@@ -427,11 +438,10 @@ namespace apoio_decisao_medica.Controllers
             return View();
         }
 
-        public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao)
+        public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao, int numProcesso)
         {
             ViewBag.USER = UserLogado();
 
-            int numProcesso = 2023000009;
             int idProcesso = dbpointer.Tprocessos
                     .Where(p => p.NumeroProcesso == numProcesso)
                     .Select(p => p.Id)
