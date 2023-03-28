@@ -104,10 +104,17 @@ input[type="text" i] {
         color: #688698
     }
 
-th a {
+th a, td a {
     text-decoration: none;
     color: #688698;
+    font-weight: bold;
 }
+    th a:hover, td a:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #688698;
+        font-weight: bold;
+    }
 
 .dropdown li{
     color: white;
@@ -134,7 +141,7 @@ tr:nth-child(even) {
 thead {
     background-color: #688698;
 }
-    thead th {
+    thead th{
         color: white;
         vertical-align: middle;
     }
@@ -171,4 +178,7 @@ thead {
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
+}
+.pesquisaSint::placeholder {
+    color: #688698;
 }

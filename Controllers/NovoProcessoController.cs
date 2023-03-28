@@ -55,6 +55,7 @@ namespace apoio_decisao_medica.Controllers
             int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
             int removerSint, int removerExam, string pesquisaSint, string pesquisaExam, int reabrir)
         {
+            
             if (nProcesso == 0)
             {
                 ViewBag.PROC = numProcesso;
@@ -69,7 +70,15 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.PROC = nProcesso;
                 ViewBag.IDPROCESSO = idProcesso;
             }
-
+            var ficha = dbpointer.Tprocessos.Include(p => p.Utente).Single(p => p.NumeroProcesso==numProcesso || p.NumeroProcesso==nProcesso);
+            ViewBag.UTENTE = ficha;
+            DateTime dataNascimento = DateTime.ParseExact(ficha.Utente.DataNascimento, "dd/MM/yyyy", null);
+            int idade = DateTime.Today.Year - dataNascimento.Year;
+            if (DateTime.Today < dataNascimento.AddYears(idade))
+            {
+                idade--;
+            }
+            ViewBag.IDADE = idade;
             if (reabrir == 1)
             {
                 var processo = dbpointer.Tprocessos.Single(p=>p.Id==idProcesso);

@@ -10511,23 +10511,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bruna\\.nuget\\packages\\": {},
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bruna\\Desktop\\Versão26_03\\projetoFinal\\apoio_decisao_medica.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\versao27_03\\projetoFinal\\apoio_decisao_medica.csproj",
       "projectName": "apoio_decisao_medica",
-      "projectPath": "C:\\Users\\bruna\\Desktop\\Versão26_03\\projetoFinal\\apoio_decisao_medica.csproj",
-      "packagesPath": "C:\\Users\\bruna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bruna\\Desktop\\Versão26_03\\projetoFinal\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\versao27_03\\projetoFinal\\apoio_decisao_medica.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\versao27_03\\projetoFinal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\bruna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10598,7 +10598,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

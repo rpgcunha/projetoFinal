@@ -77,6 +77,24 @@ namespace apoio_decisao_medica.Controllers
                 }
                 return View(listaUtentes);
             }
+            if (cidade != null)
+            {
+                foreach (var item in dbpointer.Tutentes)
+                {
+                    if (item.Cidade.ToString().ToUpper().Contains(cidade.ToUpper()))
+                    {
+                        Utente u = new Utente();
+                        u.Id = item.Id;
+                        u.Nome = item.Nome;
+                        u.NumeroUtente = item.NumeroUtente;
+                        u.DataNascimento = item.DataNascimento;
+                        u.Genero = item.Genero;
+                        u.Cidade = item.Cidade;
+                        listaUtentes.Add(u);
+                    }
+                }
+                return View(listaUtentes);
+            }
             return View(dbpointer.Tutentes.ToList());
         }
 
@@ -92,15 +110,22 @@ namespace apoio_decisao_medica.Controllers
                     u.Nome = item.Nome;
                     u.NumeroUtente = item.NumeroUtente;
                     u.DataNascimento = item.DataNascimento;
+                    DateTime dataNascimento = DateTime.ParseExact(item.DataNascimento, "dd/MM/yyyy", null);
+                    int idade = DateTime.Today.Year - dataNascimento.Year;
+                    if (DateTime.Today < dataNascimento.AddYears(idade))
+                    {
+                        idade--;
+                    }
                     u.Genero = item.Genero;
                     u.Cidade = item.Cidade;
                     ViewBag.UTENTE = u;
+                    ViewBag.IDADE = idade;
                 }
             }
-
+            
 
             //historico de processos do utente
-            List<HistoricoProcesso> listaProcessos = new List<HistoricoProcesso>();
+            List <HistoricoProcesso> listaProcessos = new List<HistoricoProcesso>();
             var processos = dbpointer.Tprocessos.OrderByDescending(p => p.Id).Include(p => p.Doenca).Include(p => p.Hospital).Include(p => p.Medico);
             foreach (var item in processos)
             {
