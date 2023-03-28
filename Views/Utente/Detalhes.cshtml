@@ -11,7 +11,21 @@
     <hr />
     <div class="container fichaUtente d-flex" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; margin-bottom: 3px;">
         <div class="row p-3">
-            <div class="col-md-4 imgUtilizador"><img src="~/img/usericon.jpg" width="50%" class="rounded-circle" /></div>
+            @switch (ViewBag.UTENTE.Genero)
+            {
+                case "Masculino":
+                    <div class="col-md-4 imgUtilizador"><img src="~/img/masculino.jpg" width="50%" class="rounded-circle" /></div>
+                    break;
+                case "Feminino":
+                    <div class="col-md-4 imgUtilizador"><img src="~/img/feminino.png" width="50%" class="rounded-circle" /></div>
+                    break;
+                default:
+                    <div class="col-md-4 imgUtilizador"><img src="~/img/none.png" width="50%" class="rounded-circle" /></div>
+                    break;
+            }
+            @if (ViewBag.UTENTE.Genero == "Masculino")
+            {
+            }
             <div class="col-md-4" >
                 <div class="row">
                     <div class="col-md-12"><h4>@ViewBag.UTENTE.Nome</h4></div>

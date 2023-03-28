@@ -344,6 +344,7 @@ namespace apoio_decisao_medica.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Genero")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")

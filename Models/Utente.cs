@@ -18,7 +18,7 @@ namespace apoio_decisao_medica.Models
         public string DataNascimento { get; set; }
 
         [Display(Name = "Género")]
-        public string? Genero { get; set; }
+        public string Genero { get; set; }
         public string? Cidade { get; set; }
 
         public virtual ICollection<Processo>? Processos { get; set; }

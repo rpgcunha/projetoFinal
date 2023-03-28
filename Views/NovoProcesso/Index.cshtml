@@ -2,7 +2,18 @@
 <hr />
 <div class="container fichaUtente align-items-center mb-3" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; height: 150px /*margin-left: 0px;*/">
     <div class="row p-3">
-        <div class="col-md-6 imgUtilizador"><img src="~/img/usericon.jpg" width="116px" height="116px" class="rounded-circle" /></div>
+        @switch (ViewBag.UTENTE.Utente.Genero)
+        {
+            case "Masculino":
+                <div class="col-md-4 imgUtilizador"><img src="~/img/masculino.jpg" width="50%" class="rounded-circle" /></div>
+                break;
+            case "Feminino":
+                <div class="col-md-4 imgUtilizador"><img src="~/img/feminino.png" width="50%" class="rounded-circle" /></div>
+                break;
+            default:
+                <div class="col-md-4 imgUtilizador"><img src="~/img/none.png" width="50%" class="rounded-circle" /></div>
+                break;
+        }
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12"><h4>@ViewBag.UTENTE.Utente.Nome</h4></div>

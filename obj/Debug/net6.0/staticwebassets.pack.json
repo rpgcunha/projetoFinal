@@ -349,8 +349,32 @@
       "PackagePath": "staticwebassets\\img\\bg-01.jpg"
     },
     {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\bruna.png",
+      "PackagePath": "staticwebassets\\img\\bruna.png"
+    },
+    {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\feminino.png",
+      "PackagePath": "staticwebassets\\img\\feminino.png"
+    },
+    {
       "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\favicon.ico",
       "PackagePath": "staticwebassets\\img\\icons\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\masculino.jpg",
+      "PackagePath": "staticwebassets\\img\\masculino.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\none.png",
+      "PackagePath": "staticwebassets\\img\\none.png"
+    },
+    {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\rui.png",
+      "PackagePath": "staticwebassets\\img\\rui.png"
+    },
+    {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\teste.png",
+      "PackagePath": "staticwebassets\\img\\teste.png"
     },
     {
       "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\usericon.jpg",
