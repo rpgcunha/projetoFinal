@@ -3763,3 +3763,11 @@ C:\Users\rpcun\Desktop\Nova pasta (2)\Nova pasta (2)\manualmente\apoio_decisao_m
 C:\Users\rpcun\Desktop\Nova pasta (2)\Nova pasta (2)\manualmente\apoio_decisao_medica\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
 C:\Users\rpcun\Desktop\Nova pasta (2)\Nova pasta (2)\manualmente\apoio_decisao_medica\bin\Debug\net6.0\System.Web.WebPages.dll
 C:\Users\rpcun\Desktop\Nova pasta (2)\Nova pasta (2)\manualmente\apoio_decisao_medica\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\FullCalendar.MVC5.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\admin\Desktop\Projeto\projetoFinal\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll

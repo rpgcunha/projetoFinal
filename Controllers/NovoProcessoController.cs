@@ -51,8 +51,8 @@ namespace apoio_decisao_medica.Controllers
             Processo novo = new Processo();
             novo.NumeroProcesso = nProcesso;
             novo.UtenteId = idUtente;
-            novo.MedicoId = 1; //necessoario automatizar
-            novo.HospitalId = 1; //necessario automatizar
+            novo.MedicoId = UserLogado().MedicoId;
+            novo.HospitalId = Convert.ToInt32(HttpContext.Session.GetInt32("local")); //necessario automatizar
             novo.DataHoraAbertura = DateTime.Today.ToString("dd/MM/yyyy");
             dbpointer.Tprocessos.Add(novo);
             dbpointer.SaveChanges();

@@ -28,7 +28,7 @@ namespace apoio_decisao_medica.Controllers
             ViewBag.USER = UserLogado();
 
             //provisorio
-            int idMedico = 1;
+            int idMedico = UserLogado().MedicoId;
             //enviar a lista de todos os processos abertos do medico
             if (pesquisaAbertos == null)
             {

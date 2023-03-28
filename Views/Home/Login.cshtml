@@ -39,6 +39,10 @@
 									placeholder="Password">
 							<span class="focus-input100"></span>
 						</div>
+						<div class="w-full text-center pb-3">
+							@Html.DropDownList("local", (SelectList)ViewBag.LOCAIS, "Selecione onde se encontra")
+							<br />
+						</div>
 						<div class="container-login100-form-btn">
 							<button class="login100-form-btn" type="submit">
 								Login

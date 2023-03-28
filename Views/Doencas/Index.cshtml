@@ -13,9 +13,10 @@
 @using (Html.BeginForm())
 {
     <div class="col-3">
+        @Html.DropDownList("categoria", (SelectList)ViewBag.CATEGORIAS, "Escolha uma categoria", new { onchange = "this.form.submit();" })
         @Html.TextBox("pesquisa")
     </div>
-}
+
 <br />
 <table class="table">
     <thead>
@@ -86,6 +87,7 @@
         }
     </tbody>
 </table>
+}
 <br />
 <br />
 

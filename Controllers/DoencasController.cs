@@ -28,7 +28,7 @@ namespace apoio_decisao_medica.Controllers
 
 
         // GET: Doencas
-        public async Task<IActionResult> Index(string pesquisa)
+        public async Task<IActionResult> Index(string pesquisa, int categoria)
         {
             ViewBag.USER = UserLogado();
 
@@ -39,6 +39,7 @@ namespace apoio_decisao_medica.Controllers
                 .Include(e => e.Exame)
                 .OrderByDescending(r => r.Relevancia);
             ViewBag.TODOSPROCESSOS = dbpointer.Tprocessos;
+            ViewBag.CATEGORIAS = new SelectList(dbpointer.TcatDoencas, "Id", "Nome");
 
             ViewBag.TOTAL = dbpointer.Tprocessos.Where(d=>d.DataHoraFecho != null).Count();
             ViewBag.CONT = 0;
@@ -47,6 +48,15 @@ namespace apoio_decisao_medica.Controllers
                 .Include(d => d.CatDoenca)
                 .OrderBy(d => d.Nome);
 
+            if (categoria != 0)
+            {
+                applicationDbContext = (IOrderedQueryable<Doenca>)dbpointer.Tdoencas
+                    .Include(d => d.CatDoenca)
+                    .OrderBy(d => d.Nome)
+                    .Where(d => d.CatDoencaId == categoria);
+
+                return View(await applicationDbContext.ToListAsync());
+            }
 
             if (pesquisa != null)
             {

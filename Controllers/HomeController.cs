@@ -1,7 +1,9 @@
 ﻿using apoio_decisao_medica.Data;
 using apoio_decisao_medica.Migrations;
 using apoio_decisao_medica.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Reflection;
@@ -26,9 +28,20 @@ namespace apoio_decisao_medica.Controllers
 			return utilizador;
 		}
 
-		public IActionResult Index(int change, string antiga, string nova, string nova2)
+		public IActionResult Index(int change, string antiga, string nova, string nova2, int local)
         {
             ViewBag.USER = UserLogado();
+
+            if (UserLogado().IsAdmin)
+            {
+                ViewBag.LOCAL = "Não aplicavel!";
+            }
+            else
+            {
+                var temp = dbpointer.Thospitais.Single(h => h.Id == Convert.ToInt32(HttpContext.Session.GetInt32("local")));
+                ViewBag.LOCAL = temp.Nome;
+            }
+
 
             if (change == 1)
             {
@@ -63,12 +76,19 @@ namespace apoio_decisao_medica.Controllers
             return View();
         }
 
-        public IActionResult Login(string user, string pass)
+        public IActionResult Login(string user, string pass, int local)
         {
             HttpContext.Session.SetInt32("idUser", 0);
             var utilizador = dbpointer.Tutilizador.SingleOrDefault(u => u.Pass == pass && u.User == user);
 
-            if (utilizador != null)
+
+            ViewBag.LOCAIS = new SelectList(dbpointer.Thospitais.OrderBy(h => h.Nome), "Id", "Nome");
+            if (local != 0)
+            {
+                HttpContext.Session.SetInt32("local", local);
+            }
+
+            if (utilizador != null && (local != 0 || utilizador.IsAdmin))
             {                
                 HttpContext.Session.SetInt32("idUser", utilizador.Id);
                 return RedirectToAction("Index");
@@ -79,7 +99,11 @@ namespace apoio_decisao_medica.Controllers
                 {
 					ViewBag.ERRO = "Username ou Password incorretos!";
 				}
-			}
+            }
+            if (utilizador != null && local == 0)
+            {
+                ViewBag.ERRO = "Selecione a instituição antes de avançar!";
+            }
             return View();
         }
     }
