@@ -40,7 +40,14 @@ namespace apoio_decisao_medica.Data
 				.HasOne(p => p.Utilizador)
 				.WithOne(e => e.Medico)
 				.HasForeignKey<Utilizador>(e => e.MedicoId);
-		}
 
-	}
+            modelBuilder.Entity<Utilizador>()
+                .HasOne(p => p.Medico)
+                .WithOne(e => e.Utilizador)
+                .HasForeignKey<Medico>(e => e.UtilizadorId);
+
+        }
+
+
+    }
 }

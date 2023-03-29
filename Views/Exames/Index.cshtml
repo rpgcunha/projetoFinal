@@ -6,9 +6,13 @@
 
 <h1>Exames</h1>
 
-<div class="btnCriar">
-    <a asp-action="Create">Adicionar Novo</a>
-</div>
+@using (Html.BeginForm())
+{
+    <div class="btnCriar">
+        <a asp-action="Create">Adicionar Novo</a>
+    </div>
+    @Html.TextBox("pesquisa", null, new {placeholder = "Pesquisa"})
+}
 <table class="table">
     <thead>
         <tr>

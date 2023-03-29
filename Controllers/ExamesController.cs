@@ -28,9 +28,18 @@ namespace apoio_decisao_medica.Controllers
 
 
         // GET: Exames
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
             ViewBag.USER = UserLogado();
+
+            if (pesquisa != null)
+            {
+                var filtro = _context.Texames
+                    .Include(m => m.CatExame)
+                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()));
+                return View(await filtro.ToListAsync());
+
+            }
 
             var applicationDbContext = _context.Texames.Include(e => e.CatExame);
             return View(await applicationDbContext.ToListAsync());

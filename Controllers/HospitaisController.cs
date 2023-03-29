@@ -28,9 +28,17 @@ namespace apoio_decisao_medica.Controllers
 
 
         // GET: Hospitais
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
             ViewBag.USER = UserLogado();
+
+            if (pesquisa != null)
+            {
+                var filtro = _context.Thospitais
+                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()));
+                return View(await filtro.ToListAsync());
+
+            }
 
             return _context.Thospitais != null ? 
                           View(await _context.Thospitais.ToListAsync()) :

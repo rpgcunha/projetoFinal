@@ -6,9 +6,13 @@
 
 <h1>Doença</h1>
 
-<p>
-    <a asp-action="Create">Adicionar Nova</a>
-</p>
+@using (Html.BeginForm())
+{
+    <div class="btnCriar">
+        <a asp-action="Create">Adicionar Nova</a>
+    </div>
+    @Html.TextBox("pesquisa", null, new {placeholder = "Pesquisa"})
+}
 <table class="table">
     <thead>
         <tr>

@@ -27,9 +27,18 @@ namespace apoio_decisao_medica.Controllers
 
 
         // GET: DoencasAdmins
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
             ViewBag.USER = UserLogado();
+
+            if (pesquisa != null)
+            {
+                var filtro = _context.Tdoencas
+                    .Include(m => m.CatDoenca)
+                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()));
+                return View(await filtro.ToListAsync());
+
+            }
 
             var applicationDbContext = _context.Tdoencas.Include(d => d.CatDoenca);
             return View(await applicationDbContext.ToListAsync());

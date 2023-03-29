@@ -111,25 +111,26 @@ namespace apoio_decisao_medica.Controllers
             if (idCatSint != 0 || pesquisaSint != null)
             {
                 List<Sintoma> filtroSintomas = new List<Sintoma>();
-                if (idCatSint != 0)
+                if (pesquisaSint != null)
                 {
-                    foreach (var item in dbpointer.Tsintomas.OrderBy(s=> s.Nome))
-                    {
-                        if (idCatSint == item.CatSintomaId)
-                        {
-                            Sintoma s = new Sintoma();
-                            s.Id = item.Id;
-                            s.Nome = item.Nome;
-                            s.CatSintomaId = item.CatSintomaId;
-                            filtroSintomas.Add(s);
-                        }
-                    }
+                    filtroSintomas = dbpointer.Tsintomas.Where(s => StringComparer.InvariantCultureIgnoreCase.Compare(s.Nome, pesquisaSint) == 0).OrderBy(s=>s.Nome).ToList();
+                    //foreach (var item in dbpointer.Tsintomas.OrderBy(s => s.Nome))
+                    //{
+                    //    if (item.Nome.ToUpper().Contains(pesquisaSint.ToUpper()))
+                    //    {
+                    //        Sintoma s = new Sintoma();
+                    //        s.Id = item.Id;
+                    //        s.Nome = item.Nome;
+                    //        s.CatSintomaId = item.CatSintomaId;
+                    //        filtroSintomas.Add(s);
+                    //    }
+                    //}
                 }
                 else
                 {
                     foreach (var item in dbpointer.Tsintomas.OrderBy(s => s.Nome))
                     {
-                        if (item.Nome.ToUpper().Contains(pesquisaSint.ToUpper()))
+                        if (idCatSint == item.CatSintomaId)
                         {
                             Sintoma s = new Sintoma();
                             s.Id = item.Id;

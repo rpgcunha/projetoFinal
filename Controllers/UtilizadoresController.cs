@@ -26,9 +26,18 @@ namespace apoio_decisao_medica.Controllers
         }
 
         // GET: Utilizadores
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
             ViewBag.USER = UserLogado();
+
+            if (pesquisa != null)
+            {
+                var filtro = _context.Tutilizador
+                    .Include(m => m.Medico)
+                    .Where(m => m.User.ToLower().Contains(pesquisa.ToLower()) || m.Medico.Nome.ToLower().Contains(pesquisa.ToLower()));
+                return View(await filtro.ToListAsync());
+
+            }
 
             var applicationDbContext = _context.Tutilizador.Include(u => u.Medico);
             return View(await applicationDbContext.ToListAsync());

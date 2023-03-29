@@ -214,6 +214,9 @@ namespace apoio_decisao_medica.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UtilizadorId")
+                        .IsUnique();
+
                     b.ToTable("Tmedicos");
                 });
 
@@ -383,9 +386,6 @@ namespace apoio_decisao_medica.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MedicoId")
-                        .IsUnique();
-
                     b.ToTable("Tutilizador");
                 });
 
@@ -447,6 +447,17 @@ namespace apoio_decisao_medica.Migrations
                         .IsRequired();
 
                     b.Navigation("CatExame");
+                });
+
+            modelBuilder.Entity("apoio_decisao_medica.Models.Medico", b =>
+                {
+                    b.HasOne("apoio_decisao_medica.Models.Utilizador", "Utilizador")
+                        .WithOne("Medico")
+                        .HasForeignKey("apoio_decisao_medica.Models.Medico", "UtilizadorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Utilizador");
                 });
 
             modelBuilder.Entity("apoio_decisao_medica.Models.Processo", b =>
@@ -531,17 +542,6 @@ namespace apoio_decisao_medica.Migrations
                     b.Navigation("CatSintoma");
                 });
 
-            modelBuilder.Entity("apoio_decisao_medica.Models.Utilizador", b =>
-                {
-                    b.HasOne("apoio_decisao_medica.Models.Medico", "Medico")
-                        .WithOne("Utilizador")
-                        .HasForeignKey("apoio_decisao_medica.Models.Utilizador", "MedicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Medico");
-                });
-
             modelBuilder.Entity("apoio_decisao_medica.Models.CatDoenca", b =>
                 {
                     b.Navigation("Doencas");
@@ -581,8 +581,6 @@ namespace apoio_decisao_medica.Migrations
             modelBuilder.Entity("apoio_decisao_medica.Models.Medico", b =>
                 {
                     b.Navigation("Processos");
-
-                    b.Navigation("Utilizador");
                 });
 
             modelBuilder.Entity("apoio_decisao_medica.Models.Sintoma", b =>
@@ -595,6 +593,11 @@ namespace apoio_decisao_medica.Migrations
             modelBuilder.Entity("apoio_decisao_medica.Models.Utente", b =>
                 {
                     b.Navigation("Processos");
+                });
+
+            modelBuilder.Entity("apoio_decisao_medica.Models.Utilizador", b =>
+                {
+                    b.Navigation("Medico");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,14 +1,18 @@
 ﻿@model IEnumerable<apoio_decisao_medica.Models.Hospital>
 
 @{
-    ViewData["Title"] = "Hospitais";
+    ViewData["Title"] = "Instituições Médicas";
 }
 
 <h1>Instituições Médicas</h1>
 
-<div class="btnCriar">
-    <a asp-action="Create">Adicionar</a>
-</div>
+@using (Html.BeginForm())
+{
+    <div class="btnCriar">
+        <a asp-action="Create">Adicionar Nova</a>
+    </div>
+    @Html.TextBox("pesquisa", null, new {placeholder = "Pesquisa"})
+}
 <table class="table">
     <thead>
         <tr>

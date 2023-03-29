@@ -18,7 +18,6 @@ namespace apoio_decisao_medica.Controllers
         {
             _context = context;
         }
-
         public Utilizador UserLogado()
         {
             int? idUSer = HttpContext.Session.GetInt32("idUser");
@@ -26,15 +25,22 @@ namespace apoio_decisao_medica.Controllers
             return utilizador;
         }
 
-
         // GET: Medicos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
             ViewBag.USER = UserLogado();
 
-            return _context.Tmedicos != null ? 
-                          View(await _context.Tmedicos.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Tmedicos'  is null.");
+            if (pesquisa != null)
+            {
+                var filtro = _context.Tmedicos
+                    .Include(m => m.Utilizador)
+                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()) || m.Bi.ToString() == pesquisa);
+                return View(await filtro.ToListAsync());
+
+            }
+
+            var applicationDbContext = _context.Tmedicos.Include(m => m.Utilizador);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Medicos/Create
@@ -42,6 +48,7 @@ namespace apoio_decisao_medica.Controllers
         {
             ViewBag.USER = UserLogado();
 
+            ViewData["UtilizadorId"] = new SelectList(_context.Tutilizador, "Id", "User");
             return View();
         }
 
@@ -60,6 +67,7 @@ namespace apoio_decisao_medica.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["UtilizadorId"] = new SelectList(_context.Tutilizador, "Id", "User", medico.UtilizadorId);
             return View(medico);
         }
 
@@ -78,6 +86,7 @@ namespace apoio_decisao_medica.Controllers
             {
                 return NotFound();
             }
+            ViewData["UtilizadorId"] = new SelectList(_context.Tutilizador, "Id", "User", medico.UtilizadorId);
             return View(medico);
         }
 
@@ -115,6 +124,7 @@ namespace apoio_decisao_medica.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["UtilizadorId"] = new SelectList(_context.Tutilizador, "Id", "User", medico.UtilizadorId);
             return View(medico);
         }
 
@@ -129,6 +139,7 @@ namespace apoio_decisao_medica.Controllers
             }
 
             var medico = await _context.Tmedicos
+                .Include(m => m.Utilizador)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (medico == null)
             {
