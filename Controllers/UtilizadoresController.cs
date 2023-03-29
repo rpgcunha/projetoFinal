@@ -57,12 +57,21 @@ namespace apoio_decisao_medica.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,User,Pass,MedicoId,IsAdmin")] Utilizador utilizador)
+        public async Task<IActionResult> Create([Bind("Id,User,Pass,MedicoId,IsAdmin")] Utilizador utilizador, IFormFile imagem, string user)
         {
             ViewBag.USER = UserLogado();
 
-            if (ModelState.IsValid)
+
+
+            if (ModelState.IsValid && imagem != null && imagem.Length > 0)
             {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/users", user + ".png");
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await imagem.CopyToAsync(stream);
+                }
+
                 _context.Add(utilizador);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -95,7 +104,7 @@ namespace apoio_decisao_medica.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,User,Pass,MedicoId,IsAdmin")] Utilizador utilizador)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,User,Pass,MedicoId,IsAdmin")] Utilizador utilizador, IFormFile imagem, string user)
         {
             ViewBag.USER = UserLogado();
 
@@ -104,10 +113,17 @@ namespace apoio_decisao_medica.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && imagem != null && imagem.Length > 0)
             {
                 try
                 {
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/users", user + ".png");
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await imagem.CopyToAsync(stream);
+                    }
+
                     _context.Update(utilizador);
                     await _context.SaveChangesAsync();
                 }

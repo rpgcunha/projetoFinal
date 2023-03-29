@@ -182,3 +182,11 @@ thead {
 .pesquisaSint::placeholder {
     color: #688698;
 }
+
+.password {
+    cursor: pointer;
+}
+
+.password:hover {
+    color: black;
+}

@@ -28,6 +28,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Medico)
             </th>
+            <th>
+                Foto de Perfil
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -38,13 +41,17 @@
                 @Html.DisplayFor(modelItem => item.User)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Pass)
-            </td>
+                <span class="password" data-password="@item.Pass">********</span>
+@*                @Html.DisplayFor(modelItem => item.Pass)
+*@            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsAdmin)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Medico.Nome)
+            </td>
+            <td>
+                    <img src="~/img/users/@(item.User).png" alt="" width="80" height="80" class="rounded-circle me-2">
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |

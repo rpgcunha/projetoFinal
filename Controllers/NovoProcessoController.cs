@@ -113,18 +113,10 @@ namespace apoio_decisao_medica.Controllers
                 List<Sintoma> filtroSintomas = new List<Sintoma>();
                 if (pesquisaSint != null)
                 {
-                    filtroSintomas = dbpointer.Tsintomas.Where(s => StringComparer.InvariantCultureIgnoreCase.Compare(s.Nome, pesquisaSint) == 0).OrderBy(s=>s.Nome).ToList();
-                    //foreach (var item in dbpointer.Tsintomas.OrderBy(s => s.Nome))
-                    //{
-                    //    if (item.Nome.ToUpper().Contains(pesquisaSint.ToUpper()))
-                    //    {
-                    //        Sintoma s = new Sintoma();
-                    //        s.Id = item.Id;
-                    //        s.Nome = item.Nome;
-                    //        s.CatSintomaId = item.CatSintomaId;
-                    //        filtroSintomas.Add(s);
-                    //    }
-                    //}
+                    filtroSintomas = dbpointer.Tsintomas
+                        .Where(s => s.Nome.ToLower().Contains(pesquisaSint.ToLower()))
+                        .OrderBy(s=>s.Nome)
+                        .ToList();
                 }
                 else
                 {
@@ -150,25 +142,18 @@ namespace apoio_decisao_medica.Controllers
             if (idCatExam != 0 || pesquisaExam != null)
             {
                 List<Exame> filtroExames = new List<Exame>();
-                if (idCatExam != 0)
+                if (pesquisaExam != null)
                 {
-                    foreach (var item in dbpointer.Texames.OrderBy(e => e.Nome))
-                    {
-                        if (idCatExam == item.CatExameId)
-                        {
-                            Exame e = new Exame();
-                            e.Id = item.Id;
-                            e.Nome = item.Nome;
-                            e.CatExameId = item.CatExameId;
-                            filtroExames.Add(e);
-                        }
-                    }
+                    filtroExames = dbpointer.Texames
+                        .Where(e => e.Nome.ToLower().Contains(pesquisaExam.ToLower()))
+                        .OrderBy(e => e.Nome)
+                        .ToList();
                 }
                 else
                 {
                     foreach (var item in dbpointer.Texames.OrderBy(e => e.Nome))
                     {
-                        if (item.Nome.ToUpper().Contains(pesquisaExam.ToUpper()))
+                        if (idCatExam == item.CatExameId)
                         {
                             Exame e = new Exame();
                             e.Id = item.Id;
