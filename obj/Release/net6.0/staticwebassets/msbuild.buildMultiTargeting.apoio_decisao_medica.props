@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\apoio_decisao_medica.props" />
+</Project>

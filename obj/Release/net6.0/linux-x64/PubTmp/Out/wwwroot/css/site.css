@@ -1,0 +1,192 @@
+html {
+    font-size: 16px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #ebf4fa !important;
+    margin-bottom: 60px;
+    color: #688698 !important;
+    
+}
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #FFFFFF #688698;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #688698;
+    border-radius: 20px;
+    border: 1px solid #688698;
+}
+
+a {
+    color: #228B22;
+    text-decoration: none;
+}
+a:hover {
+        color: black;
+        text-decoration: none;
+    }
+.btnCriar a {
+    color: #688698;
+    text-decoration: none;
+}
+    .btnCriar a:hover {
+        color: #688698;
+    }
+
+
+.btnCriar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 125px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 30px;
+    font-size: 0.8em;
+}
+[type=button], [type=reset], [type=submit], button {
+    outline: none;
+    border: none;
+    color: #688698;
+}
+
+
+.navbar-brand {
+    color: #228B22;
+    font-weight: bold;
+}
+
+.btn2{
+    margin-right: 1em;
+}
+
+input[type="text" i] {
+    border: 2px solid #ebf4fa;
+    color: #688698;
+}
+
+    input[type="text" i]:focus {
+        outline: none;
+        border: 2px solid #688698 !important;
+    }
+
+.nav li{
+    color: white;
+}
+.nav li:hover {
+    color: #e8f4d9;
+}
+.linkAtivo {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #e8f4d9;
+    color: #688698;
+    text-decoration: none;
+}
+    .linkAtivo:hover {
+        color: #688698
+    }
+
+th a, td a {
+    text-decoration: none;
+    color: #688698;
+    font-weight: bold;
+}
+    th a:hover, td a:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #688698;
+        font-weight: bold;
+    }
+
+.dropdown li{
+    color: white;
+}
+tbody, td, tfoot, th, thead, tr {
+    border: none !important;
+    color: #688698;
+    text-align: center;
+}
+thead th{
+    font-weight: bold;
+    color: #688698;
+}
+tbody th{
+    font-weight:400;
+}
+th {
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+thead {
+    background-color: #688698;
+}
+    thead th{
+        color: white;
+        vertical-align: middle;
+    }
+
+.fixed-height {
+    height: 300px; /* altura fixa */
+}
+
+.fixed-height-pequena {
+    height: 150px; /* altura fixa */
+}
+.lupa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    float: left;
+    padding: 0px;
+}
+
+.textbox{
+    position:relative;
+    width: fit-content;
+    border-radius: 50%;
+}
+.textbox input[type="text" i]{
+    border-radius: 30px;
+    padding-left:10px;
+    padding-right: 35px;
+}
+
+.botaolupa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+}
+.pesquisaSint::placeholder {
+    color: #688698;
+}
+
+.password {
+    cursor: pointer;
+}
+
+.password:hover {
+    color: black;
+}
