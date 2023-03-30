@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "av3SMzhuysW5Pgl1uwOKe0DKhUnmZCsxMBUfKPqVknk=",
+  "Hash": "jXQIR0VrbbGBrxauD4C5ZsuERaMh1ZPR2Lb912bOpi0=",
   "Source": "apoio_decisao_medica",
   "BasePath": "_content/apoio_decisao_medica",
   "Mode": "Default",
@@ -1545,6 +1545,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icons\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\login.ico",
+      "SourceId": "apoio_decisao_medica",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
+      "BasePath": "_content/apoio_decisao_medica",
+      "RelativePath": "img/icons/login.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icons\\login.ico"
+    },
+    {
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\site.ico",
+      "SourceId": "apoio_decisao_medica",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
+      "BasePath": "_content/apoio_decisao_medica",
+      "RelativePath": "img/icons/site.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icons\\site.ico"
     },
     {
       "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\masculino.jpg",

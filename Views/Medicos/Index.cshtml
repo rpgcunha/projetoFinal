@@ -7,10 +7,16 @@
 <h1>Médicos</h1>
 @using (Html.BeginForm())
 {
-    <div class="btnCriar">
-        <a asp-action="Create">Adicionar Novo</a>
+    <div class="row pb-3 pt-3">
+        <div class="col-10">
+            <div class="btnCriar">
+                <a asp-action="Create">Adicionar Novo</a>
+            </div>
+        </div>
+        <div class="col-2">
+            @Html.TextBox("pesquisa", null, new {placeholder = "Pesquisa"})
+        </div>
     </div>
-    @Html.TextBox("pesquisa", null, new {placeholder = "Pesquisa"})
 }
 <table class="table">
     <thead>
