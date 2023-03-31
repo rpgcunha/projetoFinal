@@ -85,29 +85,36 @@
                     <tr>
                         @if (item.DataFecho == null)
                         {
-                            <td><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.NumProcesso">@item.NumProcesso</a></td>
+                            if (ViewBag.USER.MedicoId == item.MedicoId)
+                            {
+                                <td><a asp-controller="NovoProcesso" asp-action="Index" asp-route-idProcesso="@item.Id" asp-route-numProcesso="@item.NumProcesso">@item.NumProcesso</a></td>
+                            }
+                            else
+                            {
+                                <td>@item.NumProcesso</td>
+                            }
                         }
                         else
                         {
-                            <td><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.NumProcesso</a></td>
+                                <td><a asp-controller="Processo" asp-action="Index" asp-route-idProcesso="@item.Id">@item.NumProcesso</a></td>
                         }
                         <td>@item.DataAbertura</td>
                         <td>@item.DataFecho</td>
                         <td>@if (ViewBag.LISTA != item.Id)
                             {
                             <input type="submit" value="+" asp-route-idProc="@item.Id">
-                        }
-                        else
-                        {
-                            if (ViewBag.LISTA == item.Id)
+                            }
+                            else
                             {
-                                @foreach (var itemS in ViewBag.SINTOMAS)
+                                if (ViewBag.LISTA == item.Id)
                                 {
-                                    @itemS
-                                    <br />
+                                    @foreach (var itemS in ViewBag.SINTOMAS)
+                                    {
+                                        @itemS
+                                        <br />
+                                    }
                                 }
                             }
-                        }
                         </td>
                         <td>@item.Doenca</td>
                         <td>@item.Medico</td>

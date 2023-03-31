@@ -31,7 +31,6 @@
     </div>
 </div>
 <br />
-    <div class="">
         <div class="row">
             <div class="col-md-12">
                 <h5>Quais são os sintomas apresentados pelo utente?</h5>
@@ -88,7 +87,7 @@
                     <br />
 
                     <button type="submit" id="submitButton" class="btnCriar" asp-route-numProcesso="@ViewBag.PROC">Adicionar ao processo</button>
-                    <a asp-action="NovoSintoma" asp-route-numProcesso="@ViewBag.PROC">Criar Novo Sintoma</a>
+                    <a asp-action="NovoSintoma" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Sintoma</a>
                     <br />
               }
            </div>
@@ -177,7 +176,7 @@
                         <br />
                         <br />
                         <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
-                        <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Criar Novo Exame</a>
+                        <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Exame</a>
                         <br />
                     }
                 </div>
@@ -310,7 +309,7 @@
         {
             @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag.CATDOENCA)
             <input type="submit" value="Aplicar" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
-            <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">Criar Nova Doença</a>
+            <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">Adicionar Nova Doença</a>
             <br />
             <br />
             if (ViewBag.MAISDOENCAS != null)

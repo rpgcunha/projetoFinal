@@ -27,82 +27,28 @@ namespace apoio_decisao_medica.Controllers
         {
             ViewBag.USER = UserLogado();
 
-            List<Utente> listaUtentes = new List<Utente>();
-
             //procurar pelo nome de utente
             if (nome != null)
             {
-                foreach (var item in dbpointer.Tutentes)
-                {
-                    if (item.Nome.ToString().ToUpper().Contains(nome.ToUpper()))
-                    {
-                        Utente u = new Utente();
-                        u.Id= item.Id;
-                        u.Nome = item.Nome;
-                        u.NumeroUtente = item.NumeroUtente;
-                        u.DataNascimento= item.DataNascimento;
-                        u.Genero= item.Genero;
-                        u.Cidade= item.Cidade;
-                        listaUtentes.Add(u);
-                    }
-                }
-                return View(listaUtentes);
+                return View(dbpointer.Tutentes
+                    .Where(u=>u.Nome.ToLower().Contains(nome.ToLower())));
             }
             //procurar pelo numero de utente
             if (numUtente != null)
             {
-                foreach (var item in dbpointer.Tutentes)
-                {
-                    if (item.NumeroUtente.ToString() == numUtente)
-                    {
-                        Utente u = new Utente();
-                        u.Id = item.Id;
-                        u.Nome = item.Nome;
-                        u.NumeroUtente = item.NumeroUtente;
-                        u.DataNascimento = item.DataNascimento;
-                        u.Genero = item.Genero;
-                        u.Cidade = item.Cidade;
-                        listaUtentes.Add(u);
-                    }
-                }
-                return View(listaUtentes);
+                return View(dbpointer.Tutentes
+                    .Where(u=>u.NumeroUtente.ToString() == numUtente));
             }
             //procurar pela Data de nascimento
             if (dataNasc != null)
             {
-                foreach (var item in dbpointer.Tutentes)
-                {
-                    if (item.DataNascimento.ToString() == dataNasc)
-                    {
-                        Utente u = new Utente();
-                        u.Id = item.Id;
-                        u.Nome = item.Nome;
-                        u.NumeroUtente = item.NumeroUtente;
-                        u.DataNascimento = item.DataNascimento;
-                        u.Genero = item.Genero;
-                        u.Cidade = item.Cidade;
-                        listaUtentes.Add(u);
-                    }
-                }
-                return View(listaUtentes);
+                return View(dbpointer.Tutentes
+                    .Where(u=>u.DataNascimento.Contains(dataNasc)));
             }
             if (cidade != null)
             {
-                foreach (var item in dbpointer.Tutentes)
-                {
-                    if (item.Cidade != null && item.Cidade.ToString().ToUpper().Contains(cidade.ToUpper()))
-                    {
-                        Utente u = new Utente();
-                        u.Id = item.Id;
-                        u.Nome = item.Nome;
-                        u.NumeroUtente = item.NumeroUtente;
-                        u.DataNascimento = item.DataNascimento;
-                        u.Genero = item.Genero;
-                        u.Cidade = item.Cidade;
-                        listaUtentes.Add(u);
-                    }
-                }
-                return View(listaUtentes);
+                return View(dbpointer.Tutentes
+                    .Where(u=>u.Cidade != null && u.Cidade.ToLower().Contains(cidade.ToLower())));
             }
 
             return View(dbpointer.Tutentes.ToList());
@@ -113,32 +59,26 @@ namespace apoio_decisao_medica.Controllers
             ViewBag.USER = UserLogado();
 
             //detalhes do utente
-            foreach (var item in dbpointer.Tutentes)
-            {
-                if (id == item.Id)
-                {
-                    Utente u = new Utente();
-                    u.Id = item.Id;
-                    u.Nome = item.Nome;
-                    u.NumeroUtente = item.NumeroUtente;
-                    u.DataNascimento = item.DataNascimento;
-                    DateTime dataNascimento = DateTime.ParseExact(item.DataNascimento, "dd/MM/yyyy", null);
-                    int idade = DateTime.Today.Year - dataNascimento.Year;
-                    if (DateTime.Today < dataNascimento.AddYears(idade))
-                    {
-                        idade--;
-                    }
-                    u.Genero = item.Genero;
-                    u.Cidade = item.Cidade;
-                    ViewBag.UTENTE = u;
-                    ViewBag.IDADE = idade;
-                }
-            }
+            var utente = dbpointer.Tutentes
+                .Single(u => u.Id == id);
 
+            //calcular idade
+            DateTime dataNascimento = DateTime.ParseExact(utente.DataNascimento, "dd/MM/yyyy", null);
+            int idade = DateTime.Today.Year - dataNascimento.Year;
+            if (DateTime.Today < dataNascimento.AddYears(idade))
+            {
+                idade--;
+            }
+            ViewBag.UTENTE = utente;
+            ViewBag.IDADE = idade;
 
             //historico de processos do utente
-            List<HistoricoProcesso> listaProcessos = new List<HistoricoProcesso>();
-            var processos = dbpointer.Tprocessos.OrderByDescending(p => p.Id).Include(p => p.Doenca).Include(p => p.Hospital).Include(p => p.Medico);
+            List<HistoricoProcesso> listaProcessos = new();
+            var processos = dbpointer.Tprocessos
+                .OrderByDescending(p => p.Id)
+                .Include(p => p.Doenca)
+                .Include(p => p.Hospital)
+                .Include(p => p.Medico);
             foreach (var item in processos)
             {
                 if (item.UtenteId == id)
@@ -149,6 +89,7 @@ namespace apoio_decisao_medica.Controllers
                     p.DataAbertura = item.DataHoraAbertura;
                     p.DataFecho = item.DataHoraFecho;
                     p.Doenca = item.Doenca?.Nome;
+                    p.MedicoId = item.Medico.Id;
                     p.Medico = item.Medico.Nome;
                     p.Hospital = item.Hospital.Nome;
                     listaProcessos.Add(p);
@@ -158,15 +99,7 @@ namespace apoio_decisao_medica.Controllers
             //quando se clica no mais carrega os sintomas daquele processo
             if (idProc != 0)
             {
-                List<string> listaSintomas = new List<string>();
-                foreach (var item in dbpointer.TprocessoSintomas.Include(s => s.Sintoma))
-                {
-                    if (idProc == item.ProcessoId)
-                    {
-                        listaSintomas.Add(item.Sintoma.Nome);
-                    }
-                }
-                ViewBag.SINTOMAS = listaSintomas.ToList();
+                ViewBag.SINTOMAS = Sintomas(idProc);
                 ViewBag.LISTA = idProc;
             }
             else
@@ -174,7 +107,16 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.LISTA = 0;
             }
 
-            return View(listaProcessos.ToList());
+            return View(listaProcessos);
+        }
+
+        public List<string> Sintomas(int idProc)
+        {
+
+            return dbpointer.TprocessoSintomas
+                    .Include(s => s.Sintoma)
+                    .Where(s => s.ProcessoId == idProc)
+                    .Select(s => s.Sintoma.Nome).ToList();
         }
 
         //criar novo utente
@@ -255,7 +197,5 @@ namespace apoio_decisao_medica.Controllers
         {
             return (dbpointer.Tutentes?.Any(e => e.Id == id)).GetValueOrDefault();
         }
-
-
     }
 }

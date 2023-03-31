@@ -14,7 +14,7 @@ builder.Services.AddSession();
 //escolhe a string connection a usar
 builder.Services.AddDbContext<ApplicationDbContext>
     (options => options.UseSqlServer(
-                        builder.Configuration.GetConnectionString("LOCAL2")));
+                        builder.Configuration.GetConnectionString("LOCAL")));
 
 var app = builder.Build();
 

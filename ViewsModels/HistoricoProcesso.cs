@@ -10,6 +10,7 @@
         public string DataAbertura { get; set; }
         public string? DataFecho { get; set; }
         public string? Doenca { get; set; }
+        public int? MedicoId { get; set; }
         public string? Medico { get; set; }
         public string Hospital { get; set; }
     }

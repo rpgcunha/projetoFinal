@@ -13,6 +13,7 @@ using NuGet.Packaging.Rules;
 using System;
 using System.Collections.Immutable;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -28,7 +29,9 @@ namespace apoio_decisao_medica.Controllers
         public Utilizador UserLogado()
         {
             int? idUSer = HttpContext.Session.GetInt32("idUser");
-            var utilizador = dbpointer.Tutilizador.Include(u => u.Medico).Single(u => u.Id == idUSer);
+            var utilizador = dbpointer.Tutilizador
+                .Include(u => u.Medico)
+                .Single(u => u.Id == idUSer);
             return utilizador;
         }
 
@@ -59,6 +62,7 @@ namespace apoio_decisao_medica.Controllers
 
             return RedirectToAction("Index", new { nProcesso = nProcesso });
         }
+
         public IActionResult Index(int nProcesso, int idProcesso, int numProcesso, int idCatSint, int idCatExam, 
             int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
             int removerSint, int removerExam, string pesquisaSint, string pesquisaExam, int reabrir)
@@ -81,24 +85,16 @@ namespace apoio_decisao_medica.Controllers
             }
 
             //calcular idade
-            var ficha = dbpointer.Tprocessos.Include(p => p.Utente).Single(p => p.NumeroProcesso == numProcesso || p.NumeroProcesso == nProcesso);
-            ViewBag.UTENTE = ficha;
-            DateTime dataNascimento = DateTime.ParseExact(ficha.Utente.DataNascimento, "dd/MM/yyyy", null);
-            int idade = DateTime.Today.Year - dataNascimento.Year;
-            if (DateTime.Today < dataNascimento.AddYears(idade))
-            {
-                idade--;
-            }
-            ViewBag.IDADE = idade;
+            ViewBag.IDADE = Idade(numProcesso, nProcesso);
 
+            //reabrir processo
             if (reabrir == 1)
             {
-                var processo = dbpointer.Tprocessos.Single(p=>p.Id==idProcesso);
+                var processo = dbpointer.Tprocessos
+                    .Single(p=>p.Id==idProcesso);
                 processo.DataHoraFecho = null;
                 dbpointer.SaveChanges();
             }
-
-
 
 
             //Listar as gategorias dos sintomas
@@ -110,60 +106,17 @@ namespace apoio_decisao_medica.Controllers
             //listar os sintomas filtrados pela cat ou pela pesquisa
             if (idCatSint != 0 || pesquisaSint != null)
             {
-                List<Sintoma> filtroSintomas = new List<Sintoma>();
-                if (pesquisaSint != null)
-                {
-                    filtroSintomas = dbpointer.Tsintomas
-                        .Where(s => s.Nome.ToLower().Contains(pesquisaSint.ToLower()))
-                        .OrderBy(s=>s.Nome)
-                        .ToList();
-                }
-                else
-                {
-                    foreach (var item in dbpointer.Tsintomas.OrderBy(s => s.Nome))
-                    {
-                        if (idCatSint == item.CatSintomaId)
-                        {
-                            Sintoma s = new Sintoma();
-                            s.Id = item.Id;
-                            s.Nome = item.Nome;
-                            s.CatSintomaId = item.CatSintomaId;
-                            filtroSintomas.Add(s);
-                        }
-                    }
-                }
-                ViewBag.FILTROSINT = filtroSintomas.ToList();
+                ViewBag.FILTROSINT = FiltroSintomas(pesquisaSint,idCatSint);
             }
             else
             {
                 ViewBag.FILTROSINT = null;
             }
+
             //listar os exames filtrados pela cat
             if (idCatExam != 0 || pesquisaExam != null)
             {
-                List<Exame> filtroExames = new List<Exame>();
-                if (pesquisaExam != null)
-                {
-                    filtroExames = dbpointer.Texames
-                        .Where(e => e.Nome.ToLower().Contains(pesquisaExam.ToLower()))
-                        .OrderBy(e => e.Nome)
-                        .ToList();
-                }
-                else
-                {
-                    foreach (var item in dbpointer.Texames.OrderBy(e => e.Nome))
-                    {
-                        if (idCatExam == item.CatExameId)
-                        {
-                            Exame e = new Exame();
-                            e.Id = item.Id;
-                            e.Nome = item.Nome;
-                            e.CatExameId = item.CatExameId;
-                            filtroExames.Add(e);
-                        }
-                    }
-                }
-                ViewBag.FILTROEXAM = filtroExames.ToList();
+                ViewBag.FILTROEXAM = FiltroExames(pesquisaExam,idCatExam);
             }
             else
             {
@@ -174,7 +127,8 @@ namespace apoio_decisao_medica.Controllers
             //adiciona sintoma ao processo
             if (sintoma != 0)
             {
-                var existe = dbpointer.TprocessoSintomas.FirstOrDefault(s=>s.SintomaId== sintoma && s.ProcessoId==idProcesso);
+                var existe = dbpointer.TprocessoSintomas
+                    .FirstOrDefault(s=>s.SintomaId== sintoma && s.ProcessoId==idProcesso);
                 if (existe == default)
                 {
                     var tabelaSintomas = dbpointer.Tsintomas.ToList();
@@ -189,13 +143,13 @@ namespace apoio_decisao_medica.Controllers
                             dbpointer.SaveChanges();
                         }
                     }
-
                 }
             }
             //adiciona exame ao processo
             if (exame != 0)
             {
-                var existe = dbpointer.TprocessoExames.FirstOrDefault(e => e.ExameId == exame && e.ProcessoId == idProcesso);
+                var existe = dbpointer.TprocessoExames
+                    .FirstOrDefault(e => e.ExameId == exame && e.ProcessoId == idProcesso);
                 if (existe == default)
                 {
                     var tabelaExames = dbpointer.Texames.ToList();
@@ -210,7 +164,6 @@ namespace apoio_decisao_medica.Controllers
                             dbpointer.SaveChanges();
                         }
                     }
-
                 }
             }
 
@@ -218,57 +171,37 @@ namespace apoio_decisao_medica.Controllers
             //remove um sintoma da lista
             if (removerSint != 0)
             {
-                var registo = dbpointer.TprocessoSintomas.Where(r=>r.SintomaId == removerSint);
-                dbpointer.TprocessoSintomas.RemoveRange(registo);
+                var registo = dbpointer.TprocessoSintomas
+                    .Where(r=>r.SintomaId == removerSint);
+                dbpointer.TprocessoSintomas
+                    .RemoveRange(registo);
                 dbpointer.SaveChanges();
             }
             //remove um exame da lista
             if (removerExam != 0)
             {
-                var registo = dbpointer.TprocessoExames.Where(r => r.ExameId == removerExam);
-                dbpointer.TprocessoExames.RemoveRange(registo);
+                var registo = dbpointer.TprocessoExames
+                    .Where(r => r.ExameId == removerExam);
+                dbpointer.TprocessoExames
+                    .RemoveRange(registo);
                 dbpointer.SaveChanges();
             }
 
 
             //Lista os sintomas do processo aberto
-            List<Sintoma> listaSintomas = new List<Sintoma>();
-            foreach (var item in dbpointer.TprocessoSintomas.Include(p => p.Sintoma))
-            {
-                if (idProcesso == item.ProcessoId)
-                {
-                    Sintoma s = new Sintoma();
-                    s.Id = item.Sintoma.Id;
-                    s.Nome= item.Sintoma.Nome;
-                    s.CatSintoma = item.Sintoma.CatSintoma;
-                    
-                    listaSintomas.Add(s);
-                }
-            }
-            if (!listaSintomas.IsNullOrEmpty())
-            {
-                ViewBag.LISTASINT = listaSintomas.ToList();
+            if (!ListaSintomas(idProcesso).IsNullOrEmpty())
+            {                
+                ViewBag.LISTASINT = ListaSintomas(idProcesso);
             }
             else
             {
                 ViewBag.LISTASINT = null;
             }
+            List<Sintoma> listaSintomas = new(ListaSintomas(idProcesso));
             //Lista os exames do processo aberto
-            List<Exame> listaExames = new List<Exame>();
-            foreach (var item in dbpointer.TprocessoExames.Include(p => p.Exame))
+            if (!ListaExames(idProcesso).IsNullOrEmpty())
             {
-                if (idProcesso == item.ProcessoId)
-                {
-                    Exame e = new Exame();
-                    e.Id = item.Exame.Id;
-                    e.Nome = item.Exame.Nome;
-                    e.CatExame = item.Exame.CatExame;
-                    listaExames.Add(e);
-                }
-            }
-            if (!listaExames.IsNullOrEmpty())
-            {
-                ViewBag.LISTAEXAM = listaExames.ToList();
+                ViewBag.LISTAEXAM = ListaExames(idProcesso);
             }
             else
             {
@@ -368,10 +301,15 @@ namespace apoio_decisao_medica.Controllers
                             }
                         }
                         ViewBag.SUGESTAO1 = doencasSugestao1;
-                        ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas.OrderByDescending(p => p.Relevancia).Include(s => s.Sintoma);
-                        ViewBag.TODOSEXAMES = dbpointer.TdoencaExames.OrderByDescending(p => p.Relevancia).Include(e => e.Exame);
+                        ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas
+                            .OrderByDescending(p => p.Relevancia)
+                            .Include(s => s.Sintoma)
+                            .ToList();
+                        ViewBag.TODOSEXAMES = dbpointer.TdoencaExames
+                            .OrderByDescending(p => p.Relevancia)
+                            .Include(e => e.Exame)
+                            .ToList();
                     }
-
                 }
                 else
                 {
@@ -388,19 +326,10 @@ namespace apoio_decisao_medica.Controllers
 
                 if (IdCatDoenca != 0)
                 {
-                    List<Doenca> listaMaisDoencas = new List<Doenca>();
-                    foreach (var item in dbpointer.Tdoencas.Include(d => d.CatDoenca).Include(d => d.DoencaSintoma))
-                    {
-                        if (IdCatDoenca == item.CatDoencaId)
-                        {
-                            Doenca d = new Doenca();
-                            d.Id = item.Id;
-                            d.Nome = item.Nome;
-                            d.CatDoenca = item.CatDoenca;
-                            listaMaisDoencas.Add(d);
-                        }
-                    }
-                    ViewBag.MAISDOENCAS = listaMaisDoencas;
+                    ViewBag.MAISDOENCAS = dbpointer.Tdoencas
+                        .Include(d => d.CatDoenca)
+                        .Include(d=> d.DoencaSintoma)
+                        .Where(d => d.CatDoencaId == IdCatDoenca);
                 }
             }
 
@@ -409,7 +338,8 @@ namespace apoio_decisao_medica.Controllers
             {
                 if (decisao != 0)
                 {
-                    var fecharProcesso = dbpointer.Tprocessos.First(p => p.NumeroProcesso == numProcesso);
+                    var fecharProcesso = dbpointer.Tprocessos
+                        .First(p => p.NumeroProcesso == numProcesso);
                     fecharProcesso.DoencaId = decisao;
                     fecharProcesso.DataHoraFecho = DateTime.Today.ToString("dd/MM/yyyy");
                     dbpointer.SaveChanges();
@@ -422,6 +352,90 @@ namespace apoio_decisao_medica.Controllers
             }
 
             return View();
+        }
+
+        public int Idade(int numProcesso, int nProcesso)
+        {
+            var ficha = dbpointer.Tprocessos
+                .Include(p => p.Utente)
+                .Single(p => p.NumeroProcesso == numProcesso || p.NumeroProcesso == nProcesso);
+            ViewBag.UTENTE = ficha;
+            DateTime dataNascimento = DateTime.ParseExact(ficha.Utente.DataNascimento, "dd/MM/yyyy", null);
+            int idade = DateTime.Today.Year - dataNascimento.Year;
+            if (DateTime.Today < dataNascimento.AddYears(idade))
+            {
+                idade--;
+            }
+            return idade;
+        }
+
+        public List<Sintoma> FiltroSintomas(string pesquisaSint, int idCatSint)
+        {
+            if (pesquisaSint != null)
+            {
+                return dbpointer.Tsintomas
+                    .Where(s => s.Nome.ToLower().Contains(pesquisaSint.ToLower()))
+                    .OrderBy(s => s.Nome).ToList();
+            }
+            else
+            {
+                return dbpointer.Tsintomas
+                    .Where(s => s.CatSintomaId == idCatSint)
+                    .OrderBy(s => s.Nome).ToList();
+            }
+        }
+
+        public List<Exame> FiltroExames(string pesquisaExam, int idCatExam)
+        {
+            if (pesquisaExam != null)
+            {
+                return dbpointer.Texames
+                    .Where(e => e.Nome.ToLower().Contains(pesquisaExam.ToLower()))
+                    .OrderBy(e => e.Nome)
+                    .ToList();
+            }
+            else
+            {
+                return dbpointer.Texames
+                    .Where(e => e.CatExameId == idCatExam)
+                    .OrderBy(e => e.Nome)
+                    .ToList();
+            }
+        }
+
+        public List<Sintoma> ListaSintomas(int idProcesso)
+        {
+            List<Sintoma> listaSintomas = new();
+            foreach (var item in dbpointer.TprocessoSintomas.Include(p => p.Sintoma))
+            {
+                if (idProcesso == item.ProcessoId)
+                {
+                    Sintoma s = new Sintoma();
+                    s.Id = item.Sintoma.Id;
+                    s.Nome = item.Sintoma.Nome;
+                    s.CatSintoma = item.Sintoma.CatSintoma;
+
+                    listaSintomas.Add(s);
+                }
+            }
+            return listaSintomas;
+        }
+
+        public List<Exame> ListaExames(int idProcesso)
+        {
+            List<Exame> listaExames = new();
+            foreach (var item in dbpointer.TprocessoExames.Include(p => p.Exame))
+            {
+                if (idProcesso == item.ProcessoId)
+                {
+                    Exame e = new Exame();
+                    e.Id = item.Exame.Id;
+                    e.Nome = item.Exame.Nome;
+                    e.CatExame = item.Exame.CatExame;
+                    listaExames.Add(e);
+                }
+            }
+            return listaExames;
         }
 
         public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao, int numProcesso)
@@ -482,18 +496,12 @@ namespace apoio_decisao_medica.Controllers
 
             //apresentar os exames para avaliar
             Processo p = new();
-            foreach (var item in dbpointer.Tprocessos.Include(p => p.Doenca))
-            {
-                if (item.Id == idProcesso)
-                {
-                    p.Id = item.Id;
-                    p.NumeroProcesso = item.NumeroProcesso;
-                    p.DataHoraAbertura = item.DataHoraAbertura;
-                    p.DoencaId = item.DoencaId;
-                    ViewBag.DOENCA = item.Doenca.Nome;
-                }
-            }
+            p = dbpointer.Tprocessos
+                .Include(p => p.Doenca)
+                .Single(p => p.Id == idProcesso);
             ViewBag.PROCESSO = p;
+
+
             List<AvaliarExame> listaExames = new();
             foreach (var item in dbpointer.TprocessoExames.Include(e=>e.Exame))
             {
@@ -528,7 +536,8 @@ namespace apoio_decisao_medica.Controllers
                     {
                         if (item.Selecionado)
                         {
-                            var updateRelevancia = dbpointer.TdoencaExames.FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
+                            var updateRelevancia = dbpointer.TdoencaExames
+                                .FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
                             if (updateRelevancia != null)
                             {
                                 if (updateRelevancia.Relevancia < 100)
@@ -549,7 +558,8 @@ namespace apoio_decisao_medica.Controllers
                         }
                         else
                         {
-                            var updateRelevancia = dbpointer.TdoencaExames.FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
+                            var updateRelevancia = dbpointer.TdoencaExames
+                                .FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
                             if (updateRelevancia != null)
                             {
                                 if (updateRelevancia.Relevancia > 0)
