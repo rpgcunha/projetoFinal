@@ -30,7 +30,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Doencas
         public async Task<IActionResult> Index(string pesquisa, int categoria)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas
                 .Include(s => s.Sintoma)

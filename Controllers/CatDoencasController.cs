@@ -29,16 +29,30 @@ namespace apoio_decisao_medica.Controllers
 
 		// GET: CatDoencas
 		public async Task<IActionResult> Index()
-        {        
-			ViewBag.USER = UserLogado();
-			return View(await _context.TcatDoencas.ToListAsync());
+        {
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            return View(await _context.TcatDoencas.ToListAsync());
         }
 
         // GET: CatDoencas/Create
         public IActionResult Create()
         {
-			ViewBag.USER = UserLogado();
-			return View();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            return View();
         }
 
         // POST: CatDoencas/Create
@@ -48,8 +62,15 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome")] CatDoenca catDoenca)
         {
-			ViewBag.USER = UserLogado();
-			if (ModelState.IsValid)
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            if (ModelState.IsValid)
             {
                 _context.Add(catDoenca);
                 await _context.SaveChangesAsync();
@@ -61,8 +82,15 @@ namespace apoio_decisao_medica.Controllers
         // GET: CatDoencas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-			ViewBag.USER = UserLogado();
-			if (id == null || _context.TcatDoencas == null)
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            if (id == null || _context.TcatDoencas == null)
             {
                 return NotFound();
             }
@@ -82,8 +110,15 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] CatDoenca catDoenca)
         {
-			ViewBag.USER = UserLogado();
-			if (id != catDoenca.Id)
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            if (id != catDoenca.Id)
             {
                 return NotFound();
             }
@@ -114,8 +149,15 @@ namespace apoio_decisao_medica.Controllers
         // GET: CatDoencas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-			ViewBag.USER = UserLogado();
-			if (id == null || _context.TcatDoencas == null)
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            if (id == null || _context.TcatDoencas == null)
             {
                 return NotFound();
             }
@@ -135,8 +177,15 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-			ViewBag.USER = UserLogado();
-			if (_context.TcatDoencas == null)
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            if (_context.TcatDoencas == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.TcatDoencas'  is null.");
             }

@@ -28,7 +28,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Utilizadores
         public async Task<IActionResult> Index(string pesquisa)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (pesquisa != null)
             {
@@ -46,7 +53,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Utilizadores/Create
         public IActionResult Create()
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             ViewData["MedicoId"] = new SelectList(_context.Tmedicos, "Id", "Nome");
             return View();
@@ -59,7 +73,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,User,Pass,MedicoId,IsAdmin")] Utilizador utilizador, IFormFile imagem, string user)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
 
 
@@ -83,7 +104,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Utilizadores/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id == null || _context.Tutilizador == null)
             {
@@ -106,7 +134,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,User,Pass,MedicoId,IsAdmin")] Utilizador utilizador, IFormFile imagem, string user)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id != utilizador.Id)
             {
@@ -147,7 +182,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Utilizadores/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id == null || _context.Tutilizador == null)
             {
@@ -170,7 +212,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (_context.Tutilizador == null)
             {

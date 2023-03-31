@@ -29,7 +29,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Sintomas
         public async Task<IActionResult> Index(string pesquisa)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (pesquisa != null)
             {
@@ -47,7 +54,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Sintomas/Create
         public IActionResult Create()
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             ViewData["CatSintomaId"] = new SelectList(_context.TcatSintomas, "Id", "Nome");
             return View();
@@ -60,7 +74,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,CatSintomaId")] Sintoma sintoma)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (ModelState.IsValid)
             {
@@ -75,7 +96,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Sintomas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id == null || _context.Tsintomas == null)
             {
@@ -98,7 +126,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CatSintomaId")] Sintoma sintoma)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id != sintoma.Id)
             {
@@ -132,7 +167,14 @@ namespace apoio_decisao_medica.Controllers
         // GET: Sintomas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id == null || _context.Tsintomas == null)
             {
@@ -155,7 +197,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (_context.Tsintomas == null)
             {

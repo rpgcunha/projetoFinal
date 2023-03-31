@@ -67,7 +67,14 @@ namespace apoio_decisao_medica.Controllers
             int sintoma, int exame, int sug, int maisDoencas, int IdCatDoenca, int fechar, int decisao,
             int removerSint, int removerExam, string pesquisaSint, string pesquisaExam, int reabrir)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (nProcesso == 0)
             {
@@ -440,7 +447,14 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao, int numProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             int idProcesso = dbpointer.Tprocessos
                     .Where(p => p.NumeroProcesso == numProcesso)
@@ -590,7 +604,14 @@ namespace apoio_decisao_medica.Controllers
         //criar novo sintoma
         public IActionResult NovoSintoma(int numProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             @ViewBag.PROC = numProcesso;
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
@@ -601,7 +622,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> NovoSintoma([Bind("Id,Nome,CatSintomaId")] Sintoma sintoma, int numProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (ModelState.IsValid)
             {
@@ -617,7 +645,14 @@ namespace apoio_decisao_medica.Controllers
         //novo exame
         public IActionResult NovoExame(int numProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             @ViewBag.PROC = numProcesso;
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
@@ -628,7 +663,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> NovoExame([Bind("Id,Nome,CatExameId")] Exame exame, int numProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (ModelState.IsValid)
             {
@@ -643,7 +685,14 @@ namespace apoio_decisao_medica.Controllers
         //nova doenca
         public IActionResult NovaDoenca(int numProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             @ViewBag.PROC = numProcesso;
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
@@ -654,7 +703,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> NovaDoenca([Bind("Id,Nome,CatDoencaId")] Doenca doenca, int numProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (ModelState.IsValid)
             {

@@ -25,7 +25,14 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult Index(string nome, string numUtente, string dataNasc, string cidade)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             //procurar pelo nome de utente
             if (nome != null)
@@ -56,7 +63,14 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult Detalhes(int? id, int idProc)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             //detalhes do utente
             var utente = dbpointer.Tutentes
@@ -122,7 +136,14 @@ namespace apoio_decisao_medica.Controllers
         //criar novo utente
         public IActionResult Novo()
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             return View();
         }
@@ -130,7 +151,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Novo([Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
 
             if (ModelState.IsValid)
@@ -146,7 +174,14 @@ namespace apoio_decisao_medica.Controllers
         //editar dados do utente
         public async Task<IActionResult> Editar(int? id)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id == null || dbpointer.Tutentes == null)
             {
@@ -164,7 +199,14 @@ namespace apoio_decisao_medica.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Editar(int id, [Bind("Id,NumeroUtente,Nome,DataNascimento,Genero,Cidade")] Utente utente)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             if (id != utente.Id)
             {

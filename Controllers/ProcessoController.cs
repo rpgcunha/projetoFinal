@@ -24,7 +24,14 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult Index(int idProcesso)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             //para voltar à pagina anterior
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();

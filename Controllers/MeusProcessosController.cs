@@ -25,8 +25,16 @@ namespace apoio_decisao_medica.Controllers
 
         public IActionResult Index(string pesquisaAbertos, string pesquisaFechados)
         {
-            var user = UserLogado();
-            ViewBag.USER = UserLogado();
+            Utilizador user;
+            try
+            {
+                ViewBag.USER = UserLogado();            
+                user = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login", "Home");
+            }
 
             //provisorio
             int idMedico = UserLogado().MedicoId;

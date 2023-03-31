@@ -30,7 +30,14 @@ namespace apoio_decisao_medica.Controllers
 
 		public IActionResult Index(int change, string antiga, string nova, string nova2, int local)
         {
-            ViewBag.USER = UserLogado();
+            try
+            {
+                ViewBag.USER = UserLogado();
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Login");
+            }
 
             if (UserLogado().IsAdmin)
             {
