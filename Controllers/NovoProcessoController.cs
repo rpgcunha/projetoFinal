@@ -220,6 +220,16 @@ namespace apoio_decisao_medica.Controllers
             Dictionary<int, int> doencasPercentagem = new Dictionary<int, int>();
             if (sug == 1)
             {
+                ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas
+                    .OrderByDescending(p => p.Relevancia)
+                    .Include(s => s.Sintoma)
+                    .ToList();
+                ViewBag.TODOSEXAMES = dbpointer.TdoencaExames
+                    .OrderByDescending(p => p.Relevancia)
+                    .Include(e => e.Exame)
+                    .ToList();
+
+                ViewBag.SUG = sug;
                 if (listaSintomas.Count != 0)
                 {
                     foreach (var itemS in listaSintomas)
@@ -235,87 +245,89 @@ namespace apoio_decisao_medica.Controllers
                             }
                         }
                     }
-                    //se houver doenças na lista verifica a relevancia em relaçao aos sintomas apresentados
-                    if (doencasPercentagem != null)
+                    //verifica se ha alguma sugestao
+                    if (doencasPercentagem.Count == 0)
                     {
-                        foreach (KeyValuePair<int, int> par in doencasPercentagem)
+                        ViewBag.VAZIO = "Não existem sugestões para apresentar, escolha uma doença abaixo ou adicione uma nova!";
+                        maisDoencas = 1;
+                    }
+                    else
+                    {
+                        //se houver doenças na lista verifica a relevancia em relaçao aos sintomas apresentados
+                        if (doencasPercentagem != null)
                         {
-                            int total = 0;
-                            int contU = 0;
-                            foreach (var item in dbpointer.TdoencaSintomas)
+                            foreach (KeyValuePair<int, int> par in doencasPercentagem)
                             {
-                                if (par.Key == item.DoencaId)
+                                int total = 0;
+                                int contU = 0;
+                                foreach (var item in dbpointer.TdoencaSintomas)
                                 {
-                                    total++;
-                                    foreach (var itemS in listaSintomas)
+                                    if (par.Key == item.DoencaId)
                                     {
-                                        if (itemS.Id == item.SintomaId)
+                                        total++;
+                                        foreach (var itemS in listaSintomas)
                                         {
-                                            contU++;
+                                            if (itemS.Id == item.SintomaId)
+                                            {
+                                                contU++;
+                                            }
                                         }
                                     }
                                 }
+                                doencasPercentagem[par.Key] = (100 * contU) / total;
                             }
-                            doencasPercentagem[par.Key] = (100 * contU) / total;
-                        }
-                        //verifica qual a doença que se repete mais vezes
-                        KeyValuePair<int, int> primeiroPar = doencasPercentagem.First();
+                            //verifica qual a doença que se repete mais vezes
+                            KeyValuePair<int, int> primeiroPar = doencasPercentagem.First();
 
-                        int maior = primeiroPar.Value;
-                        foreach (KeyValuePair<int, int> par in doencasPercentagem)
-                        {
-                            if (par.Value > maior)
-                            {
-                                maior = par.Value;
-                            }
-                        }
-                        ViewBag.PERCENTAGEMSINT = maior;
-
-                        //se a maior percentagem for abaixo de 40% apresenta todas as sugestoes
-                        List<int> doencasSugeridas = new List<int>();
-                        if (maior <= 40)
-                        {
+                            int maior = primeiroPar.Value;
                             foreach (KeyValuePair<int, int> par in doencasPercentagem)
                             {
-                                doencasSugeridas.Add(par.Key);
+                                if (par.Value > maior)
+                                {
+                                    maior = par.Value;
+                                }
                             }
-                        }
-                        else
-                        {
-                            foreach (KeyValuePair<int, int> par in doencasPercentagem)
+                            ViewBag.PERCENTAGEMSINT = maior;
+
+                            //se a maior percentagem for abaixo de 40% apresenta todas as sugestoes
+                            List<int> doencasSugeridas = new List<int>();
+                            if (maior <= 40)
                             {
-                                if (maior == par.Value)
+                                foreach (KeyValuePair<int, int> par in doencasPercentagem)
                                 {
                                     doencasSugeridas.Add(par.Key);
                                 }
                             }
-
-                        }
-                        //envia a(s) doença(s) para a view
-                        List<Doenca> doencasSugestao1 = new List<Doenca>();
-                        foreach (var item in doencasSugeridas)
-                        {
-                            foreach (var itemD in dbpointer.Tdoencas.Include(d => d.CatDoenca).Include(d => d.DoencaSintoma))
+                            else
                             {
-                                if (item == itemD.Id)
+                                foreach (KeyValuePair<int, int> par in doencasPercentagem)
                                 {
-                                    Doenca d = new Doenca();
-                                    d.Id = itemD.Id;
-                                    d.Nome = itemD.Nome;
-                                    d.CatDoenca = itemD.CatDoenca;
-                                    doencasSugestao1.Add(d);
+                                    if (maior == par.Value)
+                                    {
+                                        doencasSugeridas.Add(par.Key);
+                                    }
+                                }
+
+                            }
+                            //envia a(s) doença(s) para a view
+                            List<Doenca> doencasSugestao1 = new List<Doenca>();
+                            foreach (var item in doencasSugeridas)
+                            {
+                                foreach (var itemD in dbpointer.Tdoencas.Include(d => d.CatDoenca).Include(d => d.DoencaSintoma))
+                                {
+                                    if (item == itemD.Id)
+                                    {
+                                        Doenca d = new Doenca();
+                                        d.Id = itemD.Id;
+                                        d.Nome = itemD.Nome;
+                                        d.CatDoenca = itemD.CatDoenca;
+                                        doencasSugestao1.Add(d);
+                                    }
                                 }
                             }
+                            ViewBag.SUGESTAO1 = doencasSugestao1;
                         }
-                        ViewBag.SUGESTAO1 = doencasSugestao1;
-                        ViewBag.TODOSSINTOMAS = dbpointer.TdoencaSintomas
-                            .OrderByDescending(p => p.Relevancia)
-                            .Include(s => s.Sintoma)
-                            .ToList();
-                        ViewBag.TODOSEXAMES = dbpointer.TdoencaExames
-                            .OrderByDescending(p => p.Relevancia)
-                            .Include(e => e.Exame)
-                            .ToList();
+
                     }
                 }
                 else

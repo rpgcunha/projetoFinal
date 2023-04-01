@@ -234,70 +234,78 @@
     }
     <br />
     <br />
-    @if (ViewBag.SUGESTAO1 != null)
+    @if (ViewBag.SUG != null)
     {
-        <h3>Sugestão</h3>
-        <h5>Os Sintomas tem @ViewBag.PERCENTAGEMSINT% de correspondência aos seguintes diagnósticos:</h5>
-        <div class="container">
-            @foreach (var item in ViewBag.SUGESTAO1)
-            {
-                <div class="row border">
-                    <div class="col-4">
-                        <h5>@item.Nome</h5>
-                        <label>Especialidade: @item.CatDoenca.Nome</label>
-                    </div>
-                    <div class="col-3">
-                        <h6>Sintomas:</h6>
-                        @foreach (var itemS in ViewBag.TODOSSINTOMAS)
-                        {
-                            if (item.Id == itemS.DoencaId)
+        if (ViewBag.SUGESTAO1 != null)
+        {
+            <h3>Sugestão</h3>
+            <h5>Os Sintomas tem @ViewBag.PERCENTAGEMSINT% de correspondência aos seguintes diagnósticos:</h5>
+            <div class="container">
+                @foreach (var item in ViewBag.SUGESTAO1)
+                {
+                    <div class="row border">
+                        <div class="col-4">
+                            <h5>@item.Nome</h5>
+                            <label>Especialidade: @item.CatDoenca.Nome</label>
+                        </div>
+                        <div class="col-3">
+                            <h6>Sintomas:</h6>
+                            @foreach (var itemS in ViewBag.TODOSSINTOMAS)
                             {
-                                int sim = 0;
-                                foreach (var itemX in ViewBag.LISTASINT)
+                                if (item.Id == itemS.DoencaId)
                                 {
-
-                                    if (itemS.SintomaId == itemX.Id)
+                                    int sim = 0;
+                                    foreach (var itemX in ViewBag.LISTASINT)
                                     {
-                                        <label class="text-success">
+
+                                        if (itemS.SintomaId == itemX.Id)
+                                        {
+                                            <label class="text-success">
+                                                @itemS.Sintoma.Nome ->
+                                                @itemS.Relevancia%
+                                            </label>
+                                            sim = 1;
+                                            break;
+                                        }
+                                    }
+                                    if (sim == 0)
+                                    {
+                                        <label class="text-secondary">
                                             @itemS.Sintoma.Nome ->
                                             @itemS.Relevancia%
                                         </label>
-                                        sim = 1;
-                                        break;
                                     }
+                                    <br />
                                 }
-                                if (sim == 0)
-                                {
-                                    <label class="text-secondary">
-                                        @itemS.Sintoma.Nome ->
-                                        @itemS.Relevancia%
-                                    </label>
-                                }
-                                <br />
                             }
-                        }
-                    </div>
-                    <div class="col-3">
-                        Exames Sugeridos:
-                        @foreach (var ItemE in ViewBag.TODOSEXAMES)
-                        {
-                            if (item.Id == ItemE.DoencaId)
+                        </div>
+                        <div class="col-3">
+                            Exames Sugeridos:
+                            @foreach (var ItemE in ViewBag.TODOSEXAMES)
                             {
-                                <label>
-                                    @ItemE.Exame.Nome ->
-                                    @ItemE.Relevancia%
-                                </label>
-                                <br />
-                            }                         
-                        }
+                                if (item.Id == ItemE.DoencaId)
+                                {
+                                    <label>
+                                        @ItemE.Exame.Nome ->
+                                        @ItemE.Relevancia%
+                                    </label>
+                                    <br />
+                                }
+                            }
+                        </div>
+                        <div class="col-2">
+                            Decisão<br>
+                            @Html.RadioButton("decisao",$"{item.Id}")
+                        </div>
                     </div>
-                    <div class="col-2">
-                        Decisão<br>
-                        @Html.RadioButton("decisao",$"{item.Id}")
-                    </div>
-                </div>                
-            }
-        </div>
+                }
+            </div>
+
+        }
+        else
+        {
+            <p><i>@ViewBag.VAZIO</i></p>
+        }
         <br />
         <br />
             <input type="submit" value="Outras Doenças" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
