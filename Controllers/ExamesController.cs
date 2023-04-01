@@ -39,6 +39,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (pesquisa != null)
             {
                 var filtro = _context.Texames
@@ -64,6 +69,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             ViewData["CatExameId"] = new SelectList(_context.TcatExames, "Id", "Nome");
             return View();
         }
@@ -82,6 +92,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -104,6 +119,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (id == null || _context.Texames == null)
@@ -134,6 +154,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (id != exame.Id)
@@ -177,6 +202,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (id == null || _context.Texames == null)
             {
                 return NotFound();
@@ -205,6 +235,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (_context.Texames == null)

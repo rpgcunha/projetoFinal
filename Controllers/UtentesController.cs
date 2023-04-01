@@ -37,6 +37,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (pesquisa != null)
             {
                 var filtro = _context.Tutentes
@@ -63,6 +68,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             return View();
         }
 
@@ -80,6 +90,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -101,6 +116,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (id == null || _context.Tutentes == null)
@@ -130,6 +150,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (id != utente.Id)
@@ -172,6 +197,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (id == null || _context.Tutentes == null)
             {
                 return NotFound();
@@ -199,6 +229,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (_context.Tutentes == null)

@@ -39,6 +39,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (pesquisa != null)
             {
                 var filtro = _context.Thospitais
@@ -64,6 +69,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             return View();
         }
 
@@ -81,6 +91,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -102,6 +117,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (id == null || _context.Thospitais == null)
@@ -131,6 +151,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (id != hospital.Id)
@@ -173,6 +198,11 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (id == null || _context.Thospitais == null)
             {
                 return NotFound();
@@ -200,6 +230,11 @@ namespace apoio_decisao_medica.Controllers
             catch (Exception)
             {
                 return RedirectToAction("Login", "Home");
+            }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
             }
 
             if (_context.Thospitais == null)

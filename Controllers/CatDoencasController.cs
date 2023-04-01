@@ -38,6 +38,12 @@ namespace apoio_decisao_medica.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             return View(await _context.TcatDoencas.ToListAsync());
         }
 
@@ -52,6 +58,12 @@ namespace apoio_decisao_medica.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             return View();
         }
 
@@ -76,6 +88,12 @@ namespace apoio_decisao_medica.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             return View(catDoenca);
         }
 
@@ -90,6 +108,12 @@ namespace apoio_decisao_medica.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (id == null || _context.TcatDoencas == null)
             {
                 return NotFound();
@@ -118,6 +142,12 @@ namespace apoio_decisao_medica.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (id != catDoenca.Id)
             {
                 return NotFound();
@@ -157,6 +187,12 @@ namespace apoio_decisao_medica.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (id == null || _context.TcatDoencas == null)
             {
                 return NotFound();
@@ -185,6 +221,12 @@ namespace apoio_decisao_medica.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
+
+            if (!UserLogado().IsAdmin)
+            {
+                return NotFound();
+            }
+
             if (_context.TcatDoencas == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.TcatDoencas'  is null.");
