@@ -229,9 +229,10 @@ namespace apoio_decisao_medica.Controllers
                     .Include(e => e.Exame)
                     .ToList();
 
-                ViewBag.SUG = sug;
                 if (listaSintomas.Count != 0)
                 {
+                    ViewBag.SUG = sug;
+
                     foreach (var itemS in listaSintomas)
                     {
                         foreach (var itemD in dbpointer.TdoencaSintomas)

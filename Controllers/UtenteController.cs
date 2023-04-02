@@ -160,6 +160,14 @@ namespace apoio_decisao_medica.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            var numUtenteRepetido = dbpointer.Tutentes
+                .SingleOrDefault(u => u.NumeroUtente == utente.NumeroUtente);
+
+            if (numUtenteRepetido != null)
+            {
+                ViewBag.NUMUTENTE = "Já existe um utente com este numero!";
+                return RedirectToAction("Index");
+            }
 
             if (ModelState.IsValid)
             {

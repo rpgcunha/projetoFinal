@@ -1,43 +1,45 @@
-﻿<h2>Numero do Processo Nº @ViewBag.PROC</h2>
-<hr />
-<div class="container fichaUtente align-items-center mb-3" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; height: 150px /*margin-left: 0px;*/">
-    <div class="row p-3">
-        @switch (ViewBag.UTENTE.Utente.Genero)
-        {
-            case "Masculino":
-                <div class="col-md-4 imgUtilizador"><img src="~/img/masculino.jpg" width="50%" class="rounded-circle" /></div>
-                break;
-            case "Feminino":
-                <div class="col-md-4 imgUtilizador"><img src="~/img/feminino.png" width="50%" class="rounded-circle" /></div>
-                break;
-            default:
-                <div class="col-md-4 imgUtilizador"><img src="~/img/none.png" width="50%" class="rounded-circle" /></div>
-                break;
-        }
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-12"><h4>@ViewBag.UTENTE.Utente.Nome</h4></div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">@ViewBag.IDADE anos, @ViewBag.UTENTE.Utente.Genero</div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">Número de utente: @ViewBag.UTENTE.Utente.NumeroUtente</div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">Cidade: @ViewBag.UTENTE.Utente.Cidade</div>
+﻿<div id="processo">
+
+    <h2>Numero do Processo Nº @ViewBag.PROC</h2>
+    <hr />
+    <div class="container fichaUtente align-items-center mb-3" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; height: 150px /*margin-left: 0px;*/">
+        <div class="row p-3">
+            @switch (ViewBag.UTENTE.Utente.Genero)
+            {
+                case "Masculino":
+                    <div class="col-md-4 imgUtilizador"><img src="~/img/masculino.jpg" width="50%" class="rounded-circle" /></div>
+                    break;
+                case "Feminino":
+                    <div class="col-md-4 imgUtilizador"><img src="~/img/feminino.png" width="50%" class="rounded-circle" /></div>
+                    break;
+                default:
+                    <div class="col-md-4 imgUtilizador"><img src="~/img/none.png" width="50%" class="rounded-circle" /></div>
+                    break;
+            }
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12"><h4>@ViewBag.UTENTE.Utente.Nome</h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">@ViewBag.IDADE anos, @ViewBag.UTENTE.Utente.Genero</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">Número de utente: @ViewBag.UTENTE.Utente.NumeroUtente</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">Cidade: @ViewBag.UTENTE.Utente.Cidade</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<br />
-        <div class="row">
-            <div class="col-md-12">
-                <h5>Quais são os sintomas apresentados pelo utente?</h5>
+    <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Quais são os sintomas apresentados pelo utente?</h5>
+                </div>
             </div>
-        </div>
-        <div class="row">
-        <div class="col-6">
+            <div class="row">
+            <div class="col-6">
                 @using (Html.BeginForm())
                 {
                     <div class="grupoPesquisa col-md-3">
@@ -89,241 +91,159 @@
                     <button type="submit" id="submitButton" class="btnCriar" asp-route-numProcesso="@ViewBag.PROC">Adicionar ao processo</button>
                     <a asp-action="NovoSintoma" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Sintoma</a>
                     <br />
-              }
-           </div>
+                }
+            </div>
         
-            <div class="col-6">
-                @using (Html.BeginForm())
-                {
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>
-                                    Lista de Sintomas do Utente
-                                </th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        @if (ViewBag.LISTASINT == null)
-                        {
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <i>
-                                            Ainda não foi adicionado nenhum sintoma ao processo.
-                                        </i>
-                                    </th>
-                                </tr>
-                            </tbody>
-                        }
-                        else
-                        {
-                            <tbody>
-                                @foreach (var item in ViewBag.LISTASINT)
-                                {
-                                    <tr>
-                                        <th>
-                                            @item.Nome
-                                        </th>
-                                        <th>
-                                            <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerSint="@item.Id">
-                                        </th>
-                                    </tr>
-                                }
-                            </tbody>
-                        }
-                    </table>
-                }                       
-           </div>
-        @using (Html.BeginForm())
-        {
-            <div class="row">
                 <div class="col-6">
                     @using (Html.BeginForm())
                     {
-                        @:Exames
-                        @Html.TextBox("pesquisaExam")
-                        <br />
-                        @foreach (var item in ViewBag.CATEXAM)
-                        {
-                            <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
-                        }
-                        <br />
-                        <div class="fixed-height overflow-auto">
-                            @if (ViewBag.FILTROEXAM == null)
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Lista de Sintomas do Utente
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            @if (ViewBag.LISTASINT == null)
                             {
-                                <p><i>Escolha uma letra para filtrar os exames</i></p>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <i>
+                                                Ainda não foi adicionado nenhum sintoma ao processo.
+                                            </i>
+                                        </th>
+                                    </tr>
+                                </tbody>
                             }
                             else
                             {
-                                if (ViewBag.FILTROEXAM.Count != 0)
-                                {
-                                    @foreach (var item in ViewBag.FILTROEXAM)
+                                <tbody>
+                                    @foreach (var item in ViewBag.LISTASINT)
                                     {
-                                        <label>
-                                            @Html.RadioButton("exame",$"{item.Id}")
-                                            @item.Nome
-                                        </label>
-                                        <br />
+                                        <tr>
+                                            <th>
+                                                @item.Nome
+                                            </th>
+                                            <th>
+                                                <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerSint="@item.Id">
+                                            </th>
+                                        </tr>
                                     }
+                                </tbody>
+                            }
+                        </table>
+                    }                       
+               </div>
+            @using (Html.BeginForm())
+            {
+                <div class="row">
+                    <div class="col-6">
+                        @using (Html.BeginForm())
+                        {
+                            @:Exames
+                            @Html.TextBox("pesquisaExam")
+                            <br />
+                            @foreach (var item in ViewBag.CATEXAM)
+                            {
+                                <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
+                            }
+                            <br />
+                            <div class="fixed-height overflow-auto">
+                                @if (ViewBag.FILTROEXAM == null)
+                                {
+                                    <p><i>Escolha uma letra para filtrar os exames</i></p>
                                 }
                                 else
                                 {
-                                    <p><i>Não existem exames nesta categoria!</i></p>
-                                }
-                            }
-                        </div>
-                        <br />
-                        <br />
-                        <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
-                        <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Exame</a>
-                        <br />
-                    }
-                </div>
-            
-                <div class="col-6">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>
-                                    Lista de Exames do Utente
-                                </th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        @if (ViewBag.LISTAEXAM == null)
-                        {
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <i>
-                                            Ainda não foi adicionado nenhum exame ao processo.
-                                        </i>
-                                    </th>
-                                </tr>
-                            </tbody>
-                        }
-                        else
-                        {
-                            <tbody>
-                                @foreach (var item in ViewBag.LISTAEXAM)
-                                {
-                                    <tr>
-                                        <th>
-                                            @item.Nome
-                                        </th>
-                                        <th>
-                                            <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerExam="@item.Id">
-                                        </th>
-                                    </tr>
-                                }
-                            </tbody>
-                        }
-                    </table>
-                </div>
-            </div>
-        }
-    </div>
-
-@using (Html.BeginForm())
-{
-    <input type="submit" value="Apresentar Sugestões" asp-route-numProcesso="@ViewBag.PROC" asp-route-sug="1">
-    @if (ViewBag.ERROSEMSINT != null)
-    {
-        <p><i>@ViewBag.ERROSEMSINT</i></p>
-    }
-    <br />
-    <br />
-    @if (ViewBag.SUG != null)
-    {
-        if (ViewBag.SUGESTAO1 != null)
-        {
-            <h3>Sugestão</h3>
-            <h5>Os Sintomas tem @ViewBag.PERCENTAGEMSINT% de correspondência aos seguintes diagnósticos:</h5>
-            <div class="container">
-                @foreach (var item in ViewBag.SUGESTAO1)
-                {
-                    <div class="row border">
-                        <div class="col-4">
-                            <h5>@item.Nome</h5>
-                            <label>Especialidade: @item.CatDoenca.Nome</label>
-                        </div>
-                        <div class="col-3">
-                            <h6>Sintomas:</h6>
-                            @foreach (var itemS in ViewBag.TODOSSINTOMAS)
-                            {
-                                if (item.Id == itemS.DoencaId)
-                                {
-                                    int sim = 0;
-                                    foreach (var itemX in ViewBag.LISTASINT)
+                                    if (ViewBag.FILTROEXAM.Count != 0)
                                     {
-
-                                        if (itemS.SintomaId == itemX.Id)
+                                        @foreach (var item in ViewBag.FILTROEXAM)
                                         {
-                                            <label class="text-success">
-                                                @itemS.Sintoma.Nome ->
-                                                @itemS.Relevancia%
+                                            <label>
+                                                @Html.RadioButton("exame",$"{item.Id}")
+                                                @item.Nome
                                             </label>
-                                            sim = 1;
-                                            break;
+                                            <br />
                                         }
                                     }
-                                    if (sim == 0)
+                                    else
                                     {
-                                        <label class="text-secondary">
-                                            @itemS.Sintoma.Nome ->
-                                            @itemS.Relevancia%
-                                        </label>
+                                        <p><i>Não existem exames nesta categoria!</i></p>
                                     }
-                                    <br />
                                 }
-                            }
-                        </div>
-                        <div class="col-3">
-                            Exames Sugeridos:
-                            @foreach (var ItemE in ViewBag.TODOSEXAMES)
-                            {
-                                if (item.Id == ItemE.DoencaId)
-                                {
-                                    <label>
-                                        @ItemE.Exame.Nome ->
-                                        @ItemE.Relevancia%
-                                    </label>
-                                    <br />
-                                }
-                            }
-                        </div>
-                        <div class="col-2">
-                            Decisão<br>
-                            @Html.RadioButton("decisao",$"{item.Id}")
-                        </div>
+                            </div>
+                            <br />
+                            <br />
+                            <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
+                            <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Exame</a>
+                            <br />
+                        }
                     </div>
-                }
-            </div>
+            
+                    <div class="col-6">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Lista de Exames do Utente
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            @if (ViewBag.LISTAEXAM == null)
+                            {
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <i>
+                                                Ainda não foi adicionado nenhum exame ao processo.
+                                            </i>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            }
+                            else
+                            {
+                                <tbody>
+                                    @foreach (var item in ViewBag.LISTAEXAM)
+                                    {
+                                        <tr>
+                                            <th>
+                                                @item.Nome
+                                            </th>
+                                            <th>
+                                                <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerExam="@item.Id">
+                                            </th>
+                                        </tr>
+                                    }
+                                </tbody>
+                            }
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
 
-        }
-        else
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Apresentar Sugestões" asp-route-numProcesso="@ViewBag.PROC" asp-route-sug="1">
+        @if (ViewBag.ERROSEMSINT != null)
         {
-            <p><i>@ViewBag.VAZIO</i></p>
+            <p><i>@ViewBag.ERROSEMSINT</i></p>
         }
         <br />
         <br />
-            <input type="submit" value="Outras Doenças" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
-        <br />
-        <br />
-        <br />
-        <br />
-        @if (ViewBag.CATDOENCA != null)
+        @if (ViewBag.SUG != null)
         {
-            @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag.CATDOENCA)
-            <input type="submit" value="Aplicar" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
-            <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">Adicionar Nova Doença</a>
-            <br />
-            <br />
-            if (ViewBag.MAISDOENCAS != null)
+            if (ViewBag.SUGESTAO1 != null)
             {
+                <h3>Sugestão</h3>
+                <h5>Os Sintomas tem @ViewBag.PERCENTAGEMSINT% de correspondência aos seguintes diagnósticos:</h5>
                 <div class="container">
-                    @foreach (var item in ViewBag.MAISDOENCAS)
+                    @foreach (var item in ViewBag.SUGESTAO1)
                     {
                         <div class="row border">
                             <div class="col-4">
@@ -362,35 +282,118 @@
                                 }
                             </div>
                             <div class="col-3">
-                                    Exames Sugeridos:
-                                    @foreach (var ItemE in ViewBag.TODOSEXAMES)
+                                Exames Sugeridos:
+                                @foreach (var ItemE in ViewBag.TODOSEXAMES)
+                                {
+                                    if (item.Id == ItemE.DoencaId)
                                     {
-                                        if (item.Id == ItemE.DoencaId)
-                                        {
-                                            <label>
-                                                @ItemE.Exame.Nome ->
-                                                @ItemE.Relevancia%
-                                            </label>
-                                            <br />
-                                        }
+                                        <label>
+                                            @ItemE.Exame.Nome ->
+                                            @ItemE.Relevancia%
+                                        </label>
+                                        <br />
                                     }
-                                </div>
+                                }
+                            </div>
                             <div class="col-2">
                                 Decisão<br>
-                                @Html.RadioButton("decisao", $"{item.Id}")
+                                @Html.RadioButton("decisao",$"{item.Id}")
                             </div>
                         </div>
                     }
                 </div>
+
+            }
+            else
+            {
+                <p><i>@ViewBag.VAZIO</i></p>
             }
             <br />
             <br />
-        }
-        <input type="submit" value="Fechar Processo" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="@ViewBag.MAIS" asp-route-sug="1" asp-route-fechar="1">
-        @if (ViewBag.ERRO != null)
-        {
-            <p><i>@ViewBag.ERRO</i></p>
+                <input type="submit" value="Outras Doenças" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
+            <br />
+            <br />
+            <br />
+            <br />
+            @if (ViewBag.CATDOENCA != null)
+            {
+                @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag.CATDOENCA)
+                <input type="submit" value="Aplicar" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1">
+                <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">Adicionar Nova Doença</a>
+                <br />
+                <br />
+                if (ViewBag.MAISDOENCAS != null)
+                {
+                    <div class="container">
+                        @foreach (var item in ViewBag.MAISDOENCAS)
+                        {
+                            <div class="row border">
+                                <div class="col-4">
+                                    <h5>@item.Nome</h5>
+                                    <label>Especialidade: @item.CatDoenca.Nome</label>
+                                </div>
+                                <div class="col-3">
+                                    <h6>Sintomas:</h6>
+                                    @foreach (var itemS in ViewBag.TODOSSINTOMAS)
+                                    {
+                                        if (item.Id == itemS.DoencaId)
+                                        {
+                                            int sim = 0;
+                                            foreach (var itemX in ViewBag.LISTASINT)
+                                            {
+
+                                                if (itemS.SintomaId == itemX.Id)
+                                                {
+                                                    <label class="text-success">
+                                                        @itemS.Sintoma.Nome ->
+                                                        @itemS.Relevancia%
+                                                    </label>
+                                                    sim = 1;
+                                                    break;
+                                                }
+                                            }
+                                            if (sim == 0)
+                                            {
+                                                <label class="text-secondary">
+                                                    @itemS.Sintoma.Nome ->
+                                                    @itemS.Relevancia%
+                                                </label>
+                                            }
+                                            <br />
+                                        }
+                                    }
+                                </div>
+                                <div class="col-3">
+                                        Exames Sugeridos:
+                                        @foreach (var ItemE in ViewBag.TODOSEXAMES)
+                                        {
+                                            if (item.Id == ItemE.DoencaId)
+                                            {
+                                                <label>
+                                                    @ItemE.Exame.Nome ->
+                                                    @ItemE.Relevancia%
+                                                </label>
+                                                <br />
+                                            }
+                                        }
+                                    </div>
+                                <div class="col-2">
+                                    Decisão<br>
+                                    @Html.RadioButton("decisao", $"{item.Id}")
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                <br />
+                <br />
+            }
+            <input type="submit" value="Fechar Processo" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="@ViewBag.MAIS" asp-route-sug="1" asp-route-fechar="1">
+            @if (ViewBag.ERRO != null)
+            {
+                <p><i>@ViewBag.ERRO</i></p>
+            }
         }
     }
-}
 
+</div>

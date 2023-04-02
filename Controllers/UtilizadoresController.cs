@@ -96,6 +96,16 @@ namespace apoio_decisao_medica.Controllers
             {
                 return NotFound();
             }
+            var userRepetido = _context.Tutilizador
+                .SingleOrDefault(u=>u.User == utilizador.User);
+
+            if (userRepetido != null)
+            {
+                ViewBag.USERREPETIDO = "Este user já está a ser usado tente outro!";
+
+                ViewData["MedicoId"] = new SelectList(_context.Tmedicos, "Id", "Nome", utilizador.MedicoId);
+                return View(utilizador);
+            }
 
             if (ModelState.IsValid && imagem != null && imagem.Length > 0)
             {
