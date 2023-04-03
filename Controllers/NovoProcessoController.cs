@@ -317,7 +317,7 @@ namespace apoio_decisao_medica.Controllers
                     fecharProcesso.DoencaId = decisao;
                     fecharProcesso.DataHoraFecho = DateTime.Today.ToString("dd/MM/yyyy");
                     dbpointer.SaveChanges();
-                    return RedirectToAction("FecharProcesso", new {numProcesso = numProcesso});
+                    return RedirectToAction("FecharProcesso", new {idProcesso = idProcesso});
                 }
                 else
                 {
@@ -412,7 +412,7 @@ namespace apoio_decisao_medica.Controllers
             return listaExames;
         }
 
-        public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao, int numProcesso, int idCatExam, string pesquisaExam,
+        public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao, int idProcesso, int idCatExam, string pesquisaExam,
             int exame, int removerExam)
         {
             try
@@ -423,11 +423,6 @@ namespace apoio_decisao_medica.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-
-            int idProcesso = dbpointer.Tprocessos
-                    .Where(p => p.NumeroProcesso == numProcesso)
-                    .Select(p => p.Id)
-                    .Single();
 
             var processos = dbpointer.TprocessoSintomas.ToList();
             foreach (var item in processos)
@@ -476,8 +471,6 @@ namespace apoio_decisao_medica.Controllers
                 }
             }
 
-            //Listra as categorias dos exames
-            ViewBag.CATEXAM = dbpointer.TcatExames.ToList();
 
             //apresentar os exames para avaliar
             Processo p = new();
@@ -485,6 +478,9 @@ namespace apoio_decisao_medica.Controllers
                 .Include(p => p.Doenca)
                 .Single(p => p.Id == idProcesso);
             ViewBag.PROCESSO = p;
+
+            //Listra as categorias dos exames
+            ViewBag.CATEXAM = dbpointer.TcatExames.ToList();
 
             //listar os exames filtrados pela cat
             if (idCatExam != 0 || pesquisaExam != null)
@@ -538,6 +534,27 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.LISTAEXAM = null;
             }
 
+            if (submeter != 0)
+            {
+                if (ListaExames(idProcesso).Count == 0)
+                {
+                    ViewBag.CONTINUAR = 1;
+                    ViewBag.SUBMETER = 0;
+                }
+                else
+                {
+                    confirmacao = 1;
+                }
+                if (confirmacao == 1)
+                {
+                    ViewBag.SUBMETER = 1;
+                }
+            }
+            else
+            {
+                ViewBag.SUBMETER = 0;
+            }
+            return View();
 
             //List<AvaliarExame> listaExames = new();
             //foreach (var item in dbpointer.TprocessoExames.Include(e=>e.Exame))
@@ -554,74 +571,74 @@ namespace apoio_decisao_medica.Controllers
 
 
             //verificar se nao escolheu nenhum para confirmar se deseja continuar
-            if (submeter != 0)
-            {
-                bool continuar = false;
-                foreach (var item in selectlistaExames)
-                {
-                    if (item.Selecionado)
-                    {
-                        continuar = true;
-                        break;
-                    }
-                }
-                if (continuar || confirmacao == 1)
-                {
-                    //atualizar relevancia dos exames para a doença
-                    int i = 0;
-                    List<string> teste = new();
-                    foreach (var item in selectlistaExames)
-                    {
-                        if (item.Selecionado)
-                        {
-                            var updateRelevancia = dbpointer.TdoencaExames
-                                .FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
-                            if (updateRelevancia != null)
-                            {
-                                if (updateRelevancia.Relevancia < 100)
-                                {
-                                    updateRelevancia.Relevancia = updateRelevancia.Relevancia + 5;
-                                    dbpointer.SaveChanges();
-                                }
-                            }
-                            else
-                            {
-                                DoencaExame r = new();
-                                r.DoencaId = Convert.ToInt32(p.DoencaId);
-                                r.ExameId = listaExames[i].Id;
-                                r.Relevancia = 50;
-                                dbpointer.TdoencaExames.Add(r);
-                                dbpointer.SaveChanges();
-                            }
-                        }
-                        else
-                        {
-                            var updateRelevancia = dbpointer.TdoencaExames
-                                .FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
-                            if (updateRelevancia != null)
-                            {
-                                if (updateRelevancia.Relevancia > 0)
-                                {
-                                    updateRelevancia.Relevancia = updateRelevancia.Relevancia - 5;
-                                    dbpointer.SaveChanges();
-                                }
-                            }
-                        }
-                        i++;
-                    }
-                    ViewBag.SUBMETER = 1;
-                }
-                else
-                {
-                    ViewBag.CONTINUAR = 1;
-                    ViewBag.SUBMETER = 0;
-                }
-            }
-            else
-            {
-                ViewBag.SUBMETER = 0;
-            }            
-            return View(listaExames);
+            //if (submeter != 0)
+            //{
+            //    bool continuar = false;
+            //    foreach (var item in selectlistaExames)
+            //    {
+            //        if (item.Selecionado)
+            //        {
+            //            continuar = true;
+            //            break;
+            //        }
+            //    }
+            //    if (continuar || confirmacao == 1)
+            //    {
+            //        //atualizar relevancia dos exames para a doença
+            //        int i = 0;
+            //        List<string> teste = new();
+            //        foreach (var item in selectlistaExames)
+            //        {
+            //            if (item.Selecionado)
+            //            {
+            //                var updateRelevancia = dbpointer.TdoencaExames
+            //                    .FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
+            //                if (updateRelevancia != null)
+            //                {
+            //                    if (updateRelevancia.Relevancia < 100)
+            //                    {
+            //                        updateRelevancia.Relevancia = updateRelevancia.Relevancia + 5;
+            //                        dbpointer.SaveChanges();
+            //                    }
+            //                }
+            //                else
+            //                {
+            //                    DoencaExame r = new();
+            //                    r.DoencaId = Convert.ToInt32(p.DoencaId);
+            //                    r.ExameId = listaExames[i].Id;
+            //                    r.Relevancia = 50;
+            //                    dbpointer.TdoencaExames.Add(r);
+            //                    dbpointer.SaveChanges();
+            //                }
+            //            }
+            //            else
+            //            {
+            //                var updateRelevancia = dbpointer.TdoencaExames
+            //                    .FirstOrDefault(e => e.ExameId == listaExames[i].Id && e.DoencaId == p.DoencaId);
+            //                if (updateRelevancia != null)
+            //                {
+            //                    if (updateRelevancia.Relevancia > 0)
+            //                    {
+            //                        updateRelevancia.Relevancia = updateRelevancia.Relevancia - 5;
+            //                        dbpointer.SaveChanges();
+            //                    }
+            //                }
+            //            }
+            //            i++;
+            //        }
+            //        ViewBag.SUBMETER = 1;
+            //    }
+            //    else
+            //    {
+            //        ViewBag.CONTINUAR = 1;
+            //        ViewBag.SUBMETER = 0;
+            //    }
+            //}
+            //else
+            //{
+            //    ViewBag.SUBMETER = 0;
+            //}            
+            //return View();
         }
 
 

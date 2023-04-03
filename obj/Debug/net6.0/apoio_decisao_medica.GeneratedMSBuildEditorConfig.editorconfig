@@ -9,209 +9,209 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = apoio_decisao_medica
 build_property.RootNamespace = apoio_decisao_medica
-build_property.ProjectDir = C:\Users\admin\Desktop\Projeto\final\projetoFinal\
+build_property.ProjectDir = C:\Users\rpcun\Desktop\Nova pasta (2)\Nova pasta (2)\projetoFinal\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\admin\Desktop\Projeto\final\projetoFinal
+build_property.MSBuildProjectDirectory = C:\Users\rpcun\Desktop\Nova pasta (2)\Nova pasta (2)\projetoFinal
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/CatDoencas/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/CatDoencas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/CatDoencas/Delete.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/CatDoencas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/CatDoencas/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/CatDoencas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/CatDoencas/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/CatDoencas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0RG9lbmNhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/DoencasAdmins/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/DoencasAdmins/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc0FkbWluc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/DoencasAdmins/Delete.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/DoencasAdmins/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc0FkbWluc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/DoencasAdmins/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/DoencasAdmins/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc0FkbWluc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/DoencasAdmins/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/DoencasAdmins/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc0FkbWluc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Doencas/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Doencas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Exames/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Exames/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Exames/Delete.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Exames/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Exames/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Exames/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Exames/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Exames/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Home/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Home/Login.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Hospitais/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Hospitais/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Hospitais/Delete.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Hospitais/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Hospitais/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Hospitais/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Hospitais/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Hospitais/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWlzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Medicos/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Medicos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Medicos/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Medicos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Medicos/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Medicos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/MeusProcessos/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/MeusProcessos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV1c1Byb2Nlc3Nvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/NovoProcesso/FecharProcesso.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/NovoProcesso/FecharProcesso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXEZlY2hhclByb2Nlc3NvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/NovoProcesso/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/NovoProcesso/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/NovoProcesso/NovaDoenca.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/NovoProcesso/NovaDoenca.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXE5vdmFEb2VuY2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/NovoProcesso/NovoExame.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/NovoProcesso/NovoExame.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXE5vdm9FeGFtZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/NovoProcesso/NovoSintoma.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/NovoProcesso/NovoSintoma.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92b1Byb2Nlc3NvXE5vdm9TaW50b21hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Processo/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Processo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Shared/Error.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Sintomas/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Sintomas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Sintomas/Delete.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Sintomas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Sintomas/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Sintomas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Sintomas/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Sintomas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utentes/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utentes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utentes/Delete.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utentes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utentes/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utentes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utentes/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utentes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utente/Detalhes.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utente/Detalhes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXERldGFsaGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utente/Editar.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utente/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utente/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utente/Novo.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utente/Novo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRlbnRlXE5vdm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utilizadores/Create.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utilizadores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGl6YWRvcmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utilizadores/Delete.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utilizadores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGl6YWRvcmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utilizadores/Edit.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utilizadores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGl6YWRvcmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Utilizadores/Index.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Utilizadores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGl6YWRvcmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/_ViewImports.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/_ViewStart.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin/Desktop/Projeto/final/projetoFinal/Views/Shared/_Layout.cshtml]
+[C:/Users/rpcun/Desktop/Nova pasta (2)/Nova pasta (2)/projetoFinal/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hdqxvguyds
