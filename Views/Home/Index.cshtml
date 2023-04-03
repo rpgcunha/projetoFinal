@@ -2,34 +2,38 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-
 <div class="text-center">
-    <img src="~/img/users/@(ViewBag.USER.User).png" alt="" width="80" height="80" class="rounded-circle me-2"><br />
+    <img src="~/img/users/@(ViewBag.USER.User).png" alt="" width="250" height="250" class="rounded-circle me-2"><br />
 </div>
-<div class="row">
+<div class="row text-center mt-5">
+    <hr />
     <div class="col-12">
-        Nome do Utilizador: @ViewBag.USER.Medico.Nome
+        <h5>Nome</h5>
     </div>
-</div>
-<div class="row">
     <div class="col-12">
-        Especialidade: @ViewBag.USER.Medico.Especialidade
+        @ViewBag.USER.Medico.Nome
     </div>
-</div>
-<div class="row">
+    <hr />
     <div class="col-12">
-        Instituição médica: @ViewBag.LOCAL
+        <h5>Especialidade </h5>
     </div>
+    <div class="col-md-12">
+        @ViewBag.USER.Medico.Especialidade
+    </div>
+    <hr />
+    <div class="col-12">
+        <h5>Instituição médica </h5>
+    </div>
+    <div class="col-md-12">
+        @ViewBag.LOCAL
+    </div>
+    <hr />
 </div>
 
 @using (Html.BeginForm())
 {
-    <div class="row">
-        <div class="col-12">
-            <button type="submit" asp-route-change="1">Mudar Password</button>
-        </div>
-    </div>
+    <button style="background-color: #688698; color: white; border-radius: 20px; padding-left: 6px; right:50%:" type="submit" asp-route-change="1">Mudar Password</button>
+
     @if (ViewBag.CHANGE != null)
     {
         if (ViewBag.ERRO != null)

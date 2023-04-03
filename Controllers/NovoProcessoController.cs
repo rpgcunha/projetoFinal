@@ -215,6 +215,11 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.LISTAEXAM = null;
             }
 
+            //testar de há sintomas na tabelas
+            if (listaSintomas.Count>0)
+            {
+                ViewBag.PERMITIR = 1;
+            }
 
             //carrega para a lista doencas as doenças que correspondem com os sintomas
             Dictionary<int, int> doencasPercentagem = new Dictionary<int, int>();

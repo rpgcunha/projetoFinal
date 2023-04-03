@@ -28,7 +28,7 @@ namespace apoio_decisao_medica.Controllers
 		}
 
 		// GET: CatDoencas
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index(string pesquisa)
         {
             try
             {
@@ -42,6 +42,13 @@ namespace apoio_decisao_medica.Controllers
             if (!UserLogado().IsAdmin)
             {
                 return NotFound();
+            }
+
+            if (pesquisa != null)
+            {
+                var filtro = _context.TcatDoencas.Where(f => f.Nome.ToLower().Contains(pesquisa.ToLower()));
+                return View(await filtro.ToListAsync());
+
             }
 
             return View(await _context.TcatDoencas.ToListAsync());
