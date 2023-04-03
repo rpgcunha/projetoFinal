@@ -1,5 +1,4 @@
-﻿@model List<apoio_decisao_medica.ViewsModels.AvaliarExame>
-@using (Html.BeginForm())
+﻿@using (Html.BeginForm())
 {
     <h5>Fechado o processo numero: @ViewBag.PROCESSO.NumeroProcesso</h5>
     <br />
@@ -7,48 +6,11 @@
     <br />
     <br />
     <br />
-    @*@if (Model.Count > 0)
-    {
-        if (ViewBag.SUBMETER == 0)
-        {
-            <p>Indique quais os exames foram uteis para chegar ao diagnostico final:</p>
-            @for (int i = 0; i < Model.Count(); i++)
-            {
-                <div>
-                    @Html.CheckBoxFor(m => m[i].Selecionado, new { @value = true })
-                    @Html.Label(Model[i].Nome)
-                </div>
-            }
-            <br />
-            <br />
-            <br />
-            <br />
-            <input type="submit" value="Submeter" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="1">
-            if (ViewBag.CONTINUAR != null)
-            {
-                <p><i>Não Selecionou nenhum exame, deseja continuar?</i></p>
-                <input type="submit" value="Sim" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="1" asp-route-confirmacao="1">
-                <input type="submit" value="Não" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="0">
-            }
-        }
-        else
-        {
-            <p><i>Submetido com sucesso, pode prosseguir!</i></p>
-            <a asp-controller="Home" asp-action="Index">Concluir</a>
-        }
-        <br />
-        <br />
-
-    }*@
-    @using (Html.BeginForm())
-    {
         if (ViewBag.SUBMETER == 0)
         {
             <div class="row">
                 <div class="col-6">
-                    @using (Html.BeginForm())
-                    {
-                        @:Exames
+                        Exames
                         @Html.TextBox("pesquisaExam")
                         <br />
                         @foreach (var item in ViewBag.CATEXAM)
@@ -85,7 +47,6 @@
                         <input type="submit" value="Adicionar ao Processo" asp-route-idProcesso="@ViewBag.PROCESSO.Id">
                         <a asp-action="NovoExame" asp-route-idProcesso="@ViewBag.PROCESSO.Id">Adicionar Novo Exame</a>
                         <br />
-                    }
                 </div>
 
                 <div class="col-6">
@@ -129,12 +90,12 @@
                     </table>
                 </div>
             </div>
-            <input type="submit" value="Submeter" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="1">
+        <input type="submit" value="Submeter" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="1">
             if (ViewBag.CONTINUAR != null)
             {
                 <p><i>Não Selecionou nenhum exame, deseja continuar?</i></p>
-                <input type="submit" value="Sim" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="1" asp-route-confirmacao="1">
-                <input type="submit" value="Não" asp-route-numProcesso="@ViewBag.PROCESSO.NumeroProcesso" asp-route-submeter="0">
+                <input type="submit" value="Sim" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="1" asp-route-confirmacao="1">
+                <input type="submit" value="Não" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="0">
             }
         }
         else
@@ -142,6 +103,4 @@
             <p><i>Submetido com sucesso, pode prosseguir!</i></p>
             <a asp-controller="Home" asp-action="Index">Concluir</a>
         }
-
-    }
 }
