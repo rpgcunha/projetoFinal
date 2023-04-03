@@ -16,7 +16,7 @@
     </div>
         <div class="grupoPesquisa col-md-6 d-grid justify-content-md-end">
             <div class="textbox">
-                @Html.TextBox("numUtente")
+                @Html.TextBox("pesquisa", null, new { placeholder = "Pesquisar" })
                 <div class="botaolupa" style="bottom: -20%">
                     <button class="lupa" type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -41,7 +41,7 @@
                 Sintomas (Relevância)
             </th>
             <th>
-                Exames (Relevância)
+                Exames
             </th>
             <th>
                 Percentagem de Casos
@@ -76,7 +76,7 @@
                         {
                             if (itemE.DoencaId == item.Id)
                             {
-                                @itemE.Exame.Nome @:(@itemE.Relevancia%)
+                                @itemE.Exame.Nome
                                 <br />
                             }
                         }

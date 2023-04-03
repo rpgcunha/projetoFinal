@@ -9,19 +9,49 @@
     if (ViewBag.SUBMETER == 0)
     {
         <div class="row">
-            <div class="col-6">
-                Exames
-                @Html.TextBox("pesquisaExam")
-                <br />
+            <div class="col-md-6">
+                <h5>Quais foram os exames realizados?</h5>
+            </div>
+            <div class="col-md-6 d-grid justify-content-md-end">
+                <div class="btnCriar" style="width: fit-content">
+                    <a asp-action="NovoExame" asp-route-idProcesso="@ViewBag.PROCESSO.Id">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        Adicionar Novo Exame
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 @foreach (var item in ViewBag.CATEXAM)
                 {
                     <a asp-route-idCatExam="@item.Id" asp-route-idProcesso="@ViewBag.PROCESSO.Id">@item.Nome</a> @:|
                 }
-                <br />
-                <div class="fixed-height overflow-auto">
-                    @if (ViewBag.FILTROEXAM == null)
+            </div>
+            <br />
+            <br />
+            <div class="grupoPesquisa col-md-12">
+                <div class="textbox">
+                    @Html.TextBox("pesquisaExam", null, new {@class = "pesquisaSint",  placeholder = "Pesquisar exames" })
+                    <div class="botaolupa">
+                        <button class="lupa" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row align-items-center">
+
+            <div class="fixed-height overflow-auto col-md-5" style=" background-color: white; border-radius: 10px;">
+                @if (ViewBag.FILTROEXAM == null)
                     {
-                        <p><i>Escolha uma letra para filtrar os exames</i></p>
+                        <p><i>Exames...</i></p>
                     }
                     else
                     {
@@ -42,54 +72,36 @@
                         }
                     }
                 </div>
-                <br />
-                <br />
-                <input type="submit" value="Adicionar ao Processo" asp-route-idProcesso="@ViewBag.PROCESSO.Id">
-                <a asp-action="NovoExame" asp-route-idProcesso="@ViewBag.PROCESSO.Id">Adicionar Novo Exame</a>
-                <br />
+            <div class="col-md-2 align-self-md-center">
+                <button type="submit" id="submitButton" class="btnCriar" style="width: fit-content;" asp-route-idProcesso="@ViewBag.PROCESSO.Id">
+                    Adicionar ao processo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                    </svg>
+                </button>
             </div>
+            <div class="col-md-4 fixed-height overflow-auto col-md-5" style="background-color: white; border-radius: 10px;">
+                @if (ViewBag.LISTAEXAM == null)
+                {
+                    <label><i>Ainda não foi adicionado nenhum exame ao processo.</i></label>
+                }
+                else
+                {
+                    @foreach (var item in ViewBag.LISTAEXAM)
+                    {
+                        @item.Nome
+                        <button type="submit" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-removerSint="@item.Id" style="background-color: #688698; color: white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </button>
+                    }
+                }
+            </div>
+        <br>
+        <br>
+         </div>
 
-            <div class="col-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                Lista de Exames do Utente
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    @if (ViewBag.LISTAEXAM == null)
-                    {
-                        <tbody>
-                            <tr>
-                                <th>
-                                    <i>
-                                        Ainda não foi adicionado nenhum exame ao processo.
-                                    </i>
-                                </th>
-                            </tr>
-                        </tbody>
-                    }
-                    else
-                    {
-                        <tbody>
-                            @foreach (var item in ViewBag.LISTAEXAM)
-                            {
-                                <tr>
-                                    <th>
-                                        @item.Nome
-                                    </th>
-                                    <th>
-                                        <input type="submit" value="-" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-removerExam="@item.Id">
-                                    </th>
-                                </tr>
-                            }
-                        </tbody>
-                    }
-                </table>
-            </div>
-        </div>
         <input type="submit" value="Submeter" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="1">
         if (ViewBag.CONTINUAR != null)
         {
@@ -100,7 +112,7 @@
     }
     else
     {
-        <p><i>Submetido com sucesso, pode prosseguir!</i></p>
+        <p style="color:forestgreen"><i>Submetido com sucesso, pode prosseguir!</i></p>
         <a asp-controller="Home" asp-action="Index">Concluir</a>
     }
 }

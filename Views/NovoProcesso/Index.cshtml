@@ -1,7 +1,10 @@
-﻿<h2>Numero do Processo Nº @ViewBag.PROC</h2>
-<hr />
-@*FICHA UTENTE*@
-<div class="container fichaUtente align-items-center mb-3" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; height: 150px /*margin-left: 0px;*/">
+﻿@*FICHA UTENTE*@
+<div class="sticky-top" style="background-color: #ebf4fa">
+    <div class="row align-items-center">
+        <div class="col-md-10"><h2>Numero do Processo Nº @ViewBag.PROC</h2></div>
+    </div>
+    <hr />
+    <div class="container fichaUtente align-items-center mb-3" style="background-color: #688698; border-radius: 15px; color: white; width: 800px; height: 150px /*margin-left: 0px;*/">
     <div class="row p-3">
             @switch (ViewBag.UTENTE.Utente.Genero)
             {
@@ -31,7 +34,8 @@
             </div>
         </div>
 </div>
-    <br />
+</div>
+<br />
 @**************@
 <div class="row">
     <div class="col-md-6">
@@ -175,8 +179,7 @@
                                             if (itemS.SintomaId == itemX.Id)
                                             {
                                                 <label class="text-success">
-                                                    @itemS.Sintoma.Nome ->
-                                                    @itemS.Relevancia%
+                                                    @itemS.Sintoma.Nome (@itemS.Relevancia%)
                                                 </label>
                                                 sim = 1;
                                                 break;
@@ -185,8 +188,7 @@
                                         if (sim == 0)
                                         {
                                             <label class="text-secondary">
-                                                @itemS.Sintoma.Nome ->
-                                                @itemS.Relevancia%
+                                                @itemS.Sintoma.Nome (@itemS.Relevancia%)
                                             </label>
                                         }
                                         <br />
@@ -195,13 +197,13 @@
                             </div>
                             <div class="col-3">
                                 <b>Exames Sugeridos</b>
+                                <br />
                                 @foreach (var ItemE in ViewBag.TODOSEXAMES)
                                 {
                                     if (item.Id == ItemE.DoencaId)
                                     {
                                         <label>
-                                            @ItemE.Exame.Nome ->
-                                            @ItemE.Relevancia%
+                                            @ItemE.Exame.Nome
                                         </label>
                                         <br />
                                     }
@@ -224,7 +226,7 @@
             <br />
             <div id="maisDoencas"></div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                 <button type="submit" class="btnCriarAzul" style="width: fit-content; color: white;" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1" asp-fragment="@ViewBag.ANCORA">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
@@ -232,8 +234,14 @@
                     Outras doenças
                     </button>
                 </div>
-                <div class="col-md-6 d-grid justify-content-md-end">
-                <button type="submit" class="btnCriarAzul" style="width: fit-content; color: white; background-color: #008000;" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="@ViewBag.MAIS" asp-route-sug="1" asp-route-fechar="1">Fechar Processo</button>
+                <div class="col-md-4">
+                    @if (ViewBag.ERRO != null)
+                    {
+                        <p style="color:red"><i>@ViewBag.ERRO</i></p>
+                    }
+                </div>
+                <div class="col-md-4 d-grid justify-content-md-end">
+                <button type="submit" class="btnCriarAzul" style="width: fit-content; color: white; background-color: #008000;" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="@ViewBag.MAIS" asp-route-sug="1" asp-route-fechar="1" asp-fragment="@ViewBag.ANCORA">Fechar Processo</button>
                 </div>
             </div>
             <br />
@@ -265,13 +273,13 @@
                     <div class="container">
                         @foreach (var item in ViewBag.MAISDOENCAS)
                         {
-                            <div class="row border">
+                            <div class="row border text-center">
                                 <div class="col-4">
                                     <h5>@item.Nome</h5>
                                     <label>Especialidade: @item.CatDoenca.Nome</label>
                                 </div>
                                 <div class="col-3">
-                                    <h6>Sintomas:</h6>
+                                <h6><b>Sintomas:</b></h6>
                                     @foreach (var itemS in ViewBag.TODOSSINTOMAS)
                                     {
                                         if (item.Id == itemS.DoencaId)
@@ -302,7 +310,7 @@
                                     }
                                 </div>
                                 <div class="col-3">
-                                        Exames Sugeridos:
+                                <b>Exames Sugeridos:</b>
                                         @foreach (var ItemE in ViewBag.TODOSEXAMES)
                                         {
                                             if (item.Id == ItemE.DoencaId)
@@ -316,7 +324,7 @@
                                         }
                                     </div>
                                 <div class="col-2">
-                                    Decisão<br>
+                                    <b>Decisão</b><br>
                                     @Html.RadioButton("decisao", $"{item.Id}")
                                 </div>
                             </div>
@@ -325,10 +333,6 @@
                 }
                 <br />
                 <br />
-            }
-            @if (ViewBag.ERRO != null)
-            {
-                <p><i>@ViewBag.ERRO</i></p>
             }
         }
     }

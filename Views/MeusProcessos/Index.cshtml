@@ -25,7 +25,7 @@
         <div class="col-md-8 d-grid justify-content-md-end">
             <div class="grupoPesquisa">
                 <div class="textbox">
-                    @Html.TextBox("pesquisaAbertos")
+                    @Html.TextBox("pesquisaAbertos", null, new { placeholder = "Pesquisar" })
                     <div class="botaolupa">
                         <button class="lupa" type="submit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -81,7 +81,7 @@
         <div class="col-md-8 d-grid justify-content-md-end">
             <div class="grupoPesquisa">
                 <div class="textbox">
-                    @Html.TextBox("pesquisaFechados")
+                    @Html.TextBox("pesquisaFechados", null, new { placeholder = "Pesquisar" })
                     <div class="botaolupa">
                         <button class="lupa" type="submit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

@@ -477,11 +477,11 @@ namespace apoio_decisao_medica.Controllers
 
 
             //apresentar os exames para avaliar
-            Processo p = new();
-            p = dbpointer.Tprocessos
+            Processo pro = new();
+            pro = dbpointer.Tprocessos
                 .Include(p => p.Doenca)
                 .Single(p => p.Id == idProcesso);
-            ViewBag.PROCESSO = p;
+            ViewBag.PROCESSO = pro;
 
             //Listra as categorias dos exames
             ViewBag.CATEXAM = dbpointer.TcatExames.ToList();
@@ -552,6 +552,26 @@ namespace apoio_decisao_medica.Controllers
                 if (confirmacao == 1)
                 {
                     ViewBag.SUBMETER = 1;
+                    var listaExames = ListaExames(idProcesso).ToList();
+                    foreach (var item in listaExames)
+                    {
+                        var atualizar = dbpointer.TdoencaExames.SingleOrDefault(d => d.DoencaId == pro.DoencaId && d.ExameId == item.Id);
+
+                        if (atualizar != null)
+                        {
+                            atualizar.Relevancia = atualizar.Relevancia + 5;
+                            dbpointer.SaveChanges();
+                        }
+                        else
+                        {
+                            DoencaExame d = new();
+                            d.DoencaId = Convert.ToInt16(pro.DoencaId);
+                            d.ExameId = item.Id;
+                            d.Relevancia = 5;
+                            dbpointer.TdoencaExames.Add(d);
+                            dbpointer.SaveChanges();
+                        }
+                    }
                 }
             }
             else
