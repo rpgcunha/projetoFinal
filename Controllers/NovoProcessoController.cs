@@ -14,6 +14,7 @@ using System;
 using System.Collections.Immutable;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace apoio_decisao_medica.Controllers
 {
@@ -106,8 +107,6 @@ namespace apoio_decisao_medica.Controllers
 
             //Listar as gategorias dos sintomas
             ViewBag.CATSIN = dbpointer.TcatSintomas.ToList();
-            //Listra as categorias dos exames
-            ViewBag.CATEXAM = dbpointer.TcatExames.ToList();
 
 
             //listar os sintomas filtrados pela cat ou pela pesquisa
@@ -119,17 +118,6 @@ namespace apoio_decisao_medica.Controllers
             {
                 ViewBag.FILTROSINT = null;
             }
-
-            //listar os exames filtrados pela cat
-            if (idCatExam != 0 || pesquisaExam != null)
-            {
-                ViewBag.FILTROEXAM = FiltroExames(pesquisaExam,idCatExam);
-            }
-            else
-            {
-                ViewBag.FILTROEXAM = null;
-            }
-
 
             //adiciona sintoma ao processo
             if (sintoma != 0)
@@ -152,27 +140,6 @@ namespace apoio_decisao_medica.Controllers
                     }
                 }
             }
-            //adiciona exame ao processo
-            if (exame != 0)
-            {
-                var existe = dbpointer.TprocessoExames
-                    .FirstOrDefault(e => e.ExameId == exame && e.ProcessoId == idProcesso);
-                if (existe == default)
-                {
-                    var tabelaExames = dbpointer.Texames.ToList();
-                    foreach (var item in tabelaExames)
-                    {
-                        if (exame == item.Id)
-                        {
-                            ProcessoExame e = new ProcessoExame();
-                            e.ProcessoId = idProcesso;
-                            e.ExameId = item.Id;
-                            dbpointer.TprocessoExames.Add(e);
-                            dbpointer.SaveChanges();
-                        }
-                    }
-                }
-            }
 
 
             //remove um sintoma da lista
@@ -181,15 +148,6 @@ namespace apoio_decisao_medica.Controllers
                 var registo = dbpointer.TprocessoSintomas
                     .Where(r=>r.SintomaId == removerSint);
                 dbpointer.TprocessoSintomas
-                    .RemoveRange(registo);
-                dbpointer.SaveChanges();
-            }
-            //remove um exame da lista
-            if (removerExam != 0)
-            {
-                var registo = dbpointer.TprocessoExames
-                    .Where(r => r.ExameId == removerExam);
-                dbpointer.TprocessoExames
                     .RemoveRange(registo);
                 dbpointer.SaveChanges();
             }
@@ -205,15 +163,6 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.LISTASINT = null;
             }
             List<Sintoma> listaSintomas = new(ListaSintomas(idProcesso));
-            //Lista os exames do processo aberto
-            if (!ListaExames(idProcesso).IsNullOrEmpty())
-            {
-                ViewBag.LISTAEXAM = ListaExames(idProcesso);
-            }
-            else
-            {
-                ViewBag.LISTAEXAM = null;
-            }
 
             //testar de há sintomas na tabelas
             if (listaSintomas.Count>0)
@@ -463,7 +412,8 @@ namespace apoio_decisao_medica.Controllers
             return listaExames;
         }
 
-        public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao, int numProcesso)
+        public IActionResult FecharProcesso(List<AvaliarExame> selectlistaExames, int submeter, int confirmacao, int numProcesso, int idCatExam, string pesquisaExam,
+            int exame, int removerExam)
         {
             try
             {
@@ -526,6 +476,9 @@ namespace apoio_decisao_medica.Controllers
                 }
             }
 
+            //Listra as categorias dos exames
+            ViewBag.CATEXAM = dbpointer.TcatExames.ToList();
+
             //apresentar os exames para avaliar
             Processo p = new();
             p = dbpointer.Tprocessos
@@ -533,19 +486,72 @@ namespace apoio_decisao_medica.Controllers
                 .Single(p => p.Id == idProcesso);
             ViewBag.PROCESSO = p;
 
-
-            List<AvaliarExame> listaExames = new();
-            foreach (var item in dbpointer.TprocessoExames.Include(e=>e.Exame))
+            //listar os exames filtrados pela cat
+            if (idCatExam != 0 || pesquisaExam != null)
             {
-                if (item.ProcessoId == p.Id)
+                ViewBag.FILTROEXAM = FiltroExames(pesquisaExam, idCatExam);
+            }
+            else
+            {
+                ViewBag.FILTROEXAM = null;
+            }
+
+            //adiciona exame ao processo
+            if (exame != 0)
+            {
+                var existe = dbpointer.TprocessoExames
+                    .FirstOrDefault(e => e.ExameId == exame && e.ProcessoId == idProcesso);
+                if (existe == default)
                 {
-                    AvaliarExame e = new();
-                    e.Id = item.ExameId;
-                    e.Nome = item.Exame.Nome;
-                    e.Selecionado = false;
-                    listaExames.Add(e);
+                    var tabelaExames = dbpointer.Texames.ToList();
+                    foreach (var item in tabelaExames)
+                    {
+                        if (exame == item.Id)
+                        {
+                            ProcessoExame e = new ProcessoExame();
+                            e.ProcessoId = idProcesso;
+                            e.ExameId = item.Id;
+                            dbpointer.TprocessoExames.Add(e);
+                            dbpointer.SaveChanges();
+                        }
+                    }
                 }
             }
+
+            //remove um exame da lista
+            if (removerExam != 0)
+            {
+                var registo = dbpointer.TprocessoExames
+                    .Where(r => r.ExameId == removerExam);
+                dbpointer.TprocessoExames
+                    .RemoveRange(registo);
+                dbpointer.SaveChanges();
+            }
+
+            //Lista os exames do processo aberto
+            if (!ListaExames(idProcesso).IsNullOrEmpty())
+            {
+                ViewBag.LISTAEXAM = ListaExames(idProcesso);
+            }
+            else
+            {
+                ViewBag.LISTAEXAM = null;
+            }
+
+
+            //List<AvaliarExame> listaExames = new();
+            //foreach (var item in dbpointer.TprocessoExames.Include(e=>e.Exame))
+            //{
+            //    if (item.ProcessoId == p.Id)
+            //    {
+            //        AvaliarExame e = new();
+            //        e.Id = item.ExameId;
+            //        e.Nome = item.Exame.Nome;
+            //        e.Selecionado = false;
+            //        listaExames.Add(e);
+            //    }
+            //}
+
 
             //verificar se nao escolheu nenhum para confirmar se deseja continuar
             if (submeter != 0)

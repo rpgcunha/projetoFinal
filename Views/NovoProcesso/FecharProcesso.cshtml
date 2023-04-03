@@ -7,7 +7,7 @@
     <br />
     <br />
     <br />
-    @if (Model.Count > 0)
+    @*@if (Model.Count > 0)
     {
         if (ViewBag.SUBMETER == 0)
         {
@@ -39,11 +39,93 @@
         <br />
         <br />
 
-    }
-    else
+    }*@
+    @using (Html.BeginForm())
     {
-        <h6>Não existem exames para validar pode prosseguir.</h6>
+        <div class="row">
+            <div class="col-6">
+                @using (Html.BeginForm())
+                {
+                    @:Exames
+                    @Html.TextBox("pesquisaExam")
+                    <br />
+                    @foreach (var item in ViewBag.CATEXAM)
+                    {
+                        <a asp-route-idCatExam="@item.Id" asp-route-numProcesso="@ViewBag.PROC">@item.Nome</a> @:|
+                    }
+                    <br />
+                    <div class="fixed-height overflow-auto">
+                        @if (ViewBag.FILTROEXAM == null)
+                        {
+                            <p><i>Escolha uma letra para filtrar os exames</i></p>
+                        }
+                        else
+                        {
+                            if (ViewBag.FILTROEXAM.Count != 0)
+                            {
+                                @foreach (var item in ViewBag.FILTROEXAM)
+                                {
+                                    <label>
+                                        @Html.RadioButton("exame",$"{item.Id}")
+                                        @item.Nome
+                                    </label>
+                                    <br />
+                                }
+                            }
+                            else
+                            {
+                                <p><i>Não existem exames nesta categoria!</i></p>
+                            }
+                        }
+                    </div>
+                    <br />
+                    <br />
+                    <input type="submit" value="Adicionar ao Processo" asp-route-numProcesso="@ViewBag.PROC">
+                    <a asp-action="NovoExame" asp-route-numProcesso="@ViewBag.PROC">Adicionar Novo Exame</a>
+                    <br />
+                }
+            </div>
 
-        <a asp-controller="Home" asp-action="Index">Concluir</a>
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Lista de Exames do Utente
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    @if (ViewBag.LISTAEXAM == null)
+                    {
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <i>
+                                        Ainda não foi adicionado nenhum exame ao processo.
+                                    </i>
+                                </th>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <tbody>
+                            @foreach (var item in ViewBag.LISTAEXAM)
+                            {
+                                <tr>
+                                    <th>
+                                        @item.Nome
+                                    </th>
+                                    <th>
+                                        <input type="submit" value="-" asp-route-numProcesso="@ViewBag.PROC" asp-route-removerExam="@item.Id">
+                                    </th>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                </table>
+            </div>
+        </div>
     }
 }
