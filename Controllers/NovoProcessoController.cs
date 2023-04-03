@@ -170,6 +170,7 @@ namespace apoio_decisao_medica.Controllers
                 ViewBag.PERMITIR = 1;
             }
 
+            ViewBag.ANCORASU = "sugestao";
             //carrega para a lista doencas as doenças que correspondem com os sintomas
             Dictionary<int, int> doencasPercentagem = new Dictionary<int, int>();
             if (sug == 1)
@@ -291,7 +292,7 @@ namespace apoio_decisao_medica.Controllers
                         "obter sugestões!";
                 }
             }
-
+            ViewBag.ANCORA = "maisDoencas";
             //carregar todas as doenças se nao quiser usar a sugerida
             if (maisDoencas == 1)
             {
@@ -657,6 +658,7 @@ namespace apoio_decisao_medica.Controllers
             @ViewBag.PROC = numProcesso;
             ViewBag.ReturnUrl = Request.Headers["Referer"].ToString();
             ViewData["CatDoencaId"] = new SelectList(dbpointer.TcatDoencas, "Id", "Nome");
+            ViewBag.ANCORA = "maisDoencas";
             return View();
         }
         [HttpPost]
@@ -676,6 +678,7 @@ namespace apoio_decisao_medica.Controllers
             {
                 dbpointer.Add(doenca);
                 await dbpointer.SaveChangesAsync();
+                ViewBag.ANCORA = "maisDoencas";
                 return RedirectToAction("Index", new {maisDoencas = 1, sug = 1, numProcesso = numProcesso });
             }
             ViewData["CatDoencaId"] = new SelectList(dbpointer.TcatDoencas, "Id", "Id", doenca.CatDoencaId);

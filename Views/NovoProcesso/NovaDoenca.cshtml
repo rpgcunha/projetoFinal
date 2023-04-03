@@ -22,7 +22,7 @@
                 <select asp-for="CatDoencaId" class="form-control" asp-items="ViewBag.CatDoencaId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Inserir" asp-route-numProcesso="@ViewBag.PROC" class="btn btn-primary" />
+                <input type="submit" value="Inserir" asp-route-numProcesso="@ViewBag.PROC" class="btn btn-primary" asp-fragment="@ViewBag.ANCORA" />
             </div>
         </form>
     </div>
