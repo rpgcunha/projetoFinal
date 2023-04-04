@@ -52,7 +52,23 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
     background-color: #FFFFFF;
+    width: 125px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 30px;
+    font-size: 0.8em;
+}
+.btnCriarAzul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    background-color: #688698;
+    color: white;
     width: 125px;
     padding-top: 0.6em;
     padding-bottom: 0.6em;
@@ -73,8 +89,10 @@ a:hover {
     font-weight: bold;
 }
 
-.btn2{
-    margin-right: 1em;
+.btn {
+    color: #688698 !important;
+    background-color: white !important;
+    text-align: left !important;
 }
 
 input[type="text" i] {
@@ -119,10 +137,14 @@ th a, td a {
 .dropdown li{
     color: white;
 }
+table{
+    table-layout: fixed;
+}
 tbody, td, tfoot, th, thead, tr {
     border: none !important;
     color: #688698;
     text-align: center;
+    vertical-align: middle;
 }
 thead th{
     font-weight: bold;
@@ -147,7 +169,10 @@ thead {
     }
 
 .fixed-height {
-    height: 300px; /* altura fixa */
+    height: 200px; /* altura fixa */
+    padding: 10px;
+    margin-top: 5px;
+
 }
 
 .fixed-height-pequena {
@@ -182,6 +207,7 @@ thead {
 .pesquisaSint::placeholder {
     color: #688698;
 }
+<<<<<<< HEAD
 
 .password {
     cursor: pointer;
@@ -190,3 +216,27 @@ thead {
 .password:hover {
     color: black;
 }
+
+.strong a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #688698;
+}
+.strong a:hover {
+    border: 1px solid #e8f4d9
+}
+
+.passinput {
+    background-color: transparent;
+    border-radius: 0px;
+    color: #688698;
+    padding: 0 15px;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid #688698;
+}
+.passinput::placeholder{
+    color: #688698;
+}
+=======
+>>>>>>> 7e07e6d7a3c4b639419507f2da8bddb0ea7459ed

@@ -357,6 +357,14 @@
       "PackagePath": "staticwebassets\\img\\icons\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\login.ico",
+      "PackagePath": "staticwebassets\\img\\icons\\login.ico"
+    },
+    {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\site.ico",
+      "PackagePath": "staticwebassets\\img\\icons\\site.ico"
+    },
+    {
       "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\masculino.jpg",
       "PackagePath": "staticwebassets\\img\\masculino.jpg"
     },
@@ -379,6 +387,10 @@
     {
       "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\medicaMaria.png",
       "PackagePath": "staticwebassets\\img\\users\\medicaMaria.png"
+    },
+    {
+      "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\medicoJoao.png",
+      "PackagePath": "staticwebassets\\img\\users\\medicoJoao.png"
     },
     {
       "Id": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\rui.png",

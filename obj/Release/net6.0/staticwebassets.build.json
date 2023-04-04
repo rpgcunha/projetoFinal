@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HJHgYuQX3bGxrQ3LRM73+RpbZCBfZffNjscsqGd1giU=",
+  "Hash": "+ckcwckrmy15xnTNI0eGUdNe6yzK1NziZegb3VEVL5g=",
   "Source": "apoio_decisao_medica",
   "BasePath": "_content/apoio_decisao_medica",
   "Mode": "Default",
@@ -1547,6 +1547,40 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\login.ico",
+      "SourceId": "apoio_decisao_medica",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
+      "BasePath": "_content/apoio_decisao_medica",
+      "RelativePath": "img/icons/login.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icons\\login.ico"
+    },
+    {
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\site.ico",
+      "SourceId": "apoio_decisao_medica",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
+      "BasePath": "_content/apoio_decisao_medica",
+      "RelativePath": "img/icons/site.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icons\\site.ico"
+    },
+    {
       "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\masculino.jpg",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
@@ -1647,6 +1681,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\users\\medicaMaria.png"
+    },
+    {
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\medicoJoao.png",
+      "SourceId": "apoio_decisao_medica",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
+      "BasePath": "_content/apoio_decisao_medica",
+      "RelativePath": "img/users/medicoJoao.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\users\\medicoJoao.png"
     },
     {
       "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\rui.png",
