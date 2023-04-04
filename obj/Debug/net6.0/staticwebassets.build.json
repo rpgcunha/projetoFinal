@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P42xXuRvfV6ffEZVjeyxXtBemvB1OfMMZYMBHg767K0=",
+  "Hash": "jXQIR0VrbbGBrxauD4C5ZsuERaMh1ZPR2Lb912bOpi0=",
   "Source": "apoio_decisao_medica",
   "BasePath": "_content/apoio_decisao_medica",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "apoio_decisao_medica\\wwwroot",
       "Source": "apoio_decisao_medica",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\apoio_decisao_medica.styles.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\apoio_decisao_medica.styles.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "apoio_decisao_medica.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\apoio_decisao_medica.styles.css"
+      "OriginalItemSpec": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\apoio_decisao_medica.styles.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\apoio_decisao_medica.bundle.scp.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\apoio_decisao_medica.bundle.scp.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "apoio_decisao_medica.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\apoio_decisao_medica.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\apoio_decisao_medica.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\css\\main.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\css\\main.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "css/main.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\css\\sidebars.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\css\\sidebars.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "css/sidebars.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\sidebars.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\css\\site.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\css\\util.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\css\\util.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "css/util.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\util.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\favicon.ico",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/css/font-awesome.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/css/font-awesome.min.css",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/fonts/FontAwesome.otf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/HELP-US-OUT.txt",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\animated.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\animated.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/animated.less",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\animated.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/bordered-pulled.less",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\core.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\core.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/core.less",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\core.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/fixed-width.less",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/font-awesome.less",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\icons.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\icons.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/icons.less",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\icons.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\larger.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\larger.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/larger.less",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\larger.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\list.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\list.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/list.less",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\list.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\mixins.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\mixins.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/mixins.less",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\mixins.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\path.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\path.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/path.less",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\path.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/rotated-flipped.less",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/screen-reader.less",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\stacked.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\stacked.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/stacked.less",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\stacked.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\variables.less",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\less\\variables.less",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/less/variables.less",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\less\\variables.less"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_animated.scss",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_core.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_core.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_core.scss",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_core.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_fixed-width.scss",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_icons.scss",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_larger.scss",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_list.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_list.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_list.scss",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_list.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_mixins.scss",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_path.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_path.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_path.scss",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_path.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_screen-reader.scss",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_stacked.scss",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/_variables.scss",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/font-awesome-4.7.0/scss/font-awesome.scss",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\icon-font.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\icon-font.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/Linearicons-Free-v1.0.0/icon-font.min.css",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Linearicons-Free-v1.0.0\\icon-font.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.eot",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.eot",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.eot"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.svg",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.svg",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.svg"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.woff",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.woff",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.woff"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.woff2",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.woff2",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Linearicons-Free-v1.0.0\\WebFont\\Linearicons-Free.woff2"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Black.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Black.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-Black.ttf",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-Black.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-BlackItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-BlackItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-BlackItalic.ttf",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-BlackItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Bold.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Bold.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-Bold.ttf",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-Bold.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-BoldItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-BoldItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-BoldItalic.ttf",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-BoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraBold.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraBold.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-ExtraBold.ttf",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-ExtraBold.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraBoldItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraBoldItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-ExtraBoldItalic.ttf",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-ExtraBoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraLight.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraLight.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-ExtraLight.ttf",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-ExtraLight.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraLightItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ExtraLightItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-ExtraLightItalic.ttf",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-ExtraLightItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Italic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Italic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-Italic.ttf",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-Italic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Light.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Light.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-Light.ttf",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-Light.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-LightItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-LightItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-LightItalic.ttf",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-LightItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Medium.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Medium.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-Medium.ttf",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-Medium.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-MediumItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-MediumItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-MediumItalic.ttf",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-MediumItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Regular.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Regular.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-Regular.ttf",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-Regular.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-SemiBold.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-SemiBold.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-SemiBold.ttf",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-SemiBold.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-SemiBoldItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-SemiBoldItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-SemiBoldItalic.ttf",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-SemiBoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Thin.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-Thin.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-Thin.ttf",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-Thin.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ThinItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\Montserrat-ThinItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/Montserrat-ThinItalic.ttf",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\Montserrat-ThinItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\montserrat\\OFL.txt",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\montserrat\\OFL.txt",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/montserrat/OFL.txt",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\montserrat\\OFL.txt"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Black.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Black.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-Black.ttf",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-Black.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-BlackItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-BlackItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-BlackItalic.ttf",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-BlackItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Bold.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Bold.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-Bold.ttf",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-Bold.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-BoldItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-BoldItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-BoldItalic.ttf",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-BoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraBold.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraBold.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-ExtraBold.ttf",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-ExtraBold.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-ExtraBoldItalic.ttf",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraLight.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraLight.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-ExtraLight.ttf",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-ExtraLight.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-ExtraLightItalic.ttf",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Italic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Italic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-Italic.ttf",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-Italic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Light.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Light.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-Light.ttf",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-Light.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-LightItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-LightItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-LightItalic.ttf",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-LightItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Medium.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Medium.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-Medium.ttf",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-Medium.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-MediumItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-MediumItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-MediumItalic.ttf",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-MediumItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Regular.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Regular.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-Regular.ttf",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-Regular.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-SemiBold.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-SemiBold.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-SemiBold.ttf",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-SemiBold.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-SemiBoldItalic.ttf",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Thin.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-Thin.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-Thin.ttf",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-Thin.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ThinItalic.ttf",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\fonts\\poppins\\Poppins-ThinItalic.ttf",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "fonts/poppins/Poppins-ThinItalic.ttf",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\poppins\\Poppins-ThinItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\bg-02.jpg",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\bg-02.jpg",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/bg-02.jpg",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\img\\bg-02.jpg"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\feminino.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\feminino.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/feminino.png",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\img\\feminino.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\icons\\favicon.ico",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\favicon.ico",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/icons/favicon.ico",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\icons\\login.ico",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\login.ico",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/icons/login.ico",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\login.ico"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\icons\\site.ico",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\icons\\site.ico",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/icons/site.ico",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icons\\site.ico"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\masculino.jpg",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\masculino.jpg",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/masculino.jpg",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\img\\masculino.jpg"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\none.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\none.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/none.png",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\img\\none.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\usericon.jpg",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\usericon.jpg",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/usericon.jpg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\img\\usericon.jpg"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\users\\bruna.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\bruna.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/users/bruna.png",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\img\\users\\bruna.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\users\\default.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\default.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/users/default.png",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\img\\users\\default.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\users\\medicaMaria.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\medicaMaria.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/users/medicaMaria.png",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\img\\users\\medicaMaria.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\users\\medicoJoao.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\medicoJoao.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/users/medicoJoao.png",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\img\\users\\medicoJoao.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\users\\rui.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\rui.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/users/rui.png",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\img\\users\\rui.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\img\\users\\teste.png",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\img\\users\\teste.png",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "img/users/teste.png",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\img\\users\\teste.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\js\\main.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\js\\main.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "js/main.js",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\js\\sidebars.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\js\\sidebars.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "js/sidebars.js",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\js\\sidebars.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\js\\site.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2244,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2261,10 +2261,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2295,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2312,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2329,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2346,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2363,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2380,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2397,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2414,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2431,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2448,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2465,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2482,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2499,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2516,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2533,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2550,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2567,10 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2584,10 +2584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2618,10 +2618,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2635,10 +2635,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2652,10 +2652,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2669,10 +2669,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2686,10 +2686,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2703,10 +2703,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2720,10 +2720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2737,10 +2737,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -2754,10 +2754,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\animate\\animate.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\animate\\animate.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/animate/animate.css",
       "AssetKind": "All",
@@ -2771,10 +2771,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\animate\\animate.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\animsition\\css\\animsition.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\animsition\\css\\animsition.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/animsition/css/animsition.css",
       "AssetKind": "All",
@@ -2788,10 +2788,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\animsition\\css\\animsition.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\animsition\\css\\animsition.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\animsition\\css\\animsition.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/animsition/css/animsition.min.css",
       "AssetKind": "All",
@@ -2805,10 +2805,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\animsition\\css\\animsition.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\animsition\\js\\animsition.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\animsition\\js\\animsition.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/animsition/js/animsition.js",
       "AssetKind": "All",
@@ -2822,10 +2822,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\animsition\\js\\animsition.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\animsition\\js\\animsition.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\animsition\\js\\animsition.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/animsition/js/animsition.min.js",
       "AssetKind": "All",
@@ -2839,10 +2839,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\animsition\\js\\animsition.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap.css",
       "AssetKind": "All",
@@ -2856,10 +2856,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2873,10 +2873,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2890,10 +2890,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2907,10 +2907,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2941,10 +2941,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2958,10 +2958,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2975,10 +2975,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2992,10 +2992,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -3009,10 +3009,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -3026,10 +3026,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -3043,10 +3043,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/js/bootstrap.js",
       "AssetKind": "All",
@@ -3060,10 +3060,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -3077,10 +3077,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\popper.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\popper.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/js/popper.js",
       "AssetKind": "All",
@@ -3094,10 +3094,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\popper.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\popper.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\popper.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/js/popper.min.js",
       "AssetKind": "All",
@@ -3111,10 +3111,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\popper.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\tooltip.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\bootstrap\\js\\tooltip.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/bootstrap/js/tooltip.js",
       "AssetKind": "All",
@@ -3128,10 +3128,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\bootstrap\\js\\tooltip.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\countdowntime\\countdowntime.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\countdowntime\\countdowntime.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/countdowntime/countdowntime.js",
       "AssetKind": "All",
@@ -3145,10 +3145,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\countdowntime\\countdowntime.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\css-hamburgers\\hamburgers.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\css-hamburgers\\hamburgers.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/css-hamburgers/hamburgers.css",
       "AssetKind": "All",
@@ -3162,10 +3162,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\css-hamburgers\\hamburgers.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\css-hamburgers\\hamburgers.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\css-hamburgers\\hamburgers.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/css-hamburgers/hamburgers.min.css",
       "AssetKind": "All",
@@ -3179,10 +3179,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\css-hamburgers\\hamburgers.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\daterangepicker.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\daterangepicker.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/daterangepicker/daterangepicker.css",
       "AssetKind": "All",
@@ -3196,10 +3196,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\daterangepicker\\daterangepicker.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\daterangepicker.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\daterangepicker.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/daterangepicker/daterangepicker.js",
       "AssetKind": "All",
@@ -3213,10 +3213,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\daterangepicker\\daterangepicker.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\moment.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\moment.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/daterangepicker/moment.js",
       "AssetKind": "All",
@@ -3230,10 +3230,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\daterangepicker\\moment.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\moment.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\daterangepicker\\moment.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/daterangepicker/moment.min.js",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\daterangepicker\\moment.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\jquery\\jquery-3.2.1.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\jquery\\jquery-3.2.1.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/jquery/jquery-3.2.1.min.js",
       "AssetKind": "All",
@@ -3264,10 +3264,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery-3.2.1.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\perfect-scrollbar\\perfect-scrollbar.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\perfect-scrollbar\\perfect-scrollbar.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/perfect-scrollbar/perfect-scrollbar.css",
       "AssetKind": "All",
@@ -3281,10 +3281,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\perfect-scrollbar\\perfect-scrollbar.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/perfect-scrollbar/perfect-scrollbar.min.js",
       "AssetKind": "All",
@@ -3298,10 +3298,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\select2\\select2.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\select2\\select2.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/select2/select2.css",
       "AssetKind": "All",
@@ -3315,10 +3315,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\select2\\select2.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\select2\\select2.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\select2\\select2.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/select2/select2.js",
       "AssetKind": "All",
@@ -3332,10 +3332,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\select2\\select2.js"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\select2\\select2.min.css",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\select2\\select2.min.css",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/select2/select2.min.css",
       "AssetKind": "All",
@@ -3349,10 +3349,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\select2\\select2.min.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\vendor\\select2\\select2.min.js",
+      "Identity": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\vendor\\select2\\select2.min.js",
       "SourceId": "apoio_decisao_medica",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\Projeto\\projetoFinal\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\rpcun\\Desktop\\Nova pasta (2)\\Nova pasta (2)\\projetoFinal\\wwwroot\\",
       "BasePath": "_content/apoio_decisao_medica",
       "RelativePath": "vendor/select2/select2.min.js",
       "AssetKind": "All",

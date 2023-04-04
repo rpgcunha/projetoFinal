@@ -15,7 +15,7 @@ namespace apoio_decisao_medica.Models
         [Display(Name = "Nome do Médico")]
         public int MedicoId { get; set; }
 
-        [Display(Name = "É Admin?")]
+        [Display(Name = "É Administrador?")]
         public bool IsAdmin { get; set; }
 
 		public virtual Medico? Medico { get; set; }

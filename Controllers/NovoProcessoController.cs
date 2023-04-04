@@ -164,7 +164,7 @@ namespace apoio_decisao_medica.Controllers
             }
             List<Sintoma> listaSintomas = new(ListaSintomas(idProcesso));
 
-            //testar de há sintomas na tabelas
+            //testar se há sintomas na tabelas
             if (listaSintomas.Count>0)
             {
                 ViewBag.PERMITIR = 1;
@@ -245,18 +245,20 @@ namespace apoio_decisao_medica.Controllers
                             }
                             ViewBag.PERCENTAGEMSINT = maior;
 
+                            Dictionary<int, int> dictOrdenado = doencasPercentagem.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+
                             //se a maior percentagem for abaixo de 40% apresenta todas as sugestoes
                             List<int> doencasSugeridas = new List<int>();
                             if (maior <= 40)
                             {
-                                foreach (KeyValuePair<int, int> par in doencasPercentagem)
+                                foreach (KeyValuePair<int, int> par in dictOrdenado)
                                 {
                                     doencasSugeridas.Add(par.Key);
                                 }
                             }
                             else
                             {
-                                foreach (KeyValuePair<int, int> par in doencasPercentagem)
+                                foreach (KeyValuePair<int, int> par in dictOrdenado)
                                 {
                                     if (maior == par.Value)
                                     {
@@ -264,7 +266,7 @@ namespace apoio_decisao_medica.Controllers
                                     }
                                 }
 
-                            }
+                            }                         
                             //envia a(s) doença(s) para a view
                             List<Doenca> doencasSugestao1 = new List<Doenca>();
                             foreach (var item in doencasSugeridas)

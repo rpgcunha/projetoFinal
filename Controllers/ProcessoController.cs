@@ -52,7 +52,26 @@ namespace apoio_decisao_medica.Controllers
                 .Select(p => p.Exame.Nome).ToList();
             ViewBag.EXAMES = exames;
 
+            //calcular idade
+            ViewBag.IDADE = Idade(idProcesso);
+
             return View(dbpointer.Tprocessos.Include(p=> p.Utente).Include(p=>p.Doenca).Where(p=>p.Id == idProcesso));
         }
+
+        public int Idade(int idProcesso)
+        {
+            var ficha = dbpointer.Tprocessos
+                .Include(p => p.Utente)
+                .Single(p => p.Id == idProcesso);
+            ViewBag.UTENTE = ficha;
+            DateTime dataNascimento = DateTime.ParseExact(ficha.Utente.DataNascimento, "dd/MM/yyyy", null);
+            int idade = DateTime.Today.Year - dataNascimento.Year;
+            if (DateTime.Today < dataNascimento.AddYears(idade))
+            {
+                idade--;
+            }
+            return idade;
+        }
+
     }
 }
