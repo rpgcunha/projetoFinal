@@ -64,17 +64,25 @@ namespace apoio_decisao_medica.Controllers
                 }
                 else
                 {
-                    if (nova != nova2)
+                    if (antiga != UserLogado().Pass)
                     {
-                        ViewBag.ERRO = "A nova password não corresponde, tente novamente";
+                        ViewBag.ERRO = "Password antiga errada!";
                         ViewBag.CHANGE = 1;
                     }
                     else
                     {
-                        var utilizador = dbpointer.Tutilizador.Single(p => p.Id == UserLogado().Id);
-                        utilizador.Pass = nova;
-                        dbpointer.SaveChanges();
-                        ViewBag.SUCESS = "Password alterada com sucesso!";
+                        if (nova != nova2)
+                        {
+                            ViewBag.ERRO = "A nova password não corresponde, tente novamente";
+                            ViewBag.CHANGE = 1;
+                        }
+                        else
+                        {
+                            var utilizador = dbpointer.Tutilizador.Single(p => p.Id == UserLogado().Id);
+                            utilizador.Pass = nova;
+                            dbpointer.SaveChanges();
+                            ViewBag.SUCESS = "Password alterada com sucesso!";
+                        }
                     }
                 }
 

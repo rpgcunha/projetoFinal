@@ -32,26 +32,41 @@
 
 @using (Html.BeginForm())
 {
-    <button style="background-color: #688698; color: white; border-radius: 20px; padding-left: 6px; right:50%:" type="submit" asp-route-change="1">Mudar Password</button>
-
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button style="background-color: transparent" type="submit" asp-route-change="1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                </svg>
+                <b>Mudar Password</b>
+            </button>
+        </div>
+    </div>
     @if (ViewBag.CHANGE != null)
     {
         if (ViewBag.ERRO != null)
         {
-            @ViewBag.ERRO
+            <p style="color:red"><b><i>@ViewBag.ERRO</i></b></p>
             <br />
         }
-        <input type="password" name="antiga" placeholder="Password Antiga">
-        <br />
-        <input type="password" name="nova" placeholder="Nova Password">
-        <br />
-        <input type="password" name="nova2" placeholder="Repita a Nova Password">
-        <br />
-        <button type="submit" asp-route-change="2">Confirmar</button>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center m-2" style="border: none; outline: none;">
+                <input class="passinput" type="password" name="antiga" placeholder="Password Antiga">
+            </div>
+            <div class="col-md-12 d-flex justify-content-center m-2" style="border: none; outline: none;">
+                <input class="passinput" type="password" name="nova" placeholder="Nova Password">
+            </div>
+            <div class="col-md-12 d-flex justify-content-center m-2" style="border: none; outline: none;">
+                <input class="passinput" type="password" name="nova2" placeholder="Repita a Nova Password">
+            </div>
+            <div class="col-md-12 d-flex justify-content-center m-2" style="border: none; outline: none;">
+                <button class="btnCriar" style="background-color: #688698; color: white; width: fit-content;" type="submit" asp-route-change="2">Confirmar</button>
+            </div>
+        </div>
     }
     @if (ViewBag.SUCESS != null)
     {
-        @ViewBag.SUCESS
+        <p style="color:forestgreen"><i><b>@ViewBag.SUCESS</b></i></p>
     }
 }
 

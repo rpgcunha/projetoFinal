@@ -207,6 +207,7 @@ thead {
 .pesquisaSint::placeholder {
     color: #688698;
 }
+<<<<<<< HEAD
 
 .password {
     cursor: pointer;
@@ -224,3 +225,18 @@ thead {
 .strong a:hover {
     border: 1px solid #e8f4d9
 }
+
+.passinput {
+    background-color: transparent;
+    border-radius: 0px;
+    color: #688698;
+    padding: 0 15px;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid #688698;
+}
+.passinput::placeholder{
+    color: #688698;
+}
+=======
+>>>>>>> 7e07e6d7a3c4b639419507f2da8bddb0ea7459ed

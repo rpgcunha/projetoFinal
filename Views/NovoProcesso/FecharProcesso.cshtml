@@ -1,8 +1,8 @@
 ﻿@using (Html.BeginForm())
 {
-    <h5>Fechado o processo numero: @ViewBag.PROCESSO.NumeroProcesso</h5>
+    <h5><b>Fechado o processo numero:</b> @ViewBag.PROCESSO.NumeroProcesso</h5>
     <br />
-    <h6>Doença: @ViewBag.PROCESSO.Doenca.Nome</h6>
+    <h6><b>Doença:</b> @ViewBag.PROCESSO.Doenca.Nome</h6>
     <br />
     <br />
     <br />
@@ -101,13 +101,24 @@
         <br>
         <br>
          </div>
-
-        <input type="submit" value="Submeter" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="1">
+         <div class="row">
+            <div class="mt-5 col-md-12 d-grid justify-content-md-end">
+                <button type="submit" class="btnCriarAzul" style="width: fit-content; color: white; background-color: #008000;" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="1">
+                         Submeter
+                </button>
+            </div>
+        </div>
         if (ViewBag.CONTINUAR != null)
         {
-            <p><i>Não Selecionou nenhum exame, deseja continuar?</i></p>
-            <input type="submit" value="Sim" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="1" asp-route-confirmacao="1">
-            <input type="submit" value="Não" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="0">
+            <p><b><i>Não Selecionou nenhum exame, deseja continuar?</i></b></p>
+            <div class="row">
+                <div class="col-md-1" style="width: 6%;">
+                    <button type="submit" class="btnCriarAzul" style="width: fit-content; color: white; background-color: #008000;" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="1" asp-route-confirmacao="1">Sim</button>
+                </div>
+                <div class="col-md-1">
+                    <button type="submit" class="btnCriarAzul" style="width: fit-content; color: white; background-color: red;" asp-route-idProcesso="@ViewBag.PROCESSO.Id" asp-route-submeter="0">Não</button>
+                </div>
+            </div>
         }
     }
     else
