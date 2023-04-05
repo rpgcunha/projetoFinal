@@ -47,12 +47,13 @@ namespace apoio_decisao_medica.Controllers
             {
                 var filtro = _context.Tsintomas
                     .Include(m => m.CatSintoma)
-                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()));
+                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()))
+                    .OrderBy(m=>m.Nome);
                 return View(await filtro.ToListAsync());
 
             }
 
-            var applicationDbContext = _context.Tsintomas.Include(s => s.CatSintoma);
+            var applicationDbContext = _context.Tsintomas.Include(s => s.CatSintoma).OrderBy(s => s.Nome);
             return View(await applicationDbContext.ToListAsync());
         }
 

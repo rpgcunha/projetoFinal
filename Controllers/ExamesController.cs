@@ -48,12 +48,13 @@ namespace apoio_decisao_medica.Controllers
             {
                 var filtro = _context.Texames
                     .Include(m => m.CatExame)
-                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()));
+                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()))
+                    .OrderBy(m=>m.Nome);
                 return View(await filtro.ToListAsync());
 
             }
 
-            var applicationDbContext = _context.Texames.Include(e => e.CatExame);
+            var applicationDbContext = _context.Texames.Include(e => e.CatExame).OrderBy(e => e.Nome);
             return View(await applicationDbContext.ToListAsync());
         }
 

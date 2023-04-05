@@ -47,12 +47,13 @@ namespace apoio_decisao_medica.Controllers
             {
                 var filtro = _context.Tdoencas
                     .Include(m => m.CatDoenca)
-                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()));
+                    .Where(m => m.Nome.ToLower().Contains(pesquisa.ToLower()))
+                    .OrderBy(m=> m.Nome);
                 return View(await filtro.ToListAsync());
 
             }
 
-            var applicationDbContext = _context.Tdoencas.Include(d => d.CatDoenca);
+            var applicationDbContext = _context.Tdoencas.Include(d => d.CatDoenca).OrderBy(d=>d.Nome);
             return View(await applicationDbContext.ToListAsync());
         }
 
