@@ -38,10 +38,10 @@
 <br />
 @**************@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8 col-lg-8">
         <h5>Quais são os sintomas apresentados pelo utente?</h5>
     </div>
-    <div class="col-md-6 d-grid justify-content-md-end">
+    <div class="col-md-4 col-lg-4 d-grid justify-content-md-end">
             <div class="btnCriar" style="width: fit-content">
                 <a asp-action="NovoSintoma" asp-route-numProcesso="@ViewBag.PROC">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
@@ -248,15 +248,15 @@
             @if (ViewBag.CATDOENCA != null)
             {
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-4" style="width: 400px;">
                 @Html.DropDownList("IdCatDoenca", (SelectList)ViewBag.CATDOENCA, "Todas as categorias", new { @class = "btn text-left" })
                 </div>
-                <div class="col-md-1">
+                <div class="col-md-1" style="width: 80px">
                     <button type="submit" class="btnCriarAzul" style="color: white; width: fit-content;" asp-route-numProcesso="@ViewBag.PROC" asp-route-maisDoencas="1" asp-route-sug="1" asp-fragment="@ViewBag.ANCORA">
                     Aplicar
                     </button>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-5">
                     <div class="btnCriar" style="width: fit-content">
                         <a asp-action="NovaDoenca" asp-route-numProcesso="@ViewBag.PROC">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">

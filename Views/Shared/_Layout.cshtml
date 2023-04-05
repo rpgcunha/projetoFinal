@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,7 +49,7 @@
             <a asp-controller="Home" asp-action="Index" class="d-flex @*align-items-center mb-3 mb-md-0 me-md-auto*@ text-reset text-decoration-none">
                 <h1 style="padding: 0.5rem 1rem; color: white;">Home</h1>
             </a>
-            <hr>
+            <hr style="color: white;">
             <ul class="nav @*nav-pills*@ flex-column mb-auto" id="myNavbar">
                 @if (ViewBag.USER != null && ViewBag.USER.IsAdmin == true)
                 {
@@ -126,7 +126,7 @@
                 }
                 else
                 {
-                    <li class="nav-item" style="color: white;">
+                    <li class="nav-item">
                         <a class="nav-link text-reset" asp-area="" asp-controller="Utente" asp-action="Index">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
@@ -158,6 +158,9 @@
                 <a href="#" class="d-flex align-items-center text-reset text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="~/img/users/@(ViewBag.USER.User).png" alt="" width="32" height="32" class="rounded-circle me-2">
                     <strong style="color:white;">@ViewBag.USER.Medico.Nome</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="color: white; margin-left: 5px;" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                    </svg>
                 </a>
                 <ul class="text-reset dropdown-menu text-small shadow">
                     <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Perfil</a></li>
